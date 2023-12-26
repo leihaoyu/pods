@@ -1,0 +1,31 @@
+{
+  "name": "FFMpegBinding",
+  "version": "0.0.1",
+  "summary": "A short description of FFMpegBinding.",
+  "description": "hello",
+  "homepage": "http://EXAMPLE/FFMpegBinding",
+  "license": "MIT",
+  "authors": {
+    "thunder": ""
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "/FFMpegBinding.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "FFMpegBinding/**/*.{h,m}",
+  "frameworks": "AudioToolbox",
+  "libraries": [
+    "iconv",
+    "bz2",
+    "z"
+  ],
+  "ios": {
+    "vendored_libraries": "FFMpegBinding/*.a"
+  },
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "$(PODS_ROOT)/../TGFramework/FFMpegBinding/header"
+  }
+}

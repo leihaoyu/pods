@@ -1,0 +1,1078 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59C110DC2B04A29E005DF558 /* TgVoipWebrtc.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C110DB2B04A29E005DF558 /* TgVoipWebrtc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59C110E62B04A2DC005DF558 /* MediaStreaming.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C110E42B04A2DC005DF558 /* MediaStreaming.h */; };
+		59C110E72B04A2DC005DF558 /* OngoingCallThreadLocalContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C110E52B04A2DC005DF558 /* OngoingCallThreadLocalContext.h */; };
+		59C110EC2B04A2E8005DF558 /* OngoingCallThreadLocalContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C110E92B04A2E8005DF558 /* OngoingCallThreadLocalContext.mm */; };
+		59C110ED2B04A2E8005DF558 /* MediaStreaming.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C110EA2B04A2E8005DF558 /* MediaStreaming.mm */; };
+		59C110EE2B04A2E8005DF558 /* MediaUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C110EB2B04A2E8005DF558 /* MediaUtils.h */; };
+		59C112DA2B04A522005DF558 /* ChannelManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112352B04A522005DF558 /* ChannelManager.h */; };
+		59C112DB2B04A522005DF558 /* CryptoHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112362B04A522005DF558 /* CryptoHelper.cpp */; };
+		59C112DC2B04A522005DF558 /* VideoCapturerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112372B04A522005DF558 /* VideoCapturerInterface.h */; };
+		59C112DD2B04A522005DF558 /* LogSinkImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112382B04A522005DF558 /* LogSinkImpl.cpp */; };
+		59C112DE2B04A522005DF558 /* InstanceImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112392B04A522005DF558 /* InstanceImpl.h */; };
+		59C112DF2B04A522005DF558 /* SctpDataChannelProviderInterfaceImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1123A2B04A522005DF558 /* SctpDataChannelProviderInterfaceImpl.cpp */; };
+		59C112E02B04A522005DF558 /* CodecSelectHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1123B2B04A522005DF558 /* CodecSelectHelper.cpp */; };
+		59C112E12B04A522005DF558 /* Message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1123C2B04A522005DF558 /* Message.cpp */; };
+		59C112E22B04A522005DF558 /* FieldTrialsConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1123D2B04A522005DF558 /* FieldTrialsConfig.h */; };
+		59C112E32B04A523005DF558 /* PlatformContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1123E2B04A522005DF558 /* PlatformContext.h */; };
+		59C112E42B04A523005DF558 /* InstanceImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1123F2B04A522005DF558 /* InstanceImpl.cpp */; };
+		59C112E52B04A523005DF558 /* NetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112402B04A522005DF558 /* NetworkManager.h */; };
+		59C112E62B04A523005DF558 /* GroupNetworkManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112422B04A522005DF558 /* GroupNetworkManager.cpp */; };
+		59C112E72B04A523005DF558 /* AudioStreamingPart.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112432B04A522005DF558 /* AudioStreamingPart.h */; };
+		59C112E82B04A523005DF558 /* GroupNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112442B04A522005DF558 /* GroupNetworkManager.h */; };
+		59C112E92B04A523005DF558 /* AudioStreamingPartInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112452B04A522005DF558 /* AudioStreamingPartInternal.h */; };
+		59C112EA2B04A523005DF558 /* GroupInstanceCustomImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112462B04A522005DF558 /* GroupInstanceCustomImpl.h */; };
+		59C112EB2B04A523005DF558 /* GroupInstanceImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112472B04A522005DF558 /* GroupInstanceImpl.h */; };
+		59C112EC2B04A523005DF558 /* AVIOContextImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112482B04A522005DF558 /* AVIOContextImpl.h */; };
+		59C112ED2B04A523005DF558 /* GroupJoinPayloadInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112492B04A522005DF558 /* GroupJoinPayloadInternal.cpp */; };
+		59C112EE2B04A523005DF558 /* GroupInstanceCustomImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1124A2B04A522005DF558 /* GroupInstanceCustomImpl.cpp */; };
+		59C112EF2B04A523005DF558 /* AudioStreamingPart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1124B2B04A522005DF558 /* AudioStreamingPart.cpp */; };
+		59C112F02B04A523005DF558 /* AudioStreamingPartPersistentDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1124C2B04A522005DF558 /* AudioStreamingPartPersistentDecoder.h */; };
+		59C112F12B04A523005DF558 /* AudioStreamingPartInternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1124D2B04A522005DF558 /* AudioStreamingPartInternal.cpp */; };
+		59C112F22B04A523005DF558 /* StreamingMediaContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1124E2B04A522005DF558 /* StreamingMediaContext.h */; };
+		59C112F32B04A523005DF558 /* AVIOContextImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1124F2B04A522005DF558 /* AVIOContextImpl.cpp */; };
+		59C112F42B04A523005DF558 /* StreamingMediaContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112502B04A522005DF558 /* StreamingMediaContext.cpp */; };
+		59C112F52B04A523005DF558 /* AudioStreamingPartPersistentDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112512B04A522005DF558 /* AudioStreamingPartPersistentDecoder.cpp */; };
+		59C112F62B04A523005DF558 /* GroupJoinPayload.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112522B04A522005DF558 /* GroupJoinPayload.h */; };
+		59C112F72B04A523005DF558 /* VideoStreamingPart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112532B04A522005DF558 /* VideoStreamingPart.cpp */; };
+		59C112F82B04A523005DF558 /* VideoStreamingPart.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112542B04A522005DF558 /* VideoStreamingPart.h */; };
+		59C112F92B04A523005DF558 /* GroupJoinPayloadInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112552B04A522005DF558 /* GroupJoinPayloadInternal.h */; };
+		59C112FA2B04A523005DF558 /* LogSinkImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112562B04A522005DF558 /* LogSinkImpl.h */; };
+		59C112FB2B04A523005DF558 /* CryptoHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112572B04A522005DF558 /* CryptoHelper.h */; };
+		59C112FC2B04A523005DF558 /* ChannelManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112582B04A522005DF558 /* ChannelManager.cpp */; };
+		59C112FD2B04A523005DF558 /* Manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112592B04A522005DF558 /* Manager.h */; };
+		59C112FE2B04A523005DF558 /* StaticThreads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1125A2B04A522005DF558 /* StaticThreads.cpp */; };
+		59C112FF2B04A523005DF558 /* VideoCaptureInterfaceImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1125B2B04A522005DF558 /* VideoCaptureInterfaceImpl.h */; };
+		59C113002B04A523005DF558 /* FakeVideoTrackSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1125C2B04A522005DF558 /* FakeVideoTrackSource.h */; };
+		59C113012B04A523005DF558 /* TGRTCCVPixelBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1125F2B04A522005DF558 /* TGRTCCVPixelBuffer.h */; };
+		59C113022B04A523005DF558 /* CustomExternalCapturer.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112602B04A522005DF558 /* CustomExternalCapturer.h */; };
+		59C113032B04A523005DF558 /* VideoMetalView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112612B04A522005DF558 /* VideoMetalView.mm */; };
+		59C113042B04A523005DF558 /* objc_video_decoder_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112622B04A522005DF558 /* objc_video_decoder_factory.h */; };
+		59C113052B04A523005DF558 /* h264_encoder_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112632B04A522005DF558 /* h264_encoder_impl.cpp */; };
+		59C113062B04A523005DF558 /* TGRTCDefaultVideoEncoderFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112642B04A522005DF558 /* TGRTCDefaultVideoEncoderFactory.mm */; };
+		59C113072B04A523005DF558 /* AudioDeviceModuleIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112652B04A522005DF558 /* AudioDeviceModuleIOS.h */; };
+		59C113082B04A523005DF558 /* objc_video_encoder_factory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112662B04A522005DF558 /* objc_video_encoder_factory.mm */; };
+		59C113092B04A523005DF558 /* VideoCapturerInterfaceImpl.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112672B04A522005DF558 /* VideoCapturerInterfaceImpl.mm */; };
+		59C1130A2B04A523005DF558 /* CustomSimulcastEncoderAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112682B04A522005DF558 /* CustomSimulcastEncoderAdapter.h */; };
+		59C1130B2B04A523005DF558 /* DarwinVideoSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112692B04A522005DF558 /* DarwinVideoSource.mm */; };
+		59C1130C2B04A523005DF558 /* TGRTCVideoEncoderH265.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1126A2B04A522005DF558 /* TGRTCVideoEncoderH265.h */; };
+		59C1130D2B04A523005DF558 /* VideoCameraCapturer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C1126B2B04A522005DF558 /* VideoCameraCapturer.mm */; };
+		59C1130E2B04A523005DF558 /* objc_video_encoder_factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1126C2B04A522005DF558 /* objc_video_encoder_factory.h */; };
+		59C1130F2B04A523005DF558 /* DarwinInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1126D2B04A522005DF558 /* DarwinInterface.h */; };
+		59C113102B04A523005DF558 /* TGRTCDefaultVideoDecoderFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C1126E2B04A522005DF558 /* TGRTCDefaultVideoDecoderFactory.mm */; };
+		59C113112B04A523005DF558 /* VideoCaptureView.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1126F2B04A522005DF558 /* VideoCaptureView.h */; };
+		59C113122B04A523005DF558 /* VideoCaptureView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112702B04A522005DF558 /* VideoCaptureView.mm */; };
+		59C113132B04A523005DF558 /* GLVideoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112712B04A522005DF558 /* GLVideoView.mm */; };
+		59C113142B04A523005DF558 /* TGRTCVideoEncoderH264.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112722B04A522005DF558 /* TGRTCVideoEncoderH264.mm */; };
+		59C113152B04A523005DF558 /* TGRTCVideoDecoderH265.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112732B04A522005DF558 /* TGRTCVideoDecoderH265.h */; };
+		59C113162B04A523005DF558 /* CustomSimulcastEncoderAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112742B04A522005DF558 /* CustomSimulcastEncoderAdapter.cpp */; };
+		59C113172B04A523005DF558 /* VideoSampleBufferView.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112752B04A522005DF558 /* VideoSampleBufferView.h */; };
+		59C113182B04A523005DF558 /* TGRTCDefaultVideoEncoderFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112762B04A522005DF558 /* TGRTCDefaultVideoEncoderFactory.h */; };
+		59C113192B04A523005DF558 /* TGRTCVideoEncoderH265.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112772B04A522005DF558 /* TGRTCVideoEncoderH265.mm */; };
+		59C1131A2B04A523005DF558 /* TGRTCCVPixelBuffer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112782B04A522005DF558 /* TGRTCCVPixelBuffer.mm */; };
+		59C1131B2B04A523005DF558 /* VideoCapturerInterfaceImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112792B04A522005DF558 /* VideoCapturerInterfaceImpl.h */; };
+		59C1131C2B04A523005DF558 /* VideoCameraCapturer.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1127A2B04A522005DF558 /* VideoCameraCapturer.h */; };
+		59C1131D2B04A523005DF558 /* RTCNativeAudioSessionDelegateAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1127C2B04A522005DF558 /* RTCNativeAudioSessionDelegateAdapter.h */; };
+		59C1131E2B04A523005DF558 /* RTCAudioSession+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1127D2B04A522005DF558 /* RTCAudioSession+Private.h */; };
+		59C1131F2B04A523005DF558 /* RTCAudioSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C1127E2B04A522005DF558 /* RTCAudioSession.mm */; };
+		59C113202B04A523005DF558 /* CallAudioTone.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1127F2B04A522005DF558 /* CallAudioTone.h */; };
+		59C113212B04A523005DF558 /* RTCAudioSession+Configuration.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112802B04A522005DF558 /* RTCAudioSession+Configuration.mm */; };
+		59C113222B04A523005DF558 /* tgcalls_audio_device_module_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112812B04A522005DF558 /* tgcalls_audio_device_module_ios.mm */; };
+		59C113232B04A523005DF558 /* tgcalls_voice_processing_audio_unit.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112822B04A522005DF558 /* tgcalls_voice_processing_audio_unit.mm */; };
+		59C113242B04A523005DF558 /* RTCNativeAudioSessionDelegateAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112832B04A522005DF558 /* RTCNativeAudioSessionDelegateAdapter.mm */; };
+		59C113252B04A523005DF558 /* RTCAudioSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112842B04A522005DF558 /* RTCAudioSession.h */; };
+		59C113262B04A523005DF558 /* RTCAudioSessionConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112852B04A522005DF558 /* RTCAudioSessionConfiguration.h */; };
+		59C113272B04A523005DF558 /* tgcalls_audio_device_module_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112862B04A522005DF558 /* tgcalls_audio_device_module_ios.h */; };
+		59C113282B04A523005DF558 /* tgcalls_voice_processing_audio_unit.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112872B04A522005DF558 /* tgcalls_voice_processing_audio_unit.h */; };
+		59C113292B04A523005DF558 /* tgcalls_audio_device_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112882B04A522005DF558 /* tgcalls_audio_device_ios.h */; };
+		59C1132A2B04A523005DF558 /* RTCAudioSessionConfiguration.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112892B04A522005DF558 /* RTCAudioSessionConfiguration.mm */; };
+		59C1132B2B04A523005DF558 /* tgcalls_audio_device_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C1128A2B04A522005DF558 /* tgcalls_audio_device_ios.mm */; };
+		59C1132C2B04A523005DF558 /* DarwinInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C1128B2B04A522005DF558 /* DarwinInterface.mm */; };
+		59C1132D2B04A523005DF558 /* DarwinVideoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1128C2B04A522005DF558 /* DarwinVideoSource.h */; };
+		59C1132E2B04A523005DF558 /* TGRTCVideoDecoderH265.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C1128D2B04A522005DF558 /* TGRTCVideoDecoderH265.mm */; };
+		59C1132F2B04A523005DF558 /* TGRTCVideoDecoderH264.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1128E2B04A522005DF558 /* TGRTCVideoDecoderH264.h */; };
+		59C113302B04A523005DF558 /* TGRTCVideoDecoderH264.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C1128F2B04A522005DF558 /* TGRTCVideoDecoderH264.mm */; };
+		59C113312B04A523005DF558 /* VideoSampleBufferView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112902B04A522005DF558 /* VideoSampleBufferView.mm */; };
+		59C113322B04A523005DF558 /* GLVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112912B04A522005DF558 /* GLVideoView.h */; };
+		59C113332B04A523005DF558 /* h264_encoder_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112922B04A522005DF558 /* h264_encoder_impl.h */; };
+		59C113342B04A523005DF558 /* AudioDeviceModuleMacos.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112932B04A522005DF558 /* AudioDeviceModuleMacos.h */; };
+		59C113352B04A523005DF558 /* TGRTCDefaultVideoDecoderFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112942B04A522005DF558 /* TGRTCDefaultVideoDecoderFactory.h */; };
+		59C113362B04A523005DF558 /* objc_video_decoder_factory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112952B04A522005DF558 /* objc_video_decoder_factory.mm */; };
+		59C113372B04A523005DF558 /* CustomExternalCapturer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 59C112962B04A522005DF558 /* CustomExternalCapturer.mm */; };
+		59C113382B04A523005DF558 /* VideoMetalView.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112972B04A522005DF558 /* VideoMetalView.h */; };
+		59C113392B04A523005DF558 /* TGRTCVideoEncoderH264.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112982B04A522005DF558 /* TGRTCVideoEncoderH264.h */; };
+		59C1133A2B04A523005DF558 /* FakeInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1129A2B04A522005DF558 /* FakeInterface.h */; };
+		59C1133B2B04A523005DF558 /* FakeInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1129B2B04A522005DF558 /* FakeInterface.cpp */; };
+		59C1133C2B04A523005DF558 /* PlatformInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1129C2B04A522005DF558 /* PlatformInterface.h */; };
+		59C1133D2B04A523005DF558 /* FakeAudioDeviceModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1129D2B04A522005DF558 /* FakeAudioDeviceModule.h */; };
+		59C1133E2B04A523005DF558 /* VideoCaptureInterfaceImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C1129E2B04A522005DF558 /* VideoCaptureInterfaceImpl.cpp */; };
+		59C1133F2B04A523005DF558 /* ThreadLocalObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C1129F2B04A522005DF558 /* ThreadLocalObject.h */; };
+		59C113402B04A523005DF558 /* Message.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112A02B04A522005DF558 /* Message.h */; };
+		59C113412B04A523005DF558 /* StaticThreads.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112A12B04A522005DF558 /* StaticThreads.h */; };
+		59C113422B04A523005DF558 /* gzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112A32B04A522005DF558 /* gzip.h */; };
+		59C113432B04A523005DF558 /* gzip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112A42B04A522005DF558 /* gzip.cpp */; };
+		59C113442B04A523005DF558 /* VideoCaptureInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112A52B04A522005DF558 /* VideoCaptureInterface.h */; };
+		59C113452B04A523005DF558 /* Manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112A62B04A522005DF558 /* Manager.cpp */; };
+		59C113462B04A523005DF558 /* TurnCustomizerImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112A72B04A522005DF558 /* TurnCustomizerImpl.cpp */; };
+		59C113472B04A523005DF558 /* SignalingEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112A92B04A522005DF558 /* SignalingEncryption.h */; };
+		59C113482B04A523005DF558 /* InstanceV2ReferenceImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112AA2B04A522005DF558 /* InstanceV2ReferenceImpl.h */; };
+		59C113492B04A523005DF558 /* ExternalSignalingConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112AB2B04A522005DF558 /* ExternalSignalingConnection.cpp */; };
+		59C1134A2B04A523005DF558 /* ReflectorRelayPortFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112AC2B04A522005DF558 /* ReflectorRelayPortFactory.h */; };
+		59C1134B2B04A523005DF558 /* ReflectorRelayPortFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112AD2B04A522005DF558 /* ReflectorRelayPortFactory.cpp */; };
+		59C1134C2B04A523005DF558 /* SignalingConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112AE2B04A522005DF558 /* SignalingConnection.cpp */; };
+		59C1134D2B04A523005DF558 /* ContentNegotiation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112AF2B04A522005DF558 /* ContentNegotiation.cpp */; };
+		59C1134E2B04A523005DF558 /* SignalingEncryption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112B02B04A522005DF558 /* SignalingEncryption.cpp */; };
+		59C1134F2B04A523005DF558 /* NativeNetworkingImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112B12B04A522005DF558 /* NativeNetworkingImpl.h */; };
+		59C113502B04A523005DF558 /* SignalingSctpConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112B22B04A522005DF558 /* SignalingSctpConnection.cpp */; };
+		59C113512B04A523005DF558 /* Signaling.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112B32B04A522005DF558 /* Signaling.h */; };
+		59C113522B04A523005DF558 /* SignalingConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112B42B04A522005DF558 /* SignalingConnection.h */; };
+		59C113532B04A524005DF558 /* ReflectorPort.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112B52B04A522005DF558 /* ReflectorPort.h */; };
+		59C113542B04A524005DF558 /* SignalingSctpConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112B62B04A522005DF558 /* SignalingSctpConnection.h */; };
+		59C113552B04A524005DF558 /* ReflectorPort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112B72B04A522005DF558 /* ReflectorPort.cpp */; };
+		59C113562B04A524005DF558 /* NativeNetworkingImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112B82B04A522005DF558 /* NativeNetworkingImpl.cpp */; };
+		59C113572B04A524005DF558 /* ContentNegotiation.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112B92B04A522005DF558 /* ContentNegotiation.h */; };
+		59C113582B04A524005DF558 /* InstanceV2ReferenceImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112BA2B04A522005DF558 /* InstanceV2ReferenceImpl.cpp */; };
+		59C113592B04A524005DF558 /* ExternalSignalingConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112BB2B04A522005DF558 /* ExternalSignalingConnection.h */; };
+		59C1135A2B04A524005DF558 /* InstanceV2Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112BC2B04A522005DF558 /* InstanceV2Impl.h */; };
+		59C1135B2B04A524005DF558 /* InstanceV2Impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112BD2B04A522005DF558 /* InstanceV2Impl.cpp */; };
+		59C1135C2B04A524005DF558 /* Signaling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112BE2B04A522005DF558 /* Signaling.cpp */; };
+		59C1135D2B04A524005DF558 /* EncryptedConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112BF2B04A522005DF558 /* EncryptedConnection.h */; };
+		59C1135E2B04A524005DF558 /* ThreadLocalObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112C02B04A522005DF558 /* ThreadLocalObject.cpp */; };
+		59C1135F2B04A524005DF558 /* NetworkManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112C12B04A522005DF558 /* NetworkManager.cpp */; };
+		59C113602B04A524005DF558 /* FakeVideoTrackSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112C22B04A522005DF558 /* FakeVideoTrackSource.cpp */; };
+		59C113612B04A524005DF558 /* AudioDeviceHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112C32B04A522005DF558 /* AudioDeviceHelper.cpp */; };
+		59C113622B04A524005DF558 /* CodecSelectHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112C42B04A522005DF558 /* CodecSelectHelper.h */; };
+		59C113632B04A524005DF558 /* EncryptedConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112C52B04A522005DF558 /* EncryptedConnection.cpp */; };
+		59C113642B04A524005DF558 /* FieldTrialsConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112C62B04A522005DF558 /* FieldTrialsConfig.cpp */; };
+		59C113652B04A524005DF558 /* MediaManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112C72B04A522005DF558 /* MediaManager.cpp */; };
+		59C113662B04A524005DF558 /* FakeAudioDeviceModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112C82B04A522005DF558 /* FakeAudioDeviceModule.cpp */; };
+		59C113672B04A524005DF558 /* Instance.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112C92B04A522005DF558 /* Instance.h */; };
+		59C113682B04A524005DF558 /* json11.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 59C112CB2B04A522005DF558 /* json11.hpp */; };
+		59C113692B04A524005DF558 /* json11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112CC2B04A522005DF558 /* json11.cpp */; };
+		59C1136A2B04A524005DF558 /* InstanceV2_4_0_0Impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112CE2B04A522005DF558 /* InstanceV2_4_0_0Impl.cpp */; };
+		59C1136B2B04A524005DF558 /* InstanceV2_4_0_0Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112CF2B04A522005DF558 /* InstanceV2_4_0_0Impl.h */; };
+		59C1136C2B04A524005DF558 /* Signaling_4_0_0.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112D02B04A522005DF558 /* Signaling_4_0_0.cpp */; };
+		59C1136D2B04A524005DF558 /* Signaling_4_0_0.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112D12B04A522005DF558 /* Signaling_4_0_0.h */; };
+		59C1136E2B04A524005DF558 /* VideoCaptureInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112D22B04A522005DF558 /* VideoCaptureInterface.cpp */; };
+		59C1136F2B04A524005DF558 /* Instance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C112D32B04A522005DF558 /* Instance.cpp */; };
+		59C113702B04A524005DF558 /* TurnCustomizerImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112D42B04A522005DF558 /* TurnCustomizerImpl.h */; };
+		59C113712B04A524005DF558 /* Stats.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112D52B04A522005DF558 /* Stats.h */; };
+		59C113722B04A524005DF558 /* AudioFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112D62B04A522005DF558 /* AudioFrame.h */; };
+		59C113732B04A524005DF558 /* MediaManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112D72B04A522005DF558 /* MediaManager.h */; };
+		59C113742B04A524005DF558 /* SctpDataChannelProviderInterfaceImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112D82B04A522005DF558 /* SctpDataChannelProviderInterfaceImpl.h */; };
+		59C113752B04A524005DF558 /* AudioDeviceHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C112D92B04A522005DF558 /* AudioDeviceHelper.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		59C110D82B04A29E005DF558 /* TgVoipWebrtc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TgVoipWebrtc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C110DB2B04A29E005DF558 /* TgVoipWebrtc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TgVoipWebrtc.h; sourceTree = "<group>"; };
+		59C110E42B04A2DC005DF558 /* MediaStreaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaStreaming.h; sourceTree = "<group>"; };
+		59C110E52B04A2DC005DF558 /* OngoingCallThreadLocalContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OngoingCallThreadLocalContext.h; sourceTree = "<group>"; };
+		59C110E92B04A2E8005DF558 /* OngoingCallThreadLocalContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OngoingCallThreadLocalContext.mm; sourceTree = "<group>"; };
+		59C110EA2B04A2E8005DF558 /* MediaStreaming.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaStreaming.mm; sourceTree = "<group>"; };
+		59C110EB2B04A2E8005DF558 /* MediaUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaUtils.h; sourceTree = "<group>"; };
+		59C112352B04A522005DF558 /* ChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelManager.h; sourceTree = "<group>"; };
+		59C112362B04A522005DF558 /* CryptoHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CryptoHelper.cpp; sourceTree = "<group>"; };
+		59C112372B04A522005DF558 /* VideoCapturerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCapturerInterface.h; sourceTree = "<group>"; };
+		59C112382B04A522005DF558 /* LogSinkImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogSinkImpl.cpp; sourceTree = "<group>"; };
+		59C112392B04A522005DF558 /* InstanceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceImpl.h; sourceTree = "<group>"; };
+		59C1123A2B04A522005DF558 /* SctpDataChannelProviderInterfaceImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SctpDataChannelProviderInterfaceImpl.cpp; sourceTree = "<group>"; };
+		59C1123B2B04A522005DF558 /* CodecSelectHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CodecSelectHelper.cpp; sourceTree = "<group>"; };
+		59C1123C2B04A522005DF558 /* Message.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Message.cpp; sourceTree = "<group>"; };
+		59C1123D2B04A522005DF558 /* FieldTrialsConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldTrialsConfig.h; sourceTree = "<group>"; };
+		59C1123E2B04A522005DF558 /* PlatformContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformContext.h; sourceTree = "<group>"; };
+		59C1123F2B04A522005DF558 /* InstanceImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstanceImpl.cpp; sourceTree = "<group>"; };
+		59C112402B04A522005DF558 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		59C112422B04A522005DF558 /* GroupNetworkManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GroupNetworkManager.cpp; sourceTree = "<group>"; };
+		59C112432B04A522005DF558 /* AudioStreamingPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamingPart.h; sourceTree = "<group>"; };
+		59C112442B04A522005DF558 /* GroupNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupNetworkManager.h; sourceTree = "<group>"; };
+		59C112452B04A522005DF558 /* AudioStreamingPartInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamingPartInternal.h; sourceTree = "<group>"; };
+		59C112462B04A522005DF558 /* GroupInstanceCustomImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInstanceCustomImpl.h; sourceTree = "<group>"; };
+		59C112472B04A522005DF558 /* GroupInstanceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInstanceImpl.h; sourceTree = "<group>"; };
+		59C112482B04A522005DF558 /* AVIOContextImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIOContextImpl.h; sourceTree = "<group>"; };
+		59C112492B04A522005DF558 /* GroupJoinPayloadInternal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GroupJoinPayloadInternal.cpp; sourceTree = "<group>"; };
+		59C1124A2B04A522005DF558 /* GroupInstanceCustomImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GroupInstanceCustomImpl.cpp; sourceTree = "<group>"; };
+		59C1124B2B04A522005DF558 /* AudioStreamingPart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioStreamingPart.cpp; sourceTree = "<group>"; };
+		59C1124C2B04A522005DF558 /* AudioStreamingPartPersistentDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamingPartPersistentDecoder.h; sourceTree = "<group>"; };
+		59C1124D2B04A522005DF558 /* AudioStreamingPartInternal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioStreamingPartInternal.cpp; sourceTree = "<group>"; };
+		59C1124E2B04A522005DF558 /* StreamingMediaContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingMediaContext.h; sourceTree = "<group>"; };
+		59C1124F2B04A522005DF558 /* AVIOContextImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AVIOContextImpl.cpp; sourceTree = "<group>"; };
+		59C112502B04A522005DF558 /* StreamingMediaContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamingMediaContext.cpp; sourceTree = "<group>"; };
+		59C112512B04A522005DF558 /* AudioStreamingPartPersistentDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioStreamingPartPersistentDecoder.cpp; sourceTree = "<group>"; };
+		59C112522B04A522005DF558 /* GroupJoinPayload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupJoinPayload.h; sourceTree = "<group>"; };
+		59C112532B04A522005DF558 /* VideoStreamingPart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VideoStreamingPart.cpp; sourceTree = "<group>"; };
+		59C112542B04A522005DF558 /* VideoStreamingPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoStreamingPart.h; sourceTree = "<group>"; };
+		59C112552B04A522005DF558 /* GroupJoinPayloadInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupJoinPayloadInternal.h; sourceTree = "<group>"; };
+		59C112562B04A522005DF558 /* LogSinkImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogSinkImpl.h; sourceTree = "<group>"; };
+		59C112572B04A522005DF558 /* CryptoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoHelper.h; sourceTree = "<group>"; };
+		59C112582B04A522005DF558 /* ChannelManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChannelManager.cpp; sourceTree = "<group>"; };
+		59C112592B04A522005DF558 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		59C1125A2B04A522005DF558 /* StaticThreads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StaticThreads.cpp; sourceTree = "<group>"; };
+		59C1125B2B04A522005DF558 /* VideoCaptureInterfaceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureInterfaceImpl.h; sourceTree = "<group>"; };
+		59C1125C2B04A522005DF558 /* FakeVideoTrackSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeVideoTrackSource.h; sourceTree = "<group>"; };
+		59C1125F2B04A522005DF558 /* TGRTCCVPixelBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRTCCVPixelBuffer.h; sourceTree = "<group>"; };
+		59C112602B04A522005DF558 /* CustomExternalCapturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomExternalCapturer.h; sourceTree = "<group>"; };
+		59C112612B04A522005DF558 /* VideoMetalView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoMetalView.mm; sourceTree = "<group>"; };
+		59C112622B04A522005DF558 /* objc_video_decoder_factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objc_video_decoder_factory.h; sourceTree = "<group>"; };
+		59C112632B04A522005DF558 /* h264_encoder_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = h264_encoder_impl.cpp; sourceTree = "<group>"; };
+		59C112642B04A522005DF558 /* TGRTCDefaultVideoEncoderFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGRTCDefaultVideoEncoderFactory.mm; sourceTree = "<group>"; };
+		59C112652B04A522005DF558 /* AudioDeviceModuleIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDeviceModuleIOS.h; sourceTree = "<group>"; };
+		59C112662B04A522005DF558 /* objc_video_encoder_factory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = objc_video_encoder_factory.mm; sourceTree = "<group>"; };
+		59C112672B04A522005DF558 /* VideoCapturerInterfaceImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoCapturerInterfaceImpl.mm; sourceTree = "<group>"; };
+		59C112682B04A522005DF558 /* CustomSimulcastEncoderAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSimulcastEncoderAdapter.h; sourceTree = "<group>"; };
+		59C112692B04A522005DF558 /* DarwinVideoSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DarwinVideoSource.mm; sourceTree = "<group>"; };
+		59C1126A2B04A522005DF558 /* TGRTCVideoEncoderH265.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRTCVideoEncoderH265.h; sourceTree = "<group>"; };
+		59C1126B2B04A522005DF558 /* VideoCameraCapturer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoCameraCapturer.mm; sourceTree = "<group>"; };
+		59C1126C2B04A522005DF558 /* objc_video_encoder_factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objc_video_encoder_factory.h; sourceTree = "<group>"; };
+		59C1126D2B04A522005DF558 /* DarwinInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DarwinInterface.h; sourceTree = "<group>"; };
+		59C1126E2B04A522005DF558 /* TGRTCDefaultVideoDecoderFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGRTCDefaultVideoDecoderFactory.mm; sourceTree = "<group>"; };
+		59C1126F2B04A522005DF558 /* VideoCaptureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureView.h; sourceTree = "<group>"; };
+		59C112702B04A522005DF558 /* VideoCaptureView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoCaptureView.mm; sourceTree = "<group>"; };
+		59C112712B04A522005DF558 /* GLVideoView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLVideoView.mm; sourceTree = "<group>"; };
+		59C112722B04A522005DF558 /* TGRTCVideoEncoderH264.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGRTCVideoEncoderH264.mm; sourceTree = "<group>"; };
+		59C112732B04A522005DF558 /* TGRTCVideoDecoderH265.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRTCVideoDecoderH265.h; sourceTree = "<group>"; };
+		59C112742B04A522005DF558 /* CustomSimulcastEncoderAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomSimulcastEncoderAdapter.cpp; sourceTree = "<group>"; };
+		59C112752B04A522005DF558 /* VideoSampleBufferView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSampleBufferView.h; sourceTree = "<group>"; };
+		59C112762B04A522005DF558 /* TGRTCDefaultVideoEncoderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRTCDefaultVideoEncoderFactory.h; sourceTree = "<group>"; };
+		59C112772B04A522005DF558 /* TGRTCVideoEncoderH265.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGRTCVideoEncoderH265.mm; sourceTree = "<group>"; };
+		59C112782B04A522005DF558 /* TGRTCCVPixelBuffer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGRTCCVPixelBuffer.mm; sourceTree = "<group>"; };
+		59C112792B04A522005DF558 /* VideoCapturerInterfaceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCapturerInterfaceImpl.h; sourceTree = "<group>"; };
+		59C1127A2B04A522005DF558 /* VideoCameraCapturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCameraCapturer.h; sourceTree = "<group>"; };
+		59C1127C2B04A522005DF558 /* RTCNativeAudioSessionDelegateAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCNativeAudioSessionDelegateAdapter.h; sourceTree = "<group>"; };
+		59C1127D2B04A522005DF558 /* RTCAudioSession+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RTCAudioSession+Private.h"; sourceTree = "<group>"; };
+		59C1127E2B04A522005DF558 /* RTCAudioSession.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTCAudioSession.mm; sourceTree = "<group>"; };
+		59C1127F2B04A522005DF558 /* CallAudioTone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallAudioTone.h; sourceTree = "<group>"; };
+		59C112802B04A522005DF558 /* RTCAudioSession+Configuration.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "RTCAudioSession+Configuration.mm"; sourceTree = "<group>"; };
+		59C112812B04A522005DF558 /* tgcalls_audio_device_module_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tgcalls_audio_device_module_ios.mm; sourceTree = "<group>"; };
+		59C112822B04A522005DF558 /* tgcalls_voice_processing_audio_unit.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tgcalls_voice_processing_audio_unit.mm; sourceTree = "<group>"; };
+		59C112832B04A522005DF558 /* RTCNativeAudioSessionDelegateAdapter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTCNativeAudioSessionDelegateAdapter.mm; sourceTree = "<group>"; };
+		59C112842B04A522005DF558 /* RTCAudioSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAudioSession.h; sourceTree = "<group>"; };
+		59C112852B04A522005DF558 /* RTCAudioSessionConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAudioSessionConfiguration.h; sourceTree = "<group>"; };
+		59C112862B04A522005DF558 /* tgcalls_audio_device_module_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tgcalls_audio_device_module_ios.h; sourceTree = "<group>"; };
+		59C112872B04A522005DF558 /* tgcalls_voice_processing_audio_unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tgcalls_voice_processing_audio_unit.h; sourceTree = "<group>"; };
+		59C112882B04A522005DF558 /* tgcalls_audio_device_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tgcalls_audio_device_ios.h; sourceTree = "<group>"; };
+		59C112892B04A522005DF558 /* RTCAudioSessionConfiguration.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RTCAudioSessionConfiguration.mm; sourceTree = "<group>"; };
+		59C1128A2B04A522005DF558 /* tgcalls_audio_device_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = tgcalls_audio_device_ios.mm; sourceTree = "<group>"; };
+		59C1128B2B04A522005DF558 /* DarwinInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DarwinInterface.mm; sourceTree = "<group>"; };
+		59C1128C2B04A522005DF558 /* DarwinVideoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DarwinVideoSource.h; sourceTree = "<group>"; };
+		59C1128D2B04A522005DF558 /* TGRTCVideoDecoderH265.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGRTCVideoDecoderH265.mm; sourceTree = "<group>"; };
+		59C1128E2B04A522005DF558 /* TGRTCVideoDecoderH264.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRTCVideoDecoderH264.h; sourceTree = "<group>"; };
+		59C1128F2B04A522005DF558 /* TGRTCVideoDecoderH264.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TGRTCVideoDecoderH264.mm; sourceTree = "<group>"; };
+		59C112902B04A522005DF558 /* VideoSampleBufferView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoSampleBufferView.mm; sourceTree = "<group>"; };
+		59C112912B04A522005DF558 /* GLVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLVideoView.h; sourceTree = "<group>"; };
+		59C112922B04A522005DF558 /* h264_encoder_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = h264_encoder_impl.h; sourceTree = "<group>"; };
+		59C112932B04A522005DF558 /* AudioDeviceModuleMacos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDeviceModuleMacos.h; sourceTree = "<group>"; };
+		59C112942B04A522005DF558 /* TGRTCDefaultVideoDecoderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRTCDefaultVideoDecoderFactory.h; sourceTree = "<group>"; };
+		59C112952B04A522005DF558 /* objc_video_decoder_factory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = objc_video_decoder_factory.mm; sourceTree = "<group>"; };
+		59C112962B04A522005DF558 /* CustomExternalCapturer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CustomExternalCapturer.mm; sourceTree = "<group>"; };
+		59C112972B04A522005DF558 /* VideoMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMetalView.h; sourceTree = "<group>"; };
+		59C112982B04A522005DF558 /* TGRTCVideoEncoderH264.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRTCVideoEncoderH264.h; sourceTree = "<group>"; };
+		59C1129A2B04A522005DF558 /* FakeInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeInterface.h; sourceTree = "<group>"; };
+		59C1129B2B04A522005DF558 /* FakeInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeInterface.cpp; sourceTree = "<group>"; };
+		59C1129C2B04A522005DF558 /* PlatformInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformInterface.h; sourceTree = "<group>"; };
+		59C1129D2B04A522005DF558 /* FakeAudioDeviceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeAudioDeviceModule.h; sourceTree = "<group>"; };
+		59C1129E2B04A522005DF558 /* VideoCaptureInterfaceImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VideoCaptureInterfaceImpl.cpp; sourceTree = "<group>"; };
+		59C1129F2B04A522005DF558 /* ThreadLocalObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadLocalObject.h; sourceTree = "<group>"; };
+		59C112A02B04A522005DF558 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		59C112A12B04A522005DF558 /* StaticThreads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticThreads.h; sourceTree = "<group>"; };
+		59C112A32B04A522005DF558 /* gzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gzip.h; sourceTree = "<group>"; };
+		59C112A42B04A522005DF558 /* gzip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gzip.cpp; sourceTree = "<group>"; };
+		59C112A52B04A522005DF558 /* VideoCaptureInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureInterface.h; sourceTree = "<group>"; };
+		59C112A62B04A522005DF558 /* Manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Manager.cpp; sourceTree = "<group>"; };
+		59C112A72B04A522005DF558 /* TurnCustomizerImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TurnCustomizerImpl.cpp; sourceTree = "<group>"; };
+		59C112A92B04A522005DF558 /* SignalingEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalingEncryption.h; sourceTree = "<group>"; };
+		59C112AA2B04A522005DF558 /* InstanceV2ReferenceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceV2ReferenceImpl.h; sourceTree = "<group>"; };
+		59C112AB2B04A522005DF558 /* ExternalSignalingConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExternalSignalingConnection.cpp; sourceTree = "<group>"; };
+		59C112AC2B04A522005DF558 /* ReflectorRelayPortFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectorRelayPortFactory.h; sourceTree = "<group>"; };
+		59C112AD2B04A522005DF558 /* ReflectorRelayPortFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReflectorRelayPortFactory.cpp; sourceTree = "<group>"; };
+		59C112AE2B04A522005DF558 /* SignalingConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SignalingConnection.cpp; sourceTree = "<group>"; };
+		59C112AF2B04A522005DF558 /* ContentNegotiation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContentNegotiation.cpp; sourceTree = "<group>"; };
+		59C112B02B04A522005DF558 /* SignalingEncryption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SignalingEncryption.cpp; sourceTree = "<group>"; };
+		59C112B12B04A522005DF558 /* NativeNetworkingImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeNetworkingImpl.h; sourceTree = "<group>"; };
+		59C112B22B04A522005DF558 /* SignalingSctpConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SignalingSctpConnection.cpp; sourceTree = "<group>"; };
+		59C112B32B04A522005DF558 /* Signaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signaling.h; sourceTree = "<group>"; };
+		59C112B42B04A522005DF558 /* SignalingConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalingConnection.h; sourceTree = "<group>"; };
+		59C112B52B04A522005DF558 /* ReflectorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectorPort.h; sourceTree = "<group>"; };
+		59C112B62B04A522005DF558 /* SignalingSctpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalingSctpConnection.h; sourceTree = "<group>"; };
+		59C112B72B04A522005DF558 /* ReflectorPort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReflectorPort.cpp; sourceTree = "<group>"; };
+		59C112B82B04A522005DF558 /* NativeNetworkingImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NativeNetworkingImpl.cpp; sourceTree = "<group>"; };
+		59C112B92B04A522005DF558 /* ContentNegotiation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentNegotiation.h; sourceTree = "<group>"; };
+		59C112BA2B04A522005DF558 /* InstanceV2ReferenceImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstanceV2ReferenceImpl.cpp; sourceTree = "<group>"; };
+		59C112BB2B04A522005DF558 /* ExternalSignalingConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExternalSignalingConnection.h; sourceTree = "<group>"; };
+		59C112BC2B04A522005DF558 /* InstanceV2Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceV2Impl.h; sourceTree = "<group>"; };
+		59C112BD2B04A522005DF558 /* InstanceV2Impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstanceV2Impl.cpp; sourceTree = "<group>"; };
+		59C112BE2B04A522005DF558 /* Signaling.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Signaling.cpp; sourceTree = "<group>"; };
+		59C112BF2B04A522005DF558 /* EncryptedConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptedConnection.h; sourceTree = "<group>"; };
+		59C112C02B04A522005DF558 /* ThreadLocalObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ThreadLocalObject.cpp; sourceTree = "<group>"; };
+		59C112C12B04A522005DF558 /* NetworkManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkManager.cpp; sourceTree = "<group>"; };
+		59C112C22B04A522005DF558 /* FakeVideoTrackSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeVideoTrackSource.cpp; sourceTree = "<group>"; };
+		59C112C32B04A522005DF558 /* AudioDeviceHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioDeviceHelper.cpp; sourceTree = "<group>"; };
+		59C112C42B04A522005DF558 /* CodecSelectHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodecSelectHelper.h; sourceTree = "<group>"; };
+		59C112C52B04A522005DF558 /* EncryptedConnection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EncryptedConnection.cpp; sourceTree = "<group>"; };
+		59C112C62B04A522005DF558 /* FieldTrialsConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FieldTrialsConfig.cpp; sourceTree = "<group>"; };
+		59C112C72B04A522005DF558 /* MediaManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MediaManager.cpp; sourceTree = "<group>"; };
+		59C112C82B04A522005DF558 /* FakeAudioDeviceModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FakeAudioDeviceModule.cpp; sourceTree = "<group>"; };
+		59C112C92B04A522005DF558 /* Instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instance.h; sourceTree = "<group>"; };
+		59C112CB2B04A522005DF558 /* json11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json11.hpp; sourceTree = "<group>"; };
+		59C112CC2B04A522005DF558 /* json11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json11.cpp; sourceTree = "<group>"; };
+		59C112CE2B04A522005DF558 /* InstanceV2_4_0_0Impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InstanceV2_4_0_0Impl.cpp; sourceTree = "<group>"; };
+		59C112CF2B04A522005DF558 /* InstanceV2_4_0_0Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceV2_4_0_0Impl.h; sourceTree = "<group>"; };
+		59C112D02B04A522005DF558 /* Signaling_4_0_0.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Signaling_4_0_0.cpp; sourceTree = "<group>"; };
+		59C112D12B04A522005DF558 /* Signaling_4_0_0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signaling_4_0_0.h; sourceTree = "<group>"; };
+		59C112D22B04A522005DF558 /* VideoCaptureInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VideoCaptureInterface.cpp; sourceTree = "<group>"; };
+		59C112D32B04A522005DF558 /* Instance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Instance.cpp; sourceTree = "<group>"; };
+		59C112D42B04A522005DF558 /* TurnCustomizerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnCustomizerImpl.h; sourceTree = "<group>"; };
+		59C112D52B04A522005DF558 /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stats.h; sourceTree = "<group>"; };
+		59C112D62B04A522005DF558 /* AudioFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFrame.h; sourceTree = "<group>"; };
+		59C112D72B04A522005DF558 /* MediaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaManager.h; sourceTree = "<group>"; };
+		59C112D82B04A522005DF558 /* SctpDataChannelProviderInterfaceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SctpDataChannelProviderInterfaceImpl.h; sourceTree = "<group>"; };
+		59C112D92B04A522005DF558 /* AudioDeviceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDeviceHelper.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59C110D52B04A29E005DF558 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59C110CE2B04A29E005DF558 = {
+			isa = PBXGroup;
+			children = (
+				59C110DA2B04A29E005DF558 /* TgVoipWebrtc */,
+				59C110D92B04A29E005DF558 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59C110D92B04A29E005DF558 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59C110D82B04A29E005DF558 /* TgVoipWebrtc.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59C110DA2B04A29E005DF558 /* TgVoipWebrtc */ = {
+			isa = PBXGroup;
+			children = (
+				59C112342B04A522005DF558 /* tgcalls */,
+				59C110E82B04A2E8005DF558 /* Sources */,
+				59C110E22B04A2DC005DF558 /* PublicHeaders */,
+				59C110DB2B04A29E005DF558 /* TgVoipWebrtc.h */,
+			);
+			path = TgVoipWebrtc;
+			sourceTree = "<group>";
+		};
+		59C110E22B04A2DC005DF558 /* PublicHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				59C110E32B04A2DC005DF558 /* TgVoipWebrtc */,
+			);
+			path = PublicHeaders;
+			sourceTree = "<group>";
+		};
+		59C110E32B04A2DC005DF558 /* TgVoipWebrtc */ = {
+			isa = PBXGroup;
+			children = (
+				59C110E42B04A2DC005DF558 /* MediaStreaming.h */,
+				59C110E52B04A2DC005DF558 /* OngoingCallThreadLocalContext.h */,
+			);
+			path = TgVoipWebrtc;
+			sourceTree = "<group>";
+		};
+		59C110E82B04A2E8005DF558 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				59C110E92B04A2E8005DF558 /* OngoingCallThreadLocalContext.mm */,
+				59C110EA2B04A2E8005DF558 /* MediaStreaming.mm */,
+				59C110EB2B04A2E8005DF558 /* MediaUtils.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		59C112342B04A522005DF558 /* tgcalls */ = {
+			isa = PBXGroup;
+			children = (
+				59C112352B04A522005DF558 /* ChannelManager.h */,
+				59C112362B04A522005DF558 /* CryptoHelper.cpp */,
+				59C112372B04A522005DF558 /* VideoCapturerInterface.h */,
+				59C112382B04A522005DF558 /* LogSinkImpl.cpp */,
+				59C112392B04A522005DF558 /* InstanceImpl.h */,
+				59C1123A2B04A522005DF558 /* SctpDataChannelProviderInterfaceImpl.cpp */,
+				59C1123B2B04A522005DF558 /* CodecSelectHelper.cpp */,
+				59C1123C2B04A522005DF558 /* Message.cpp */,
+				59C1123D2B04A522005DF558 /* FieldTrialsConfig.h */,
+				59C1123E2B04A522005DF558 /* PlatformContext.h */,
+				59C1123F2B04A522005DF558 /* InstanceImpl.cpp */,
+				59C112402B04A522005DF558 /* NetworkManager.h */,
+				59C112412B04A522005DF558 /* group */,
+				59C112562B04A522005DF558 /* LogSinkImpl.h */,
+				59C112572B04A522005DF558 /* CryptoHelper.h */,
+				59C112582B04A522005DF558 /* ChannelManager.cpp */,
+				59C112592B04A522005DF558 /* Manager.h */,
+				59C1125A2B04A522005DF558 /* StaticThreads.cpp */,
+				59C1125B2B04A522005DF558 /* VideoCaptureInterfaceImpl.h */,
+				59C1125C2B04A522005DF558 /* FakeVideoTrackSource.h */,
+				59C1125D2B04A522005DF558 /* platform */,
+				59C1129D2B04A522005DF558 /* FakeAudioDeviceModule.h */,
+				59C1129E2B04A522005DF558 /* VideoCaptureInterfaceImpl.cpp */,
+				59C1129F2B04A522005DF558 /* ThreadLocalObject.h */,
+				59C112A02B04A522005DF558 /* Message.h */,
+				59C112A12B04A522005DF558 /* StaticThreads.h */,
+				59C112A22B04A522005DF558 /* utils */,
+				59C112A52B04A522005DF558 /* VideoCaptureInterface.h */,
+				59C112A62B04A522005DF558 /* Manager.cpp */,
+				59C112A72B04A522005DF558 /* TurnCustomizerImpl.cpp */,
+				59C112A82B04A522005DF558 /* v2 */,
+				59C112BF2B04A522005DF558 /* EncryptedConnection.h */,
+				59C112C02B04A522005DF558 /* ThreadLocalObject.cpp */,
+				59C112C12B04A522005DF558 /* NetworkManager.cpp */,
+				59C112C22B04A522005DF558 /* FakeVideoTrackSource.cpp */,
+				59C112C32B04A522005DF558 /* AudioDeviceHelper.cpp */,
+				59C112C42B04A522005DF558 /* CodecSelectHelper.h */,
+				59C112C52B04A522005DF558 /* EncryptedConnection.cpp */,
+				59C112C62B04A522005DF558 /* FieldTrialsConfig.cpp */,
+				59C112C72B04A522005DF558 /* MediaManager.cpp */,
+				59C112C82B04A522005DF558 /* FakeAudioDeviceModule.cpp */,
+				59C112C92B04A522005DF558 /* Instance.h */,
+				59C112CA2B04A522005DF558 /* third-party */,
+				59C112CD2B04A522005DF558 /* v2_4_0_0 */,
+				59C112D22B04A522005DF558 /* VideoCaptureInterface.cpp */,
+				59C112D32B04A522005DF558 /* Instance.cpp */,
+				59C112D42B04A522005DF558 /* TurnCustomizerImpl.h */,
+				59C112D52B04A522005DF558 /* Stats.h */,
+				59C112D62B04A522005DF558 /* AudioFrame.h */,
+				59C112D72B04A522005DF558 /* MediaManager.h */,
+				59C112D82B04A522005DF558 /* SctpDataChannelProviderInterfaceImpl.h */,
+				59C112D92B04A522005DF558 /* AudioDeviceHelper.h */,
+			);
+			path = tgcalls;
+			sourceTree = "<group>";
+		};
+		59C112412B04A522005DF558 /* group */ = {
+			isa = PBXGroup;
+			children = (
+				59C112422B04A522005DF558 /* GroupNetworkManager.cpp */,
+				59C112432B04A522005DF558 /* AudioStreamingPart.h */,
+				59C112442B04A522005DF558 /* GroupNetworkManager.h */,
+				59C112452B04A522005DF558 /* AudioStreamingPartInternal.h */,
+				59C112462B04A522005DF558 /* GroupInstanceCustomImpl.h */,
+				59C112472B04A522005DF558 /* GroupInstanceImpl.h */,
+				59C112482B04A522005DF558 /* AVIOContextImpl.h */,
+				59C112492B04A522005DF558 /* GroupJoinPayloadInternal.cpp */,
+				59C1124A2B04A522005DF558 /* GroupInstanceCustomImpl.cpp */,
+				59C1124B2B04A522005DF558 /* AudioStreamingPart.cpp */,
+				59C1124C2B04A522005DF558 /* AudioStreamingPartPersistentDecoder.h */,
+				59C1124D2B04A522005DF558 /* AudioStreamingPartInternal.cpp */,
+				59C1124E2B04A522005DF558 /* StreamingMediaContext.h */,
+				59C1124F2B04A522005DF558 /* AVIOContextImpl.cpp */,
+				59C112502B04A522005DF558 /* StreamingMediaContext.cpp */,
+				59C112512B04A522005DF558 /* AudioStreamingPartPersistentDecoder.cpp */,
+				59C112522B04A522005DF558 /* GroupJoinPayload.h */,
+				59C112532B04A522005DF558 /* VideoStreamingPart.cpp */,
+				59C112542B04A522005DF558 /* VideoStreamingPart.h */,
+				59C112552B04A522005DF558 /* GroupJoinPayloadInternal.h */,
+			);
+			path = group;
+			sourceTree = "<group>";
+		};
+		59C1125D2B04A522005DF558 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				59C1125E2B04A522005DF558 /* darwin */,
+				59C112992B04A522005DF558 /* fake */,
+				59C1129C2B04A522005DF558 /* PlatformInterface.h */,
+			);
+			path = platform;
+			sourceTree = "<group>";
+		};
+		59C1125E2B04A522005DF558 /* darwin */ = {
+			isa = PBXGroup;
+			children = (
+				59C1125F2B04A522005DF558 /* TGRTCCVPixelBuffer.h */,
+				59C112602B04A522005DF558 /* CustomExternalCapturer.h */,
+				59C112612B04A522005DF558 /* VideoMetalView.mm */,
+				59C112622B04A522005DF558 /* objc_video_decoder_factory.h */,
+				59C112632B04A522005DF558 /* h264_encoder_impl.cpp */,
+				59C112642B04A522005DF558 /* TGRTCDefaultVideoEncoderFactory.mm */,
+				59C112652B04A522005DF558 /* AudioDeviceModuleIOS.h */,
+				59C112662B04A522005DF558 /* objc_video_encoder_factory.mm */,
+				59C112672B04A522005DF558 /* VideoCapturerInterfaceImpl.mm */,
+				59C112682B04A522005DF558 /* CustomSimulcastEncoderAdapter.h */,
+				59C112692B04A522005DF558 /* DarwinVideoSource.mm */,
+				59C1126A2B04A522005DF558 /* TGRTCVideoEncoderH265.h */,
+				59C1126B2B04A522005DF558 /* VideoCameraCapturer.mm */,
+				59C1126C2B04A522005DF558 /* objc_video_encoder_factory.h */,
+				59C1126D2B04A522005DF558 /* DarwinInterface.h */,
+				59C1126E2B04A522005DF558 /* TGRTCDefaultVideoDecoderFactory.mm */,
+				59C1126F2B04A522005DF558 /* VideoCaptureView.h */,
+				59C112702B04A522005DF558 /* VideoCaptureView.mm */,
+				59C112712B04A522005DF558 /* GLVideoView.mm */,
+				59C112722B04A522005DF558 /* TGRTCVideoEncoderH264.mm */,
+				59C112732B04A522005DF558 /* TGRTCVideoDecoderH265.h */,
+				59C112742B04A522005DF558 /* CustomSimulcastEncoderAdapter.cpp */,
+				59C112752B04A522005DF558 /* VideoSampleBufferView.h */,
+				59C112762B04A522005DF558 /* TGRTCDefaultVideoEncoderFactory.h */,
+				59C112772B04A522005DF558 /* TGRTCVideoEncoderH265.mm */,
+				59C112782B04A522005DF558 /* TGRTCCVPixelBuffer.mm */,
+				59C112792B04A522005DF558 /* VideoCapturerInterfaceImpl.h */,
+				59C1127A2B04A522005DF558 /* VideoCameraCapturer.h */,
+				59C1127B2B04A522005DF558 /* iOS */,
+				59C1128B2B04A522005DF558 /* DarwinInterface.mm */,
+				59C1128C2B04A522005DF558 /* DarwinVideoSource.h */,
+				59C1128D2B04A522005DF558 /* TGRTCVideoDecoderH265.mm */,
+				59C1128E2B04A522005DF558 /* TGRTCVideoDecoderH264.h */,
+				59C1128F2B04A522005DF558 /* TGRTCVideoDecoderH264.mm */,
+				59C112902B04A522005DF558 /* VideoSampleBufferView.mm */,
+				59C112912B04A522005DF558 /* GLVideoView.h */,
+				59C112922B04A522005DF558 /* h264_encoder_impl.h */,
+				59C112932B04A522005DF558 /* AudioDeviceModuleMacos.h */,
+				59C112942B04A522005DF558 /* TGRTCDefaultVideoDecoderFactory.h */,
+				59C112952B04A522005DF558 /* objc_video_decoder_factory.mm */,
+				59C112962B04A522005DF558 /* CustomExternalCapturer.mm */,
+				59C112972B04A522005DF558 /* VideoMetalView.h */,
+				59C112982B04A522005DF558 /* TGRTCVideoEncoderH264.h */,
+			);
+			path = darwin;
+			sourceTree = "<group>";
+		};
+		59C1127B2B04A522005DF558 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				59C1127C2B04A522005DF558 /* RTCNativeAudioSessionDelegateAdapter.h */,
+				59C1127D2B04A522005DF558 /* RTCAudioSession+Private.h */,
+				59C1127E2B04A522005DF558 /* RTCAudioSession.mm */,
+				59C1127F2B04A522005DF558 /* CallAudioTone.h */,
+				59C112802B04A522005DF558 /* RTCAudioSession+Configuration.mm */,
+				59C112812B04A522005DF558 /* tgcalls_audio_device_module_ios.mm */,
+				59C112822B04A522005DF558 /* tgcalls_voice_processing_audio_unit.mm */,
+				59C112832B04A522005DF558 /* RTCNativeAudioSessionDelegateAdapter.mm */,
+				59C112842B04A522005DF558 /* RTCAudioSession.h */,
+				59C112852B04A522005DF558 /* RTCAudioSessionConfiguration.h */,
+				59C112862B04A522005DF558 /* tgcalls_audio_device_module_ios.h */,
+				59C112872B04A522005DF558 /* tgcalls_voice_processing_audio_unit.h */,
+				59C112882B04A522005DF558 /* tgcalls_audio_device_ios.h */,
+				59C112892B04A522005DF558 /* RTCAudioSessionConfiguration.mm */,
+				59C1128A2B04A522005DF558 /* tgcalls_audio_device_ios.mm */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		59C112992B04A522005DF558 /* fake */ = {
+			isa = PBXGroup;
+			children = (
+				59C1129A2B04A522005DF558 /* FakeInterface.h */,
+				59C1129B2B04A522005DF558 /* FakeInterface.cpp */,
+			);
+			path = fake;
+			sourceTree = "<group>";
+		};
+		59C112A22B04A522005DF558 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				59C112A32B04A522005DF558 /* gzip.h */,
+				59C112A42B04A522005DF558 /* gzip.cpp */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		59C112A82B04A522005DF558 /* v2 */ = {
+			isa = PBXGroup;
+			children = (
+				59C112A92B04A522005DF558 /* SignalingEncryption.h */,
+				59C112AA2B04A522005DF558 /* InstanceV2ReferenceImpl.h */,
+				59C112AB2B04A522005DF558 /* ExternalSignalingConnection.cpp */,
+				59C112AC2B04A522005DF558 /* ReflectorRelayPortFactory.h */,
+				59C112AD2B04A522005DF558 /* ReflectorRelayPortFactory.cpp */,
+				59C112AE2B04A522005DF558 /* SignalingConnection.cpp */,
+				59C112AF2B04A522005DF558 /* ContentNegotiation.cpp */,
+				59C112B02B04A522005DF558 /* SignalingEncryption.cpp */,
+				59C112B12B04A522005DF558 /* NativeNetworkingImpl.h */,
+				59C112B22B04A522005DF558 /* SignalingSctpConnection.cpp */,
+				59C112B32B04A522005DF558 /* Signaling.h */,
+				59C112B42B04A522005DF558 /* SignalingConnection.h */,
+				59C112B52B04A522005DF558 /* ReflectorPort.h */,
+				59C112B62B04A522005DF558 /* SignalingSctpConnection.h */,
+				59C112B72B04A522005DF558 /* ReflectorPort.cpp */,
+				59C112B82B04A522005DF558 /* NativeNetworkingImpl.cpp */,
+				59C112B92B04A522005DF558 /* ContentNegotiation.h */,
+				59C112BA2B04A522005DF558 /* InstanceV2ReferenceImpl.cpp */,
+				59C112BB2B04A522005DF558 /* ExternalSignalingConnection.h */,
+				59C112BC2B04A522005DF558 /* InstanceV2Impl.h */,
+				59C112BD2B04A522005DF558 /* InstanceV2Impl.cpp */,
+				59C112BE2B04A522005DF558 /* Signaling.cpp */,
+			);
+			path = v2;
+			sourceTree = "<group>";
+		};
+		59C112CA2B04A522005DF558 /* third-party */ = {
+			isa = PBXGroup;
+			children = (
+				59C112CB2B04A522005DF558 /* json11.hpp */,
+				59C112CC2B04A522005DF558 /* json11.cpp */,
+			);
+			path = "third-party";
+			sourceTree = "<group>";
+		};
+		59C112CD2B04A522005DF558 /* v2_4_0_0 */ = {
+			isa = PBXGroup;
+			children = (
+				59C112CE2B04A522005DF558 /* InstanceV2_4_0_0Impl.cpp */,
+				59C112CF2B04A522005DF558 /* InstanceV2_4_0_0Impl.h */,
+				59C112D02B04A522005DF558 /* Signaling_4_0_0.cpp */,
+				59C112D12B04A522005DF558 /* Signaling_4_0_0.h */,
+			);
+			path = v2_4_0_0;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		59C110D32B04A29E005DF558 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59C113262B04A523005DF558 /* RTCAudioSessionConfiguration.h in Headers */,
+				59C113332B04A523005DF558 /* h264_encoder_impl.h in Headers */,
+				59C113412B04A523005DF558 /* StaticThreads.h in Headers */,
+				59C113722B04A524005DF558 /* AudioFrame.h in Headers */,
+				59C1131B2B04A523005DF558 /* VideoCapturerInterfaceImpl.h in Headers */,
+				59C1133F2B04A523005DF558 /* ThreadLocalObject.h in Headers */,
+				59C113542B04A524005DF558 /* SignalingSctpConnection.h in Headers */,
+				59C1131C2B04A523005DF558 /* VideoCameraCapturer.h in Headers */,
+				59C113392B04A523005DF558 /* TGRTCVideoEncoderH264.h in Headers */,
+				59C113482B04A523005DF558 /* InstanceV2ReferenceImpl.h in Headers */,
+				59C112E92B04A523005DF558 /* AudioStreamingPartInternal.h in Headers */,
+				59C1134F2B04A523005DF558 /* NativeNetworkingImpl.h in Headers */,
+				59C112E32B04A523005DF558 /* PlatformContext.h in Headers */,
+				59C113442B04A523005DF558 /* VideoCaptureInterface.h in Headers */,
+				59C113342B04A523005DF558 /* AudioDeviceModuleMacos.h in Headers */,
+				59C112FA2B04A523005DF558 /* LogSinkImpl.h in Headers */,
+				59C113202B04A523005DF558 /* CallAudioTone.h in Headers */,
+				59C1135A2B04A524005DF558 /* InstanceV2Impl.h in Headers */,
+				59C113682B04A524005DF558 /* json11.hpp in Headers */,
+				59C113592B04A524005DF558 /* ExternalSignalingConnection.h in Headers */,
+				59C113422B04A523005DF558 /* gzip.h in Headers */,
+				59C113702B04A524005DF558 /* TurnCustomizerImpl.h in Headers */,
+				59C113182B04A523005DF558 /* TGRTCDefaultVideoEncoderFactory.h in Headers */,
+				59C1130A2B04A523005DF558 /* CustomSimulcastEncoderAdapter.h in Headers */,
+				59C112FB2B04A523005DF558 /* CryptoHelper.h in Headers */,
+				59C112F82B04A523005DF558 /* VideoStreamingPart.h in Headers */,
+				59C1131D2B04A523005DF558 /* RTCNativeAudioSessionDelegateAdapter.h in Headers */,
+				59C113522B04A523005DF558 /* SignalingConnection.h in Headers */,
+				59C113672B04A524005DF558 /* Instance.h in Headers */,
+				59C113532B04A524005DF558 /* ReflectorPort.h in Headers */,
+				59C113622B04A524005DF558 /* CodecSelectHelper.h in Headers */,
+				59C112EA2B04A523005DF558 /* GroupInstanceCustomImpl.h in Headers */,
+				59C113152B04A523005DF558 /* TGRTCVideoDecoderH265.h in Headers */,
+				59C113022B04A523005DF558 /* CustomExternalCapturer.h in Headers */,
+				59C113252B04A523005DF558 /* RTCAudioSession.h in Headers */,
+				59C110E62B04A2DC005DF558 /* MediaStreaming.h in Headers */,
+				59C112DA2B04A522005DF558 /* ChannelManager.h in Headers */,
+				59C113072B04A523005DF558 /* AudioDeviceModuleIOS.h in Headers */,
+				59C112FF2B04A523005DF558 /* VideoCaptureInterfaceImpl.h in Headers */,
+				59C113272B04A523005DF558 /* tgcalls_audio_device_module_ios.h in Headers */,
+				59C113732B04A524005DF558 /* MediaManager.h in Headers */,
+				59C112F02B04A523005DF558 /* AudioStreamingPartPersistentDecoder.h in Headers */,
+				59C1130C2B04A523005DF558 /* TGRTCVideoEncoderH265.h in Headers */,
+				59C112F22B04A523005DF558 /* StreamingMediaContext.h in Headers */,
+				59C1133C2B04A523005DF558 /* PlatformInterface.h in Headers */,
+				59C113112B04A523005DF558 /* VideoCaptureView.h in Headers */,
+				59C1133D2B04A523005DF558 /* FakeAudioDeviceModule.h in Headers */,
+				59C1136B2B04A524005DF558 /* InstanceV2_4_0_0Impl.h in Headers */,
+				59C112FD2B04A523005DF558 /* Manager.h in Headers */,
+				59C1131E2B04A523005DF558 /* RTCAudioSession+Private.h in Headers */,
+				59C113322B04A523005DF558 /* GLVideoView.h in Headers */,
+				59C113012B04A523005DF558 /* TGRTCCVPixelBuffer.h in Headers */,
+				59C113042B04A523005DF558 /* objc_video_decoder_factory.h in Headers */,
+				59C113572B04A524005DF558 /* ContentNegotiation.h in Headers */,
+				59C112E72B04A523005DF558 /* AudioStreamingPart.h in Headers */,
+				59C112EB2B04A523005DF558 /* GroupInstanceImpl.h in Headers */,
+				59C112E52B04A523005DF558 /* NetworkManager.h in Headers */,
+				59C1133A2B04A523005DF558 /* FakeInterface.h in Headers */,
+				59C112E22B04A522005DF558 /* FieldTrialsConfig.h in Headers */,
+				59C113742B04A524005DF558 /* SctpDataChannelProviderInterfaceImpl.h in Headers */,
+				59C1136D2B04A524005DF558 /* Signaling_4_0_0.h in Headers */,
+				59C110DC2B04A29E005DF558 /* TgVoipWebrtc.h in Headers */,
+				59C110E72B04A2DC005DF558 /* OngoingCallThreadLocalContext.h in Headers */,
+				59C112DC2B04A522005DF558 /* VideoCapturerInterface.h in Headers */,
+				59C113752B04A524005DF558 /* AudioDeviceHelper.h in Headers */,
+				59C113712B04A524005DF558 /* Stats.h in Headers */,
+				59C113292B04A523005DF558 /* tgcalls_audio_device_ios.h in Headers */,
+				59C1130E2B04A523005DF558 /* objc_video_encoder_factory.h in Headers */,
+				59C1135D2B04A524005DF558 /* EncryptedConnection.h in Headers */,
+				59C113402B04A523005DF558 /* Message.h in Headers */,
+				59C112F92B04A523005DF558 /* GroupJoinPayloadInternal.h in Headers */,
+				59C113282B04A523005DF558 /* tgcalls_voice_processing_audio_unit.h in Headers */,
+				59C113002B04A523005DF558 /* FakeVideoTrackSource.h in Headers */,
+				59C113472B04A523005DF558 /* SignalingEncryption.h in Headers */,
+				59C112E82B04A523005DF558 /* GroupNetworkManager.h in Headers */,
+				59C1130F2B04A523005DF558 /* DarwinInterface.h in Headers */,
+				59C1134A2B04A523005DF558 /* ReflectorRelayPortFactory.h in Headers */,
+				59C113382B04A523005DF558 /* VideoMetalView.h in Headers */,
+				59C112EC2B04A523005DF558 /* AVIOContextImpl.h in Headers */,
+				59C110EE2B04A2E8005DF558 /* MediaUtils.h in Headers */,
+				59C112DE2B04A522005DF558 /* InstanceImpl.h in Headers */,
+				59C113352B04A523005DF558 /* TGRTCDefaultVideoDecoderFactory.h in Headers */,
+				59C112F62B04A523005DF558 /* GroupJoinPayload.h in Headers */,
+				59C113172B04A523005DF558 /* VideoSampleBufferView.h in Headers */,
+				59C113512B04A523005DF558 /* Signaling.h in Headers */,
+				59C1132F2B04A523005DF558 /* TGRTCVideoDecoderH264.h in Headers */,
+				59C1132D2B04A523005DF558 /* DarwinVideoSource.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		59C110D72B04A29E005DF558 /* TgVoipWebrtc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59C110DF2B04A29E005DF558 /* Build configuration list for PBXNativeTarget "TgVoipWebrtc" */;
+			buildPhases = (
+				59C110D32B04A29E005DF558 /* Headers */,
+				59C110D42B04A29E005DF558 /* Sources */,
+				59C110D52B04A29E005DF558 /* Frameworks */,
+				59C110D62B04A29E005DF558 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TgVoipWebrtc;
+			productName = TgVoipWebrtc;
+			productReference = 59C110D82B04A29E005DF558 /* TgVoipWebrtc.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59C110CF2B04A29E005DF558 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					59C110D72B04A29E005DF558 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 59C110D22B04A29E005DF558 /* Build configuration list for PBXProject "TgVoipWebrtc" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59C110CE2B04A29E005DF558;
+			productRefGroup = 59C110D92B04A29E005DF558 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59C110D72B04A29E005DF558 /* TgVoipWebrtc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59C110D62B04A29E005DF558 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59C110D42B04A29E005DF558 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59C113302B04A523005DF558 /* TGRTCVideoDecoderH264.mm in Sources */,
+				59C113192B04A523005DF558 /* TGRTCVideoEncoderH265.mm in Sources */,
+				59C112E42B04A523005DF558 /* InstanceImpl.cpp in Sources */,
+				59C112DB2B04A522005DF558 /* CryptoHelper.cpp in Sources */,
+				59C1135E2B04A524005DF558 /* ThreadLocalObject.cpp in Sources */,
+				59C1136C2B04A524005DF558 /* Signaling_4_0_0.cpp in Sources */,
+				59C1136F2B04A524005DF558 /* Instance.cpp in Sources */,
+				59C1132A2B04A523005DF558 /* RTCAudioSessionConfiguration.mm in Sources */,
+				59C112F72B04A523005DF558 /* VideoStreamingPart.cpp in Sources */,
+				59C1133B2B04A523005DF558 /* FakeInterface.cpp in Sources */,
+				59C113612B04A524005DF558 /* AudioDeviceHelper.cpp in Sources */,
+				59C1136A2B04A524005DF558 /* InstanceV2_4_0_0Impl.cpp in Sources */,
+				59C113052B04A523005DF558 /* h264_encoder_impl.cpp in Sources */,
+				59C1135C2B04A524005DF558 /* Signaling.cpp in Sources */,
+				59C113662B04A524005DF558 /* FakeAudioDeviceModule.cpp in Sources */,
+				59C1131F2B04A523005DF558 /* RTCAudioSession.mm in Sources */,
+				59C1131A2B04A523005DF558 /* TGRTCCVPixelBuffer.mm in Sources */,
+				59C113652B04A524005DF558 /* MediaManager.cpp in Sources */,
+				59C113582B04A524005DF558 /* InstanceV2ReferenceImpl.cpp in Sources */,
+				59C112F52B04A523005DF558 /* AudioStreamingPartPersistentDecoder.cpp in Sources */,
+				59C1135B2B04A524005DF558 /* InstanceV2Impl.cpp in Sources */,
+				59C113312B04A523005DF558 /* VideoSampleBufferView.mm in Sources */,
+				59C1133E2B04A523005DF558 /* VideoCaptureInterfaceImpl.cpp in Sources */,
+				59C113132B04A523005DF558 /* GLVideoView.mm in Sources */,
+				59C1130B2B04A523005DF558 /* DarwinVideoSource.mm in Sources */,
+				59C112FE2B04A523005DF558 /* StaticThreads.cpp in Sources */,
+				59C113222B04A523005DF558 /* tgcalls_audio_device_module_ios.mm in Sources */,
+				59C1134B2B04A523005DF558 /* ReflectorRelayPortFactory.cpp in Sources */,
+				59C112E12B04A522005DF558 /* Message.cpp in Sources */,
+				59C113362B04A523005DF558 /* objc_video_decoder_factory.mm in Sources */,
+				59C113492B04A523005DF558 /* ExternalSignalingConnection.cpp in Sources */,
+				59C112FC2B04A523005DF558 /* ChannelManager.cpp in Sources */,
+				59C113642B04A524005DF558 /* FieldTrialsConfig.cpp in Sources */,
+				59C112ED2B04A523005DF558 /* GroupJoinPayloadInternal.cpp in Sources */,
+				59C113212B04A523005DF558 /* RTCAudioSession+Configuration.mm in Sources */,
+				59C112E62B04A523005DF558 /* GroupNetworkManager.cpp in Sources */,
+				59C113372B04A523005DF558 /* CustomExternalCapturer.mm in Sources */,
+				59C113062B04A523005DF558 /* TGRTCDefaultVideoEncoderFactory.mm in Sources */,
+				59C113632B04A524005DF558 /* EncryptedConnection.cpp in Sources */,
+				59C113552B04A524005DF558 /* ReflectorPort.cpp in Sources */,
+				59C113102B04A523005DF558 /* TGRTCDefaultVideoDecoderFactory.mm in Sources */,
+				59C112DD2B04A522005DF558 /* LogSinkImpl.cpp in Sources */,
+				59C112EF2B04A523005DF558 /* AudioStreamingPart.cpp in Sources */,
+				59C113082B04A523005DF558 /* objc_video_encoder_factory.mm in Sources */,
+				59C1134E2B04A523005DF558 /* SignalingEncryption.cpp in Sources */,
+				59C112EE2B04A523005DF558 /* GroupInstanceCustomImpl.cpp in Sources */,
+				59C1132E2B04A523005DF558 /* TGRTCVideoDecoderH265.mm in Sources */,
+				59C112E02B04A522005DF558 /* CodecSelectHelper.cpp in Sources */,
+				59C1135F2B04A524005DF558 /* NetworkManager.cpp in Sources */,
+				59C1134C2B04A523005DF558 /* SignalingConnection.cpp in Sources */,
+				59C110EC2B04A2E8005DF558 /* OngoingCallThreadLocalContext.mm in Sources */,
+				59C110ED2B04A2E8005DF558 /* MediaStreaming.mm in Sources */,
+				59C113162B04A523005DF558 /* CustomSimulcastEncoderAdapter.cpp in Sources */,
+				59C113462B04A523005DF558 /* TurnCustomizerImpl.cpp in Sources */,
+				59C113562B04A524005DF558 /* NativeNetworkingImpl.cpp in Sources */,
+				59C1136E2B04A524005DF558 /* VideoCaptureInterface.cpp in Sources */,
+				59C112DF2B04A522005DF558 /* SctpDataChannelProviderInterfaceImpl.cpp in Sources */,
+				59C1130D2B04A523005DF558 /* VideoCameraCapturer.mm in Sources */,
+				59C113502B04A523005DF558 /* SignalingSctpConnection.cpp in Sources */,
+				59C113452B04A523005DF558 /* Manager.cpp in Sources */,
+				59C113242B04A523005DF558 /* RTCNativeAudioSessionDelegateAdapter.mm in Sources */,
+				59C1132B2B04A523005DF558 /* tgcalls_audio_device_ios.mm in Sources */,
+				59C112F32B04A523005DF558 /* AVIOContextImpl.cpp in Sources */,
+				59C112F12B04A523005DF558 /* AudioStreamingPartInternal.cpp in Sources */,
+				59C1134D2B04A523005DF558 /* ContentNegotiation.cpp in Sources */,
+				59C113692B04A524005DF558 /* json11.cpp in Sources */,
+				59C113602B04A524005DF558 /* FakeVideoTrackSource.cpp in Sources */,
+				59C113142B04A523005DF558 /* TGRTCVideoEncoderH264.mm in Sources */,
+				59C113092B04A523005DF558 /* VideoCapturerInterfaceImpl.mm in Sources */,
+				59C113122B04A523005DF558 /* VideoCaptureView.mm in Sources */,
+				59C113432B04A523005DF558 /* gzip.cpp in Sources */,
+				59C113032B04A523005DF558 /* VideoMetalView.mm in Sources */,
+				59C113232B04A523005DF558 /* tgcalls_voice_processing_audio_unit.mm in Sources */,
+				59C112F42B04A523005DF558 /* StreamingMediaContext.cpp in Sources */,
+				59C1132C2B04A523005DF558 /* DarwinInterface.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		59C110DD2B04A29E005DF558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59C110DE2B04A29E005DF558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59C110E02B04A29E005DF558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.im.meetalk.TgVoipWebrtc;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59C110E12B04A29E005DF558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.im.meetalk.TgVoipWebrtc;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59C110D22B04A29E005DF558 /* Build configuration list for PBXProject "TgVoipWebrtc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59C110DD2B04A29E005DF558 /* Debug */,
+				59C110DE2B04A29E005DF558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59C110DF2B04A29E005DF558 /* Build configuration list for PBXNativeTarget "TgVoipWebrtc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59C110E02B04A29E005DF558 /* Debug */,
+				59C110E12B04A29E005DF558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59C110CF2B04A29E005DF558 /* Project object */;
+}

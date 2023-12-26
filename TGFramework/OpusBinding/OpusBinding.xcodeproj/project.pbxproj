@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59E21C1D2A471472004B8269 /* ogg.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21BFF2A471472004B8269 /* ogg.h */; };
+		59E21C1E2A471472004B8269 /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C002A471472004B8269 /* framing.c */; };
+		59E21C1F2A471472004B8269 /* os_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C012A471472004B8269 /* os_types.h */; };
+		59E21C202A471472004B8269 /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C022A471472004B8269 /* bitwise.c */; };
+		59E21C212A471472004B8269 /* OpusBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C032A471472004B8269 /* OpusBinding.h */; };
+		59E21C222A471472004B8269 /* picture.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C052A471472004B8269 /* picture.h */; };
+		59E21C232A471472004B8269 /* opusenc.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C062A471472004B8269 /* opusenc.m */; };
+		59E21C242A471472004B8269 /* opus_header.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C072A471472004B8269 /* opus_header.c */; };
+		59E21C252A471472004B8269 /* wav_io.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C082A471472004B8269 /* wav_io.c */; };
+		59E21C262A471472004B8269 /* diag_range.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C092A471472004B8269 /* diag_range.h */; };
+		59E21C272A471472004B8269 /* picture.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C0A2A471472004B8269 /* picture.c */; };
+		59E21C282A471472004B8269 /* opus_header.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C0B2A471472004B8269 /* opus_header.h */; };
+		59E21C292A471472004B8269 /* wav_io.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C0C2A471472004B8269 /* wav_io.h */; };
+		59E21C2A2A471472004B8269 /* diag_range.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C0D2A471472004B8269 /* diag_range.c */; };
+		59E21C2B2A471472004B8269 /* OggOpusReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C0E2A471472004B8269 /* OggOpusReader.m */; };
+		59E21C2C2A471472004B8269 /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C102A471472004B8269 /* internal.h */; };
+		59E21C2D2A471472004B8269 /* opusfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C112A471472004B8269 /* opusfile.c */; };
+		59E21C2E2A471472004B8269 /* info.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C122A471472004B8269 /* info.c */; };
+		59E21C2F2A471472004B8269 /* internal.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C132A471472004B8269 /* internal.c */; };
+		59E21C302A471472004B8269 /* opusfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C142A471472004B8269 /* opusfile.h */; };
+		59E21C312A471472004B8269 /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C152A471472004B8269 /* stream.c */; };
+		59E21C322A471472004B8269 /* TGDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E21C162A471472004B8269 /* TGDataItem.m */; };
+		59E21C332A471472004B8269 /* TGOggOpusWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C192A471472004B8269 /* TGOggOpusWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59E21C342A471472004B8269 /* OpusBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C1A2A471472004B8269 /* OpusBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59E21C352A471472004B8269 /* TGDataItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C1B2A471472004B8269 /* TGDataItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59E21C362A471472004B8269 /* OggOpusReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E21C1C2A471472004B8269 /* OggOpusReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59E21C3A2A471870004B8269 /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E21C382A471870004B8269 /* libopus.a */; };
+		59E21C3B2A471870004B8269 /* libopusarm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E21C392A471870004B8269 /* libopusarm.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		59E21BF32A47145C004B8269 /* OpusBinding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpusBinding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59E21BFF2A471472004B8269 /* ogg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogg.h; sourceTree = "<group>"; };
+		59E21C002A471472004B8269 /* framing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = framing.c; sourceTree = "<group>"; };
+		59E21C012A471472004B8269 /* os_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = os_types.h; sourceTree = "<group>"; };
+		59E21C022A471472004B8269 /* bitwise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitwise.c; sourceTree = "<group>"; };
+		59E21C032A471472004B8269 /* OpusBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpusBinding.h; sourceTree = "<group>"; };
+		59E21C052A471472004B8269 /* picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = picture.h; sourceTree = "<group>"; };
+		59E21C062A471472004B8269 /* opusenc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = opusenc.m; sourceTree = "<group>"; };
+		59E21C072A471472004B8269 /* opus_header.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opus_header.c; sourceTree = "<group>"; };
+		59E21C082A471472004B8269 /* wav_io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wav_io.c; sourceTree = "<group>"; };
+		59E21C092A471472004B8269 /* diag_range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diag_range.h; sourceTree = "<group>"; };
+		59E21C0A2A471472004B8269 /* picture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = picture.c; sourceTree = "<group>"; };
+		59E21C0B2A471472004B8269 /* opus_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus_header.h; sourceTree = "<group>"; };
+		59E21C0C2A471472004B8269 /* wav_io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav_io.h; sourceTree = "<group>"; };
+		59E21C0D2A471472004B8269 /* diag_range.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = diag_range.c; sourceTree = "<group>"; };
+		59E21C0E2A471472004B8269 /* OggOpusReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OggOpusReader.m; sourceTree = "<group>"; };
+		59E21C102A471472004B8269 /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		59E21C112A471472004B8269 /* opusfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opusfile.c; sourceTree = "<group>"; };
+		59E21C122A471472004B8269 /* info.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = info.c; sourceTree = "<group>"; };
+		59E21C132A471472004B8269 /* internal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = internal.c; sourceTree = "<group>"; };
+		59E21C142A471472004B8269 /* opusfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opusfile.h; sourceTree = "<group>"; };
+		59E21C152A471472004B8269 /* stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream.c; sourceTree = "<group>"; };
+		59E21C162A471472004B8269 /* TGDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGDataItem.m; sourceTree = "<group>"; };
+		59E21C192A471472004B8269 /* TGOggOpusWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGOggOpusWriter.h; sourceTree = "<group>"; };
+		59E21C1A2A471472004B8269 /* OpusBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpusBinding.h; sourceTree = "<group>"; };
+		59E21C1B2A471472004B8269 /* TGDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGDataItem.h; sourceTree = "<group>"; };
+		59E21C1C2A471472004B8269 /* OggOpusReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OggOpusReader.h; sourceTree = "<group>"; };
+		59E21C382A471870004B8269 /* libopus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopus.a; sourceTree = "<group>"; };
+		59E21C392A471870004B8269 /* libopusarm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopusarm.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59E21BF02A47145C004B8269 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E21C3A2A471870004B8269 /* libopus.a in Frameworks */,
+				59E21C3B2A471870004B8269 /* libopusarm.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59E21BE92A47145C004B8269 = {
+			isa = PBXGroup;
+			children = (
+				59E21BF52A47145C004B8269 /* OpusBinding */,
+				59E21BF42A47145C004B8269 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59E21BF42A47145C004B8269 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59E21BF32A47145C004B8269 /* OpusBinding.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59E21BF52A47145C004B8269 /* OpusBinding */ = {
+			isa = PBXGroup;
+			children = (
+				59E21C372A471870004B8269 /* lib */,
+				59E21C172A471472004B8269 /* PublicHeaders */,
+				59E21BFD2A471472004B8269 /* Sources */,
+			);
+			path = OpusBinding;
+			sourceTree = "<group>";
+		};
+		59E21BFD2A471472004B8269 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				59E21BFE2A471472004B8269 /* ogg */,
+				59E21C032A471472004B8269 /* OpusBinding.h */,
+				59E21C042A471472004B8269 /* opusenc */,
+				59E21C0E2A471472004B8269 /* OggOpusReader.m */,
+				59E21C0F2A471472004B8269 /* opusfile */,
+				59E21C162A471472004B8269 /* TGDataItem.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		59E21BFE2A471472004B8269 /* ogg */ = {
+			isa = PBXGroup;
+			children = (
+				59E21BFF2A471472004B8269 /* ogg.h */,
+				59E21C002A471472004B8269 /* framing.c */,
+				59E21C012A471472004B8269 /* os_types.h */,
+				59E21C022A471472004B8269 /* bitwise.c */,
+			);
+			path = ogg;
+			sourceTree = "<group>";
+		};
+		59E21C042A471472004B8269 /* opusenc */ = {
+			isa = PBXGroup;
+			children = (
+				59E21C052A471472004B8269 /* picture.h */,
+				59E21C062A471472004B8269 /* opusenc.m */,
+				59E21C072A471472004B8269 /* opus_header.c */,
+				59E21C082A471472004B8269 /* wav_io.c */,
+				59E21C092A471472004B8269 /* diag_range.h */,
+				59E21C0A2A471472004B8269 /* picture.c */,
+				59E21C0B2A471472004B8269 /* opus_header.h */,
+				59E21C0C2A471472004B8269 /* wav_io.h */,
+				59E21C0D2A471472004B8269 /* diag_range.c */,
+			);
+			path = opusenc;
+			sourceTree = "<group>";
+		};
+		59E21C0F2A471472004B8269 /* opusfile */ = {
+			isa = PBXGroup;
+			children = (
+				59E21C102A471472004B8269 /* internal.h */,
+				59E21C112A471472004B8269 /* opusfile.c */,
+				59E21C122A471472004B8269 /* info.c */,
+				59E21C132A471472004B8269 /* internal.c */,
+				59E21C142A471472004B8269 /* opusfile.h */,
+				59E21C152A471472004B8269 /* stream.c */,
+			);
+			path = opusfile;
+			sourceTree = "<group>";
+		};
+		59E21C172A471472004B8269 /* PublicHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				59E21C182A471472004B8269 /* OpusBinding */,
+			);
+			path = PublicHeaders;
+			sourceTree = "<group>";
+		};
+		59E21C182A471472004B8269 /* OpusBinding */ = {
+			isa = PBXGroup;
+			children = (
+				59E21C192A471472004B8269 /* TGOggOpusWriter.h */,
+				59E21C1A2A471472004B8269 /* OpusBinding.h */,
+				59E21C1B2A471472004B8269 /* TGDataItem.h */,
+				59E21C1C2A471472004B8269 /* OggOpusReader.h */,
+			);
+			path = OpusBinding;
+			sourceTree = "<group>";
+		};
+		59E21C372A471870004B8269 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				59E21C382A471870004B8269 /* libopus.a */,
+				59E21C392A471870004B8269 /* libopusarm.a */,
+			);
+			path = lib;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		59E21BEE2A47145C004B8269 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E21C1D2A471472004B8269 /* ogg.h in Headers */,
+				59E21C332A471472004B8269 /* TGOggOpusWriter.h in Headers */,
+				59E21C212A471472004B8269 /* OpusBinding.h in Headers */,
+				59E21C282A471472004B8269 /* opus_header.h in Headers */,
+				59E21C2C2A471472004B8269 /* internal.h in Headers */,
+				59E21C342A471472004B8269 /* OpusBinding.h in Headers */,
+				59E21C292A471472004B8269 /* wav_io.h in Headers */,
+				59E21C1F2A471472004B8269 /* os_types.h in Headers */,
+				59E21C362A471472004B8269 /* OggOpusReader.h in Headers */,
+				59E21C352A471472004B8269 /* TGDataItem.h in Headers */,
+				59E21C222A471472004B8269 /* picture.h in Headers */,
+				59E21C262A471472004B8269 /* diag_range.h in Headers */,
+				59E21C302A471472004B8269 /* opusfile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		59E21BF22A47145C004B8269 /* OpusBinding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59E21BFA2A47145C004B8269 /* Build configuration list for PBXNativeTarget "OpusBinding" */;
+			buildPhases = (
+				59E21BEE2A47145C004B8269 /* Headers */,
+				59E21BEF2A47145C004B8269 /* Sources */,
+				59E21BF02A47145C004B8269 /* Frameworks */,
+				59E21BF12A47145C004B8269 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpusBinding;
+			productName = OpusBinding;
+			productReference = 59E21BF32A47145C004B8269 /* OpusBinding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59E21BEA2A47145C004B8269 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					59E21BF22A47145C004B8269 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 59E21BED2A47145C004B8269 /* Build configuration list for PBXProject "OpusBinding" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59E21BE92A47145C004B8269;
+			productRefGroup = 59E21BF42A47145C004B8269 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59E21BF22A47145C004B8269 /* OpusBinding */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59E21BF12A47145C004B8269 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59E21BEF2A47145C004B8269 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E21C2A2A471472004B8269 /* diag_range.c in Sources */,
+				59E21C2F2A471472004B8269 /* internal.c in Sources */,
+				59E21C2B2A471472004B8269 /* OggOpusReader.m in Sources */,
+				59E21C1E2A471472004B8269 /* framing.c in Sources */,
+				59E21C242A471472004B8269 /* opus_header.c in Sources */,
+				59E21C322A471472004B8269 /* TGDataItem.m in Sources */,
+				59E21C312A471472004B8269 /* stream.c in Sources */,
+				59E21C272A471472004B8269 /* picture.c in Sources */,
+				59E21C2E2A471472004B8269 /* info.c in Sources */,
+				59E21C232A471472004B8269 /* opusenc.m in Sources */,
+				59E21C252A471472004B8269 /* wav_io.c in Sources */,
+				59E21C202A471472004B8269 /* bitwise.c in Sources */,
+				59E21C2D2A471472004B8269 /* opusfile.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		59E21BF82A47145C004B8269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59E21BF92A47145C004B8269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59E21BFB2A47145C004B8269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/headers\"";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tio.OpusBinding;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59E21BFC2A47145C004B8269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/headers\"";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tio.OpusBinding;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59E21BED2A47145C004B8269 /* Build configuration list for PBXProject "OpusBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59E21BF82A47145C004B8269 /* Debug */,
+				59E21BF92A47145C004B8269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59E21BFA2A47145C004B8269 /* Build configuration list for PBXNativeTarget "OpusBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59E21BFB2A47145C004B8269 /* Debug */,
+				59E21BFC2A47145C004B8269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59E21BEA2A47145C004B8269 /* Project object */;
+}

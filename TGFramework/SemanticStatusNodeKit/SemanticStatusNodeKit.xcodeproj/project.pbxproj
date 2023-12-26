@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A69A772AF4A80200B171BA /* SemanticStatusNodeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A69A762AF4A80200B171BA /* SemanticStatusNodeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04A69A7F2AF4A81300B171BA /* SemanticStatusNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69A7E2AF4A81300B171BA /* SemanticStatusNode.swift */; };
+		04A69A832AF4A83D00B171BA /* AsyncDisplayKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A812AF4A83D00B171BA /* AsyncDisplayKit.xcframework */; };
+		04A69A842AF4A83D00B171BA /* AsyncDisplayKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A812AF4A83D00B171BA /* AsyncDisplayKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A852AF4A83E00B171BA /* Display.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A822AF4A83D00B171BA /* Display.xcframework */; };
+		04A69A862AF4A83E00B171BA /* Display.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A822AF4A83D00B171BA /* Display.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A892AF4A86700B171BA /* LegacyComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A882AF4A86700B171BA /* LegacyComponents.xcframework */; };
+		04A69A8A2AF4A86700B171BA /* LegacyComponents.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A882AF4A86700B171BA /* LegacyComponents.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A8C2AF4A87D00B171BA /* GZip.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A8B2AF4A87D00B171BA /* GZip.xcframework */; };
+		04A69A8D2AF4A87D00B171BA /* GZip.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A8B2AF4A87D00B171BA /* GZip.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A8F2AF4A89200B171BA /* RLottieBinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A8E2AF4A89100B171BA /* RLottieBinding.xcframework */; };
+		04A69A902AF4A89200B171BA /* RLottieBinding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A8E2AF4A89100B171BA /* RLottieBinding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A922AF4A89A00B171BA /* AppBundle.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A912AF4A89A00B171BA /* AppBundle.xcframework */; };
+		04A69A932AF4A89A00B171BA /* AppBundle.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A912AF4A89A00B171BA /* AppBundle.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A952AF4A8B800B171BA /* ManagedAnimationNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A942AF4A8B800B171BA /* ManagedAnimationNodeKit.xcframework */; };
+		04A69A962AF4A8B900B171BA /* ManagedAnimationNodeKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A942AF4A8B800B171BA /* ManagedAnimationNodeKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A982AF4A8C500B171BA /* Markdown.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A972AF4A8C400B171BA /* Markdown.xcframework */; };
+		04A69A992AF4A8C500B171BA /* Markdown.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A972AF4A8C400B171BA /* Markdown.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A9C2AF4A8D000B171BA /* ObjCRuntimeUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A9A2AF4A8D000B171BA /* ObjCRuntimeUtils.xcframework */; };
+		04A69A9D2AF4A8D100B171BA /* ObjCRuntimeUtils.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A9A2AF4A8D000B171BA /* ObjCRuntimeUtils.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69A9E2AF4A8D300B171BA /* UIKitRuntimeUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A9B2AF4A8D000B171BA /* UIKitRuntimeUtils.xcframework */; };
+		04A69A9F2AF4A8D400B171BA /* UIKitRuntimeUtils.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69A9B2AF4A8D000B171BA /* UIKitRuntimeUtils.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69AA12AF4A8E400B171BA /* SwiftSignalKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AA02AF4A8E400B171BA /* SwiftSignalKit.xcframework */; };
+		04A69AA22AF4A8E500B171BA /* SwiftSignalKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AA02AF4A8E400B171BA /* SwiftSignalKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69AA52AF4A93200B171BA /* TelegramCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AA42AF4A93100B171BA /* TelegramCore.xcframework */; };
+		04A69AA62AF4A93300B171BA /* TelegramCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AA42AF4A93100B171BA /* TelegramCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69AA82AF4A97200B171BA /* MtProtoKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AA72AF4A97200B171BA /* MtProtoKit.xcframework */; };
+		04A69AA92AF4A97400B171BA /* MtProtoKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AA72AF4A97200B171BA /* MtProtoKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A69AAB2AF4A9E000B171BA /* EncryptionProviderKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AAA2AF4A9E000B171BA /* EncryptionProviderKit.xcframework */; };
+		04A69AAD2AF4AA0B00B171BA /* CloudDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AAC2AF4AA0A00B171BA /* CloudDataKit.xcframework */; };
+		04A69AAF2AF4AA2000B171BA /* CryptoUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AAE2AF4AA2000B171BA /* CryptoUtils.xcframework */; };
+		04A69AB12AF4AA3100B171BA /* DarwinDirStat.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AB02AF4AA3100B171BA /* DarwinDirStat.xcframework */; };
+		04A69AB32AF4AA5E00B171BA /* ManagedFileKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AB22AF4AA5D00B171BA /* ManagedFileKit.xcframework */; };
+		04A69AB52AF4AA7000B171BA /* MurMurHash32.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AB42AF4AA7000B171BA /* MurMurHash32.xcframework */; };
+		04A69AB72AF4AA7D00B171BA /* NetworkLogging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AB62AF4AA7D00B171BA /* NetworkLogging.xcframework */; };
+		04A69AB92AF4AAB200B171BA /* PostboxKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AB82AF4AAB200B171BA /* PostboxKit.xcframework */; };
+		04A69ABB2AF4AAC500B171BA /* RangeSetKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69ABA2AF4AAC500B171BA /* RangeSetKit.xcframework */; };
+		04A69ABD2AF4AACD00B171BA /* ReachabilityKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69ABC2AF4AACD00B171BA /* ReachabilityKit.xcframework */; };
+		04A69ABF2AF4AB5600B171BA /* Crc32.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69ABE2AF4AB5600B171BA /* Crc32.xcframework */; };
+		04A69AC12AF4AB7400B171BA /* StringTransliteration.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AC02AF4AB7400B171BA /* StringTransliteration.xcframework */; };
+		04A69AC32AF4AB8300B171BA /* sqlcipher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AC22AF4AB8200B171BA /* sqlcipher.xcframework */; };
+		04A69AC52AF4AC0300B171BA /* LegacyReachability.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AC42AF4AC0300B171BA /* LegacyReachability.xcframework */; };
+		04A69AC72AF4AC4600B171BA /* TelegramApi.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A69AC62AF4AC4600B171BA /* TelegramApi.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04A69A872AF4A83E00B171BA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				04A69AA92AF4A97400B171BA /* MtProtoKit.xcframework in Embed Frameworks */,
+				04A69A862AF4A83E00B171BA /* Display.xcframework in Embed Frameworks */,
+				04A69AA62AF4A93300B171BA /* TelegramCore.xcframework in Embed Frameworks */,
+				04A69A8D2AF4A87D00B171BA /* GZip.xcframework in Embed Frameworks */,
+				04A69A9D2AF4A8D100B171BA /* ObjCRuntimeUtils.xcframework in Embed Frameworks */,
+				04A69A962AF4A8B900B171BA /* ManagedAnimationNodeKit.xcframework in Embed Frameworks */,
+				04A69A842AF4A83D00B171BA /* AsyncDisplayKit.xcframework in Embed Frameworks */,
+				04A69A9F2AF4A8D400B171BA /* UIKitRuntimeUtils.xcframework in Embed Frameworks */,
+				04A69A932AF4A89A00B171BA /* AppBundle.xcframework in Embed Frameworks */,
+				04A69A902AF4A89200B171BA /* RLottieBinding.xcframework in Embed Frameworks */,
+				04A69AA22AF4A8E500B171BA /* SwiftSignalKit.xcframework in Embed Frameworks */,
+				04A69A992AF4A8C500B171BA /* Markdown.xcframework in Embed Frameworks */,
+				04A69A8A2AF4A86700B171BA /* LegacyComponents.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04A69A732AF4A80200B171BA /* SemanticStatusNodeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SemanticStatusNodeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A69A762AF4A80200B171BA /* SemanticStatusNodeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemanticStatusNodeKit.h; sourceTree = "<group>"; };
+		04A69A7E2AF4A81300B171BA /* SemanticStatusNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemanticStatusNode.swift; sourceTree = "<group>"; };
+		04A69A812AF4A83D00B171BA /* AsyncDisplayKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AsyncDisplayKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/AsyncDisplayKit.xcframework"; sourceTree = "<group>"; };
+		04A69A822AF4A83D00B171BA /* Display.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Display.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/Display.xcframework"; sourceTree = "<group>"; };
+		04A69A882AF4A86700B171BA /* LegacyComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LegacyComponents.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/LegacyComponents.xcframework"; sourceTree = "<group>"; };
+		04A69A8B2AF4A87D00B171BA /* GZip.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GZip.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/GZip.xcframework"; sourceTree = "<group>"; };
+		04A69A8E2AF4A89100B171BA /* RLottieBinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RLottieBinding.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/RLottieBinding.xcframework"; sourceTree = "<group>"; };
+		04A69A912AF4A89A00B171BA /* AppBundle.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AppBundle.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/AppBundle.xcframework"; sourceTree = "<group>"; };
+		04A69A942AF4A8B800B171BA /* ManagedAnimationNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ManagedAnimationNodeKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/ManagedAnimationNodeKit.xcframework"; sourceTree = "<group>"; };
+		04A69A972AF4A8C400B171BA /* Markdown.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Markdown.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/Markdown.xcframework"; sourceTree = "<group>"; };
+		04A69A9A2AF4A8D000B171BA /* ObjCRuntimeUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ObjCRuntimeUtils.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/ObjCRuntimeUtils.xcframework"; sourceTree = "<group>"; };
+		04A69A9B2AF4A8D000B171BA /* UIKitRuntimeUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UIKitRuntimeUtils.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/UIKitRuntimeUtils.xcframework"; sourceTree = "<group>"; };
+		04A69AA02AF4A8E400B171BA /* SwiftSignalKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftSignalKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/SwiftSignalKit.xcframework"; sourceTree = "<group>"; };
+		04A69AA42AF4A93100B171BA /* TelegramCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramCore.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/TelegramCore.xcframework"; sourceTree = "<group>"; };
+		04A69AA72AF4A97200B171BA /* MtProtoKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MtProtoKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/MtProtoKit.xcframework"; sourceTree = "<group>"; };
+		04A69AAA2AF4A9E000B171BA /* EncryptionProviderKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EncryptionProviderKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/EncryptionProviderKit.xcframework"; sourceTree = "<group>"; };
+		04A69AAC2AF4AA0A00B171BA /* CloudDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CloudDataKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/CloudDataKit.xcframework"; sourceTree = "<group>"; };
+		04A69AAE2AF4AA2000B171BA /* CryptoUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CryptoUtils.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/CryptoUtils.xcframework"; sourceTree = "<group>"; };
+		04A69AB02AF4AA3100B171BA /* DarwinDirStat.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DarwinDirStat.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/DarwinDirStat.xcframework"; sourceTree = "<group>"; };
+		04A69AB22AF4AA5D00B171BA /* ManagedFileKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ManagedFileKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/ManagedFileKit.xcframework"; sourceTree = "<group>"; };
+		04A69AB42AF4AA7000B171BA /* MurMurHash32.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MurMurHash32.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/MurMurHash32.xcframework"; sourceTree = "<group>"; };
+		04A69AB62AF4AA7D00B171BA /* NetworkLogging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NetworkLogging.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/NetworkLogging.xcframework"; sourceTree = "<group>"; };
+		04A69AB82AF4AAB200B171BA /* PostboxKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PostboxKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/PostboxKit.xcframework"; sourceTree = "<group>"; };
+		04A69ABA2AF4AAC500B171BA /* RangeSetKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RangeSetKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/RangeSetKit.xcframework"; sourceTree = "<group>"; };
+		04A69ABC2AF4AACD00B171BA /* ReachabilityKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReachabilityKit.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/ReachabilityKit.xcframework"; sourceTree = "<group>"; };
+		04A69ABE2AF4AB5600B171BA /* Crc32.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Crc32.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/Crc32.xcframework"; sourceTree = "<group>"; };
+		04A69AC02AF4AB7400B171BA /* StringTransliteration.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StringTransliteration.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/StringTransliteration.xcframework"; sourceTree = "<group>"; };
+		04A69AC22AF4AB8200B171BA /* sqlcipher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = sqlcipher.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/sqlcipher.xcframework"; sourceTree = "<group>"; };
+		04A69AC42AF4AC0300B171BA /* LegacyReachability.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LegacyReachability.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/LegacyReachability.xcframework"; sourceTree = "<group>"; };
+		04A69AC62AF4AC4600B171BA /* TelegramApi.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramApi.xcframework; path = "../../Library/Git/Gerrit/New/t-ios/TGLibs/TelegramApi.xcframework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04A69A702AF4A80200B171BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A69A852AF4A83E00B171BA /* Display.xcframework in Frameworks */,
+				04A69AC72AF4AC4600B171BA /* TelegramApi.xcframework in Frameworks */,
+				04A69A8C2AF4A87D00B171BA /* GZip.xcframework in Frameworks */,
+				04A69A9C2AF4A8D000B171BA /* ObjCRuntimeUtils.xcframework in Frameworks */,
+				04A69AC52AF4AC0300B171BA /* LegacyReachability.xcframework in Frameworks */,
+				04A69AB32AF4AA5E00B171BA /* ManagedFileKit.xcframework in Frameworks */,
+				04A69AB72AF4AA7D00B171BA /* NetworkLogging.xcframework in Frameworks */,
+				04A69AAB2AF4A9E000B171BA /* EncryptionProviderKit.xcframework in Frameworks */,
+				04A69AB92AF4AAB200B171BA /* PostboxKit.xcframework in Frameworks */,
+				04A69AC12AF4AB7400B171BA /* StringTransliteration.xcframework in Frameworks */,
+				04A69AC32AF4AB8300B171BA /* sqlcipher.xcframework in Frameworks */,
+				04A69A952AF4A8B800B171BA /* ManagedAnimationNodeKit.xcframework in Frameworks */,
+				04A69AB52AF4AA7000B171BA /* MurMurHash32.xcframework in Frameworks */,
+				04A69ABD2AF4AACD00B171BA /* ReachabilityKit.xcframework in Frameworks */,
+				04A69ABB2AF4AAC500B171BA /* RangeSetKit.xcframework in Frameworks */,
+				04A69A832AF4A83D00B171BA /* AsyncDisplayKit.xcframework in Frameworks */,
+				04A69AAF2AF4AA2000B171BA /* CryptoUtils.xcframework in Frameworks */,
+				04A69ABF2AF4AB5600B171BA /* Crc32.xcframework in Frameworks */,
+				04A69A9E2AF4A8D300B171BA /* UIKitRuntimeUtils.xcframework in Frameworks */,
+				04A69AB12AF4AA3100B171BA /* DarwinDirStat.xcframework in Frameworks */,
+				04A69AAD2AF4AA0B00B171BA /* CloudDataKit.xcframework in Frameworks */,
+				04A69A922AF4A89A00B171BA /* AppBundle.xcframework in Frameworks */,
+				04A69A8F2AF4A89200B171BA /* RLottieBinding.xcframework in Frameworks */,
+				04A69AA82AF4A97200B171BA /* MtProtoKit.xcframework in Frameworks */,
+				04A69AA12AF4A8E400B171BA /* SwiftSignalKit.xcframework in Frameworks */,
+				04A69A982AF4A8C500B171BA /* Markdown.xcframework in Frameworks */,
+				04A69A892AF4A86700B171BA /* LegacyComponents.xcframework in Frameworks */,
+				04A69AA52AF4A93200B171BA /* TelegramCore.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04A69A692AF4A80200B171BA = {
+			isa = PBXGroup;
+			children = (
+				04A69A752AF4A80200B171BA /* SemanticStatusNodeKit */,
+				04A69A742AF4A80200B171BA /* Products */,
+				04A69A802AF4A83D00B171BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04A69A742AF4A80200B171BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04A69A732AF4A80200B171BA /* SemanticStatusNodeKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04A69A752AF4A80200B171BA /* SemanticStatusNodeKit */ = {
+			isa = PBXGroup;
+			children = (
+				04A69A762AF4A80200B171BA /* SemanticStatusNodeKit.h */,
+				04A69A7D2AF4A81300B171BA /* Sources */,
+			);
+			path = SemanticStatusNodeKit;
+			sourceTree = "<group>";
+		};
+		04A69A7D2AF4A81300B171BA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				04A69A7E2AF4A81300B171BA /* SemanticStatusNode.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		04A69A802AF4A83D00B171BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04A69AC62AF4AC4600B171BA /* TelegramApi.xcframework */,
+				04A69AC42AF4AC0300B171BA /* LegacyReachability.xcframework */,
+				04A69AC22AF4AB8200B171BA /* sqlcipher.xcframework */,
+				04A69AC02AF4AB7400B171BA /* StringTransliteration.xcframework */,
+				04A69ABE2AF4AB5600B171BA /* Crc32.xcframework */,
+				04A69ABC2AF4AACD00B171BA /* ReachabilityKit.xcframework */,
+				04A69ABA2AF4AAC500B171BA /* RangeSetKit.xcframework */,
+				04A69AB82AF4AAB200B171BA /* PostboxKit.xcframework */,
+				04A69AB62AF4AA7D00B171BA /* NetworkLogging.xcframework */,
+				04A69AB42AF4AA7000B171BA /* MurMurHash32.xcframework */,
+				04A69AB22AF4AA5D00B171BA /* ManagedFileKit.xcframework */,
+				04A69AB02AF4AA3100B171BA /* DarwinDirStat.xcframework */,
+				04A69AAE2AF4AA2000B171BA /* CryptoUtils.xcframework */,
+				04A69AAC2AF4AA0A00B171BA /* CloudDataKit.xcframework */,
+				04A69AAA2AF4A9E000B171BA /* EncryptionProviderKit.xcframework */,
+				04A69AA72AF4A97200B171BA /* MtProtoKit.xcframework */,
+				04A69AA42AF4A93100B171BA /* TelegramCore.xcframework */,
+				04A69AA02AF4A8E400B171BA /* SwiftSignalKit.xcframework */,
+				04A69A9A2AF4A8D000B171BA /* ObjCRuntimeUtils.xcframework */,
+				04A69A9B2AF4A8D000B171BA /* UIKitRuntimeUtils.xcframework */,
+				04A69A972AF4A8C400B171BA /* Markdown.xcframework */,
+				04A69A942AF4A8B800B171BA /* ManagedAnimationNodeKit.xcframework */,
+				04A69A912AF4A89A00B171BA /* AppBundle.xcframework */,
+				04A69A8E2AF4A89100B171BA /* RLottieBinding.xcframework */,
+				04A69A8B2AF4A87D00B171BA /* GZip.xcframework */,
+				04A69A882AF4A86700B171BA /* LegacyComponents.xcframework */,
+				04A69A812AF4A83D00B171BA /* AsyncDisplayKit.xcframework */,
+				04A69A822AF4A83D00B171BA /* Display.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04A69A6E2AF4A80200B171BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A69A772AF4A80200B171BA /* SemanticStatusNodeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		04A69A722AF4A80200B171BA /* SemanticStatusNodeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A69A7A2AF4A80200B171BA /* Build configuration list for PBXNativeTarget "SemanticStatusNodeKit" */;
+			buildPhases = (
+				04A69A6E2AF4A80200B171BA /* Headers */,
+				04A69A6F2AF4A80200B171BA /* Sources */,
+				04A69A702AF4A80200B171BA /* Frameworks */,
+				04A69A712AF4A80200B171BA /* Resources */,
+				04A69A872AF4A83E00B171BA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SemanticStatusNodeKit;
+			productName = SemanticStatusNodeKit;
+			productReference = 04A69A732AF4A80200B171BA /* SemanticStatusNodeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04A69A6A2AF4A80200B171BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					04A69A722AF4A80200B171BA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 04A69A6D2AF4A80200B171BA /* Build configuration list for PBXProject "SemanticStatusNodeKit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04A69A692AF4A80200B171BA;
+			productRefGroup = 04A69A742AF4A80200B171BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04A69A722AF4A80200B171BA /* SemanticStatusNodeKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04A69A712AF4A80200B171BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04A69A6F2AF4A80200B171BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A69A7F2AF4A81300B171BA /* SemanticStatusNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		04A69A782AF4A80200B171BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		04A69A792AF4A80200B171BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		04A69A7B2AF4A80200B171BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = arm64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = maynor.SemanticStatusNodeKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04A69A7C2AF4A80200B171BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = arm64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = maynor.SemanticStatusNodeKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04A69A6D2AF4A80200B171BA /* Build configuration list for PBXProject "SemanticStatusNodeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A69A782AF4A80200B171BA /* Debug */,
+				04A69A792AF4A80200B171BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A69A7A2AF4A80200B171BA /* Build configuration list for PBXNativeTarget "SemanticStatusNodeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A69A7B2AF4A80200B171BA /* Debug */,
+				04A69A7C2AF4A80200B171BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04A69A6A2AF4A80200B171BA /* Project object */;
+}

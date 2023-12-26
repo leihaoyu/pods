@@ -1,0 +1,38 @@
+{
+  "name": "RLottieBinding",
+  "version": "0.0.1",
+  "summary": "A short description of RLottieBinding.",
+  "description": "RLottieBinding",
+  "homepage": "http://EXAMPLE/RLottieBinding",
+  "license": "MIT",
+  "authors": {
+    "thunder": ""
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "http:///RLottieBinding.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "Classes",
+    "rlottie/src/**/*.{h,cpp}",
+    "LottieInstance.mm",
+    "config.h",
+    "rlottie/inc/**/*.h",
+    "PublicHeaders/**/*.h"
+  ],
+  "exclude_files": [
+    "rlottie/src/vector/vdrawhelper_neon.cpp",
+    "rlottie/src/vector/stb/**/*",
+    "rlottie/src/lottie/rapidjson/msinttypes/**/*"
+  ],
+  "public_header_files": "PublicHeaders/**/*.h",
+  "compiler_flags": [
+    "-Dpixman_region_selfcheck(x)=1",
+    "-DLOTTIE_DISABLE_ARM_NEON=1",
+    "-DLOTTIE_THREAD_SAFE=1",
+    "-DLOTTIE_IMAGE_MODULE_DISABLED=1"
+  ]
+}

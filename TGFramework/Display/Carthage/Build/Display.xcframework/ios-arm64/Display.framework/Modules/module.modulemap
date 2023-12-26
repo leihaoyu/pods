@@ -1,0 +1,11 @@
+framework module Display {
+  umbrella header "Display.h"
+
+  export *
+  module * { export * }
+}
+
+module Display.Swift {
+  header "Display-Swift.h"
+  requires objc
+}

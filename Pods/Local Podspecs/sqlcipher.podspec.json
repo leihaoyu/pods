@@ -1,0 +1,36 @@
+{
+  "name": "sqlcipher",
+  "version": "0.0.1",
+  "summary": "A short description of sqlcipher.",
+  "description": "hello",
+  "homepage": "http://EXAMPLE/sqlcipher",
+  "license": "MIT",
+  "authors": {
+    "thunder": ""
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source": {
+    "git": "./.git"
+  },
+  "source_files": [
+    "sqlcipher",
+    "sqlcipher/**/*.{h,m,c}",
+    "sqlcipher/PublicHeaders/**/*.{h,m}"
+  ],
+  "compiler_flags": [
+    "-DSQLITE_HAS_CODEC=1",
+    "-DSQLCIPHER_CRYPTO_CC=1",
+    "-DSQLITE_TEMP_STORE=2",
+    "-DSQLITE_ENABLE_FTS5",
+    "-DHAVE_USLEEP=1",
+    "-DSQLITE_DEFAULT_MEMSTATUS=0",
+    "-DSQLITE_OMIT_LOAD_EXTENSION",
+    "-DSQLITE_OMIT_DECLTYPE",
+    "-DSQLITE_OMIT_PROGRESS_CALLBACK",
+    "-DSQLITE_OMIT_DEPRECATED",
+    "-DNDEBUG=1",
+    "-DSQLITE_MAX_MMAP_SIZE=0"
+  ]
+}

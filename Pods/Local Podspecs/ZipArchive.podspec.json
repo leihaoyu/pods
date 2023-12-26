@@ -1,0 +1,32 @@
+{
+  "name": "ZipArchive",
+  "version": "0.0.1",
+  "summary": "A short description of ZipArchive.",
+  "description": "Hello",
+  "homepage": "/ZipArchive",
+  "license": "MIT",
+  "authors": {
+    "thunder": ""
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "/ZipArchive.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "Classes",
+    "ZipArchive/**/*.{h,m,swift,c}"
+  ],
+  "exclude_files": "Classes/Exclude",
+  "public_header_files": "ZipArchive/PublicHeaders/**/*.h",
+  "libraries": "iconv",
+  "compiler_flags": [
+    "-DHAVE_ZLIB",
+    "-DHAVE_INTTYPES_H",
+    "-DHAVE_PKCRYPT",
+    "-DHAVE_STDINT_H",
+    "-DHAVE_WZAES"
+  ]
+}

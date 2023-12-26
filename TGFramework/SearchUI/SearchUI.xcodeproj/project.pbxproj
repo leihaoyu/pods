@@ -1,0 +1,894 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		595E43212AFA25240026AAA1 /* SearchUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 595E43202AFA25240026AAA1 /* SearchUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		595E43342AFA254C0026AAA1 /* AppBundle.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E432B2AFA254C0026AAA1 /* AppBundle.xcframework */; };
+		595E43352AFA254C0026AAA1 /* SwiftSignalKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E432C2AFA254C0026AAA1 /* SwiftSignalKit.xcframework */; };
+		595E43362AFA254C0026AAA1 /* UIKitRuntimeUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E432D2AFA254C0026AAA1 /* UIKitRuntimeUtils.xcframework */; };
+		595E43372AFA254C0026AAA1 /* Markdown.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E432E2AFA254C0026AAA1 /* Markdown.xcframework */; };
+		595E43382AFA254C0026AAA1 /* SSignalKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E432F2AFA254C0026AAA1 /* SSignalKit.xcframework */; };
+		595E43392AFA254C0026AAA1 /* AsyncDisplayKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43302AFA254C0026AAA1 /* AsyncDisplayKit.xcframework */; };
+		595E433A2AFA254C0026AAA1 /* Display.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43312AFA254C0026AAA1 /* Display.xcframework */; };
+		595E433B2AFA254C0026AAA1 /* ObjCRuntimeUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43322AFA254C0026AAA1 /* ObjCRuntimeUtils.xcframework */; };
+		595E433C2AFA254C0026AAA1 /* ManagedFileKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43332AFA254C0026AAA1 /* ManagedFileKit.xcframework */; };
+		595E43502AFA255C0026AAA1 /* VideoAnimationCache.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E433D2AFA255B0026AAA1 /* VideoAnimationCache.xcframework */; };
+		595E43512AFA255C0026AAA1 /* LegacyComponents.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E433E2AFA255B0026AAA1 /* LegacyComponents.xcframework */; };
+		595E43522AFA255C0026AAA1 /* ImageBlur.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E433F2AFA255B0026AAA1 /* ImageBlur.xcframework */; };
+		595E43532AFA255C0026AAA1 /* SoftwareVideo.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43402AFA255B0026AAA1 /* SoftwareVideo.xcframework */; };
+		595E43542AFA255C0026AAA1 /* ImageCompression.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43412AFA255B0026AAA1 /* ImageCompression.xcframework */; };
+		595E43552AFA255C0026AAA1 /* DeviceLocationManagerKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43422AFA255B0026AAA1 /* DeviceLocationManagerKit.xcframework */; };
+		595E43562AFA255C0026AAA1 /* TemporaryCachedPeerDataManager.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43432AFA255B0026AAA1 /* TemporaryCachedPeerDataManager.xcframework */; };
+		595E43572AFA255C0026AAA1 /* MusicAlbumArtResources.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43442AFA255B0026AAA1 /* MusicAlbumArtResources.xcframework */; };
+		595E43582AFA255C0026AAA1 /* ShimmerEffect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43452AFA255B0026AAA1 /* ShimmerEffect.xcframework */; };
+		595E43592AFA255D0026AAA1 /* StickerResources.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43462AFA255C0026AAA1 /* StickerResources.xcframework */; };
+		595E435A2AFA255D0026AAA1 /* Tuples.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43472AFA255C0026AAA1 /* Tuples.xcframework */; };
+		595E435B2AFA255D0026AAA1 /* FastBlur.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43482AFA255C0026AAA1 /* FastBlur.xcframework */; };
+		595E435C2AFA255D0026AAA1 /* ComponentFlow.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43492AFA255C0026AAA1 /* ComponentFlow.xcframework */; };
+		595E435D2AFA255D0026AAA1 /* HierarchyTrackingLayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E434A2AFA255C0026AAA1 /* HierarchyTrackingLayer.xcframework */; };
+		595E435E2AFA255D0026AAA1 /* LocalMediaResources.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E434B2AFA255C0026AAA1 /* LocalMediaResources.xcframework */; };
+		595E435F2AFA255D0026AAA1 /* InAppPurchaseManagerKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E434C2AFA255C0026AAA1 /* InAppPurchaseManagerKit.xcframework */; };
+		595E43602AFA255D0026AAA1 /* MozjpegBinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E434D2AFA255C0026AAA1 /* MozjpegBinding.xcframework */; };
+		595E43612AFA255D0026AAA1 /* Lottie.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E434E2AFA255C0026AAA1 /* Lottie.xcframework */; };
+		595E43622AFA255E0026AAA1 /* TelegramPresentationData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E434F2AFA255C0026AAA1 /* TelegramPresentationData.xcframework */; };
+		595E439A2AFA256C0026AAA1 /* OverlayStatusController.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43632AFA256A0026AAA1 /* OverlayStatusController.xcframework */; };
+		595E439B2AFA256D0026AAA1 /* EmojiTextAttachmentViewKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43642AFA256A0026AAA1 /* EmojiTextAttachmentViewKit.xcframework */; };
+		595E439C2AFA256D0026AAA1 /* ReactionButtonListComponent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43652AFA256A0026AAA1 /* ReactionButtonListComponent.xcframework */; };
+		595E439D2AFA256D0026AAA1 /* LottieComponentKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43662AFA256A0026AAA1 /* LottieComponentKit.xcframework */; };
+		595E439E2AFA256D0026AAA1 /* LottieAnimationCompont.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43672AFA256A0026AAA1 /* LottieAnimationCompont.xcframework */; };
+		595E439F2AFA256D0026AAA1 /* PagerComponentKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43682AFA256A0026AAA1 /* PagerComponentKit.xcframework */; };
+		595E43A02AFA256D0026AAA1 /* ChatInterfaceStateKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43692AFA256A0026AAA1 /* ChatInterfaceStateKit.xcframework */; };
+		595E43A12AFA256E0026AAA1 /* TelegramStringFormatting.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E436A2AFA256A0026AAA1 /* TelegramStringFormatting.xcframework */; };
+		595E43A22AFA256E0026AAA1 /* ReactionImageComponent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E436B2AFA256A0026AAA1 /* ReactionImageComponent.xcframework */; };
+		595E43A32AFA256E0026AAA1 /* StringPluralization.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E436C2AFA256A0026AAA1 /* StringPluralization.xcframework */; };
+		595E43A42AFA256E0026AAA1 /* ProgressNavigationButtonNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E436D2AFA256A0026AAA1 /* ProgressNavigationButtonNodeKit.xcframework */; };
+		595E43A62AFA256E0026AAA1 /* PeerPresenceStatusManagerKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E436F2AFA256A0026AAA1 /* PeerPresenceStatusManagerKit.xcframework */; };
+		595E43A72AFA256F0026AAA1 /* PresentationDataUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43702AFA256A0026AAA1 /* PresentationDataUtils.xcframework */; };
+		595E43A82AFA256F0026AAA1 /* PhotoResources.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43712AFA256A0026AAA1 /* PhotoResources.xcframework */; };
+		595E43A92AFA256F0026AAA1 /* ReactionSelectionNode.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43722AFA256A0026AAA1 /* ReactionSelectionNode.xcframework */; };
+		595E43AA2AFA256F0026AAA1 /* StickerPeekUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43732AFA256A0026AAA1 /* StickerPeekUI.xcframework */; };
+		595E43AB2AFA25700026AAA1 /* LottieComponentEmojiContent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43742AFA256A0026AAA1 /* LottieComponentEmojiContent.xcframework */; };
+		595E43AC2AFA25700026AAA1 /* EmojiStatusSelectionComponentKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43752AFA256B0026AAA1 /* EmojiStatusSelectionComponentKit.xcframework */; };
+		595E43AD2AFA25700026AAA1 /* ViewControllerComponent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43762AFA256B0026AAA1 /* ViewControllerComponent.xcframework */; };
+		595E43AE2AFA25700026AAA1 /* MergeLists.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43772AFA256B0026AAA1 /* MergeLists.xcframework */; };
+		595E43AF2AFA25700026AAA1 /* ChatPresentationInterfaceStateKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43782AFA256B0026AAA1 /* ChatPresentationInterfaceStateKit.xcframework */; };
+		595E43B02AFA25710026AAA1 /* SwitchNode.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43792AFA256B0026AAA1 /* SwitchNode.xcframework */; };
+		595E43B12AFA25710026AAA1 /* AlertUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E437A2AFA256B0026AAA1 /* AlertUI.xcframework */; };
+		595E43B22AFA25710026AAA1 /* SlotMachineAnimationNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E437B2AFA256B0026AAA1 /* SlotMachineAnimationNodeKit.xcframework */; };
+		595E43B32AFA25710026AAA1 /* EntityKeyboard.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E437C2AFA256B0026AAA1 /* EntityKeyboard.xcframework */; };
+		595E43B42AFA25720026AAA1 /* AvatarNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E437D2AFA256B0026AAA1 /* AvatarNodeKit.xcframework */; };
+		595E43B52AFA25720026AAA1 /* DeviceAccessKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E437E2AFA256B0026AAA1 /* DeviceAccessKit.xcframework */; };
+		595E43B62AFA25720026AAA1 /* OverlayStatusControllerImpl.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E437F2AFA256B0026AAA1 /* OverlayStatusControllerImpl.xcframework */; };
+		595E43B72AFA25720026AAA1 /* TextNodeWithEntitiesKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43802AFA256B0026AAA1 /* TextNodeWithEntitiesKit.xcframework */; };
+		595E43B82AFA25730026AAA1 /* AnimationUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43812AFA256B0026AAA1 /* AnimationUI.xcframework */; };
+		595E43B92AFA25730026AAA1 /* ContextUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43822AFA256B0026AAA1 /* ContextUI.xcframework */; };
+		595E43BA2AFA25730026AAA1 /* ItemListUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43832AFA256B0026AAA1 /* ItemListUI.xcframework */; };
+		595E43BB2AFA25740026AAA1 /* PersistentStringHash.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43842AFA256B0026AAA1 /* PersistentStringHash.xcframework */; };
+		595E43BC2AFA25740026AAA1 /* SolidRoundedButtonComponentKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43852AFA256B0026AAA1 /* SolidRoundedButtonComponentKit.xcframework */; };
+		595E43BD2AFA25740026AAA1 /* SegmentedControlNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43862AFA256B0026AAA1 /* SegmentedControlNodeKit.xcframework */; };
+		595E43BE2AFA25740026AAA1 /* UrlWhitelist.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43872AFA256B0026AAA1 /* UrlWhitelist.xcframework */; };
+		595E43BF2AFA25750026AAA1 /* BundleIconComponent.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43882AFA256B0026AAA1 /* BundleIconComponent.xcframework */; };
+		595E43C02AFA25750026AAA1 /* Svg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43892AFA256C0026AAA1 /* Svg.xcframework */; };
+		595E43C12AFA25750026AAA1 /* ImageTransparency.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E438A2AFA256C0026AAA1 /* ImageTransparency.xcframework */; };
+		595E43C22AFA25760026AAA1 /* UndoUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E438B2AFA256C0026AAA1 /* UndoUI.xcframework */; };
+		595E43C32AFA25760026AAA1 /* CheckNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E438C2AFA256C0026AAA1 /* CheckNodeKit.xcframework */; };
+		595E43C42AFA25760026AAA1 /* SearchBarNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E438D2AFA256C0026AAA1 /* SearchBarNodeKit.xcframework */; };
+		595E43C52AFA25770026AAA1 /* DirectionalPanGesture.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E438E2AFA256C0026AAA1 /* DirectionalPanGesture.xcframework */; };
+		595E43C62AFA25770026AAA1 /* MultilineTextComponentKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E438F2AFA256C0026AAA1 /* MultilineTextComponentKit.xcframework */; };
+		595E43C72AFA25770026AAA1 /* EmojiStatusComponentKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43902AFA256C0026AAA1 /* EmojiStatusComponentKit.xcframework */; };
+		595E43C82AFA25780026AAA1 /* LocalizedPeerData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43912AFA256C0026AAA1 /* LocalizedPeerData.xcframework */; };
+		595E43C92AFA25780026AAA1 /* ComponentDisplayAdapters.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43922AFA256C0026AAA1 /* ComponentDisplayAdapters.xcframework */; };
+		595E43CA2AFA25780026AAA1 /* TextSelectionNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43932AFA256C0026AAA1 /* TextSelectionNodeKit.xcframework */; };
+		595E43CB2AFA25790026AAA1 /* TelegramNotices.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43942AFA256C0026AAA1 /* TelegramNotices.xcframework */; };
+		595E43CC2AFA25790026AAA1 /* AudioBlob.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43952AFA256C0026AAA1 /* AudioBlob.xcframework */; };
+		595E43CD2AFA257A0026AAA1 /* TelegramPermissions.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43962AFA256C0026AAA1 /* TelegramPermissions.xcframework */; };
+		595E43CE2AFA257A0026AAA1 /* SolidRoundedButtonNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43972AFA256C0026AAA1 /* SolidRoundedButtonNodeKit.xcframework */; };
+		595E43CF2AFA257A0026AAA1 /* AnimatedAvatarSetNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43982AFA256C0026AAA1 /* AnimatedAvatarSetNodeKit.xcframework */; };
+		595E43D02AFA257B0026AAA1 /* ActivityIndicator.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43992AFA256C0026AAA1 /* ActivityIndicator.xcframework */; };
+		595E43E62AFA25820026AAA1 /* MtProtoKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D12AFA25800026AAA1 /* MtProtoKit.xcframework */; };
+		595E43E72AFA25820026AAA1 /* TelegramApi.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D22AFA25800026AAA1 /* TelegramApi.xcframework */; };
+		595E43E82AFA25820026AAA1 /* MurMurHash32.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D32AFA25800026AAA1 /* MurMurHash32.xcframework */; };
+		595E43E92AFA25830026AAA1 /* CloudDataKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D42AFA25800026AAA1 /* CloudDataKit.xcframework */; };
+		595E43EA2AFA25830026AAA1 /* ReachabilityKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D52AFA25810026AAA1 /* ReachabilityKit.xcframework */; };
+		595E43EB2AFA25840026AAA1 /* RangeSetKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D62AFA25810026AAA1 /* RangeSetKit.xcframework */; };
+		595E43EC2AFA25840026AAA1 /* NetworkLogging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D72AFA25810026AAA1 /* NetworkLogging.xcframework */; };
+		595E43ED2AFA25840026AAA1 /* PresentationStringsKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D82AFA25810026AAA1 /* PresentationStringsKit.xcframework */; };
+		595E43EE2AFA25850026AAA1 /* DarwinDirStat.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43D92AFA25810026AAA1 /* DarwinDirStat.xcframework */; };
+		595E43EF2AFA25850026AAA1 /* TelegramCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43DA2AFA25810026AAA1 /* TelegramCore.xcframework */; };
+		595E43F02AFA25860026AAA1 /* PostboxKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43DB2AFA25810026AAA1 /* PostboxKit.xcframework */; };
+		595E43F12AFA25860026AAA1 /* StringTransliteration.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43DC2AFA25810026AAA1 /* StringTransliteration.xcframework */; };
+		595E43F22AFA25870026AAA1 /* EncryptionProviderKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43DD2AFA25810026AAA1 /* EncryptionProviderKit.xcframework */; };
+		595E43F32AFA25870026AAA1 /* Sunrise.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43DE2AFA25810026AAA1 /* Sunrise.xcframework */; };
+		595E43F42AFA25880026AAA1 /* MediaResources.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43DF2AFA25810026AAA1 /* MediaResources.xcframework */; };
+		595E43F52AFA25880026AAA1 /* TelegramUIPreferences.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43E02AFA25810026AAA1 /* TelegramUIPreferences.xcframework */; };
+		595E43F62AFA25880026AAA1 /* LegacyReachability.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43E12AFA25810026AAA1 /* LegacyReachability.xcframework */; };
+		595E43F72AFA25890026AAA1 /* CryptoUtils.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43E22AFA25810026AAA1 /* CryptoUtils.xcframework */; };
+		595E43F82AFA25890026AAA1 /* Crc32.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43E32AFA25810026AAA1 /* Crc32.xcframework */; };
+		595E43F92AFA258A0026AAA1 /* sqlcipher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43E42AFA25810026AAA1 /* sqlcipher.xcframework */; };
+		595E43FA2AFA258A0026AAA1 /* TinyThumbnail.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43E52AFA25810026AAA1 /* TinyThumbnail.xcframework */; };
+		595E44042AFA25910026AAA1 /* FFMpegBinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43FB2AFA25900026AAA1 /* FFMpegBinding.xcframework */; };
+		595E44062AFA25920026AAA1 /* TextFormat.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43FD2AFA25900026AAA1 /* TextFormat.xcframework */; };
+		595E44072AFA25920026AAA1 /* TelegramAudio.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43FE2AFA25900026AAA1 /* TelegramAudio.xcframework */; };
+		595E44082AFA25930026AAA1 /* RingBuffer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E43FF2AFA25900026AAA1 /* RingBuffer.xcframework */; };
+		595E44092AFA25930026AAA1 /* AccountContextKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44002AFA25900026AAA1 /* AccountContextKit.xcframework */; };
+		595E440A2AFA25940026AAA1 /* YuvConversion.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44012AFA25900026AAA1 /* YuvConversion.xcframework */; };
+		595E440B2AFA25940026AAA1 /* DctHuffman.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44022AFA25900026AAA1 /* DctHuffman.xcframework */; };
+		595E440C2AFA25950026AAA1 /* UniversalMediaPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44032AFA25900026AAA1 /* UniversalMediaPlayer.xcframework */; };
+		595E441B2AFA259B0026AAA1 /* MeshAnimationCacheKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E440D2AFA259B0026AAA1 /* MeshAnimationCacheKit.xcframework */; };
+		595E441C2AFA259C0026AAA1 /* LottieMeshSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E440E2AFA259B0026AAA1 /* LottieMeshSwift.xcframework */; };
+		595E441D2AFA259D0026AAA1 /* TelegramAnimatedStickerNode.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E440F2AFA259B0026AAA1 /* TelegramAnimatedStickerNode.xcframework */; };
+		595E441E2AFA259D0026AAA1 /* AnimatedStickerComponentKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44102AFA259B0026AAA1 /* AnimatedStickerComponentKit.xcframework */; };
+		595E441F2AFA259E0026AAA1 /* ManagedAnimationNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44112AFA259B0026AAA1 /* ManagedAnimationNodeKit.xcframework */; };
+		595E44202AFA259E0026AAA1 /* WebPBinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44122AFA259B0026AAA1 /* WebPBinding.xcframework */; };
+		595E44212AFA259F0026AAA1 /* MultiAnimationRendererKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44132AFA259B0026AAA1 /* MultiAnimationRendererKit.xcframework */; };
+		595E44222AFA259F0026AAA1 /* AnimationCacheKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44142AFA259B0026AAA1 /* AnimationCacheKit.xcframework */; };
+		595E44232AFA25A00026AAA1 /* AnimationCompression.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44152AFA259B0026AAA1 /* AnimationCompression.xcframework */; };
+		595E44242AFA25A00026AAA1 /* AnimatedStickerNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44162AFA259B0026AAA1 /* AnimatedStickerNodeKit.xcframework */; };
+		595E44252AFA25A10026AAA1 /* GZip.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44172AFA259B0026AAA1 /* GZip.xcframework */; };
+		595E44262AFA25A20026AAA1 /* RLottieBinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44182AFA259B0026AAA1 /* RLottieBinding.xcframework */; };
+		595E44272AFA25A20026AAA1 /* LottieAnimationCache.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44192AFA259B0026AAA1 /* LottieAnimationCache.xcframework */; };
+		595E44282AFA25A30026AAA1 /* AnimatedTextComponentKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E441A2AFA259B0026AAA1 /* AnimatedTextComponentKit.xcframework */; };
+		595E442A2AFA25E90026AAA1 /* PeerOnlineMarkerNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 595E44292AFA25E90026AAA1 /* PeerOnlineMarkerNodeKit.xcframework */; };
+		59C1D74B2B060B9500AD5A3A /* MetalImageViewKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C1D74A2B060B9500AD5A3A /* MetalImageViewKit.xcframework */; };
+		59C1D74D2B060BA100AD5A3A /* RadialStatusNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C1D74C2B060BA100AD5A3A /* RadialStatusNodeKit.xcframework */; };
+		59C1D7532B060BD800AD5A3A /* SearchDisplayControllerContentNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1D74F2B060BD800AD5A3A /* SearchDisplayControllerContentNode.swift */; };
+		59C1D7542B060BD800AD5A3A /* FixSearchableListNodeScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1D7502B060BD800AD5A3A /* FixSearchableListNodeScrolling.swift */; };
+		59C1D7552B060BD800AD5A3A /* NavigationBarSearchContentNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1D7512B060BD800AD5A3A /* NavigationBarSearchContentNode.swift */; };
+		59C1D7562B060BD800AD5A3A /* SearchDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1D7522B060BD800AD5A3A /* SearchDisplayController.swift */; };
+		59C1D7582B060CB600AD5A3A /* ChatListSearchItemNodeKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C1D7572B060CB600AD5A3A /* ChatListSearchItemNodeKit.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		595E431D2AFA25240026AAA1 /* SearchUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SearchUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		595E43202AFA25240026AAA1 /* SearchUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchUI.h; sourceTree = "<group>"; };
+		595E432B2AFA254C0026AAA1 /* AppBundle.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AppBundle.xcframework; path = ../../TGLibs/AppBundle.xcframework; sourceTree = "<group>"; };
+		595E432C2AFA254C0026AAA1 /* SwiftSignalKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftSignalKit.xcframework; path = ../../TGLibs/SwiftSignalKit.xcframework; sourceTree = "<group>"; };
+		595E432D2AFA254C0026AAA1 /* UIKitRuntimeUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UIKitRuntimeUtils.xcframework; path = ../../TGLibs/UIKitRuntimeUtils.xcframework; sourceTree = "<group>"; };
+		595E432E2AFA254C0026AAA1 /* Markdown.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Markdown.xcframework; path = ../../TGLibs/Markdown.xcframework; sourceTree = "<group>"; };
+		595E432F2AFA254C0026AAA1 /* SSignalKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SSignalKit.xcframework; path = ../../TGLibs/SSignalKit.xcframework; sourceTree = "<group>"; };
+		595E43302AFA254C0026AAA1 /* AsyncDisplayKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AsyncDisplayKit.xcframework; path = ../../TGLibs/AsyncDisplayKit.xcframework; sourceTree = "<group>"; };
+		595E43312AFA254C0026AAA1 /* Display.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Display.xcframework; path = ../../TGLibs/Display.xcframework; sourceTree = "<group>"; };
+		595E43322AFA254C0026AAA1 /* ObjCRuntimeUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ObjCRuntimeUtils.xcframework; path = ../../TGLibs/ObjCRuntimeUtils.xcframework; sourceTree = "<group>"; };
+		595E43332AFA254C0026AAA1 /* ManagedFileKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ManagedFileKit.xcframework; path = ../../TGLibs/ManagedFileKit.xcframework; sourceTree = "<group>"; };
+		595E433D2AFA255B0026AAA1 /* VideoAnimationCache.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VideoAnimationCache.xcframework; path = ../../TGLibs/VideoAnimationCache.xcframework; sourceTree = "<group>"; };
+		595E433E2AFA255B0026AAA1 /* LegacyComponents.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LegacyComponents.xcframework; path = ../../TGLibs/LegacyComponents.xcframework; sourceTree = "<group>"; };
+		595E433F2AFA255B0026AAA1 /* ImageBlur.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ImageBlur.xcframework; path = ../../TGLibs/ImageBlur.xcframework; sourceTree = "<group>"; };
+		595E43402AFA255B0026AAA1 /* SoftwareVideo.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SoftwareVideo.xcframework; path = ../../TGLibs/SoftwareVideo.xcframework; sourceTree = "<group>"; };
+		595E43412AFA255B0026AAA1 /* ImageCompression.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ImageCompression.xcframework; path = ../../TGLibs/ImageCompression.xcframework; sourceTree = "<group>"; };
+		595E43422AFA255B0026AAA1 /* DeviceLocationManagerKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DeviceLocationManagerKit.xcframework; path = ../../TGLibs/DeviceLocationManagerKit.xcframework; sourceTree = "<group>"; };
+		595E43432AFA255B0026AAA1 /* TemporaryCachedPeerDataManager.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TemporaryCachedPeerDataManager.xcframework; path = ../../TGLibs/TemporaryCachedPeerDataManager.xcframework; sourceTree = "<group>"; };
+		595E43442AFA255B0026AAA1 /* MusicAlbumArtResources.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MusicAlbumArtResources.xcframework; path = ../../TGLibs/MusicAlbumArtResources.xcframework; sourceTree = "<group>"; };
+		595E43452AFA255B0026AAA1 /* ShimmerEffect.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShimmerEffect.xcframework; path = ../../TGLibs/ShimmerEffect.xcframework; sourceTree = "<group>"; };
+		595E43462AFA255C0026AAA1 /* StickerResources.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StickerResources.xcframework; path = ../../TGLibs/StickerResources.xcframework; sourceTree = "<group>"; };
+		595E43472AFA255C0026AAA1 /* Tuples.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Tuples.xcframework; path = ../../TGLibs/Tuples.xcframework; sourceTree = "<group>"; };
+		595E43482AFA255C0026AAA1 /* FastBlur.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FastBlur.xcframework; path = ../../TGLibs/FastBlur.xcframework; sourceTree = "<group>"; };
+		595E43492AFA255C0026AAA1 /* ComponentFlow.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ComponentFlow.xcframework; path = ../../TGLibs/ComponentFlow.xcframework; sourceTree = "<group>"; };
+		595E434A2AFA255C0026AAA1 /* HierarchyTrackingLayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HierarchyTrackingLayer.xcframework; path = ../../TGLibs/HierarchyTrackingLayer.xcframework; sourceTree = "<group>"; };
+		595E434B2AFA255C0026AAA1 /* LocalMediaResources.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LocalMediaResources.xcframework; path = ../../TGLibs/LocalMediaResources.xcframework; sourceTree = "<group>"; };
+		595E434C2AFA255C0026AAA1 /* InAppPurchaseManagerKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = InAppPurchaseManagerKit.xcframework; path = ../../TGLibs/InAppPurchaseManagerKit.xcframework; sourceTree = "<group>"; };
+		595E434D2AFA255C0026AAA1 /* MozjpegBinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MozjpegBinding.xcframework; path = ../../TGLibs/MozjpegBinding.xcframework; sourceTree = "<group>"; };
+		595E434E2AFA255C0026AAA1 /* Lottie.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Lottie.xcframework; path = ../../TGLibs/Lottie.xcframework; sourceTree = "<group>"; };
+		595E434F2AFA255C0026AAA1 /* TelegramPresentationData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramPresentationData.xcframework; path = ../../TGLibs/TelegramPresentationData.xcframework; sourceTree = "<group>"; };
+		595E43632AFA256A0026AAA1 /* OverlayStatusController.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OverlayStatusController.xcframework; path = ../../TGLibs/OverlayStatusController.xcframework; sourceTree = "<group>"; };
+		595E43642AFA256A0026AAA1 /* EmojiTextAttachmentViewKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EmojiTextAttachmentViewKit.xcframework; path = ../../TGLibs/EmojiTextAttachmentViewKit.xcframework; sourceTree = "<group>"; };
+		595E43652AFA256A0026AAA1 /* ReactionButtonListComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactionButtonListComponent.xcframework; path = ../../TGLibs/ReactionButtonListComponent.xcframework; sourceTree = "<group>"; };
+		595E43662AFA256A0026AAA1 /* LottieComponentKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LottieComponentKit.xcframework; path = ../../TGLibs/LottieComponentKit.xcframework; sourceTree = "<group>"; };
+		595E43672AFA256A0026AAA1 /* LottieAnimationCompont.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LottieAnimationCompont.xcframework; path = ../../TGLibs/LottieAnimationCompont.xcframework; sourceTree = "<group>"; };
+		595E43682AFA256A0026AAA1 /* PagerComponentKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PagerComponentKit.xcframework; path = ../../TGLibs/PagerComponentKit.xcframework; sourceTree = "<group>"; };
+		595E43692AFA256A0026AAA1 /* ChatInterfaceStateKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ChatInterfaceStateKit.xcframework; path = ../../TGLibs/ChatInterfaceStateKit.xcframework; sourceTree = "<group>"; };
+		595E436A2AFA256A0026AAA1 /* TelegramStringFormatting.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramStringFormatting.xcframework; path = ../../TGLibs/TelegramStringFormatting.xcframework; sourceTree = "<group>"; };
+		595E436B2AFA256A0026AAA1 /* ReactionImageComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactionImageComponent.xcframework; path = ../../TGLibs/ReactionImageComponent.xcframework; sourceTree = "<group>"; };
+		595E436C2AFA256A0026AAA1 /* StringPluralization.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StringPluralization.xcframework; path = ../../TGLibs/StringPluralization.xcframework; sourceTree = "<group>"; };
+		595E436D2AFA256A0026AAA1 /* ProgressNavigationButtonNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ProgressNavigationButtonNodeKit.xcframework; path = ../../TGLibs/ProgressNavigationButtonNodeKit.xcframework; sourceTree = "<group>"; };
+		595E436E2AFA256A0026AAA1 /* RadialStatusNode.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RadialStatusNode.xcframework; path = ../../TGLibs/RadialStatusNode.xcframework; sourceTree = "<group>"; };
+		595E436F2AFA256A0026AAA1 /* PeerPresenceStatusManagerKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PeerPresenceStatusManagerKit.xcframework; path = ../../TGLibs/PeerPresenceStatusManagerKit.xcframework; sourceTree = "<group>"; };
+		595E43702AFA256A0026AAA1 /* PresentationDataUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PresentationDataUtils.xcframework; path = ../../TGLibs/PresentationDataUtils.xcframework; sourceTree = "<group>"; };
+		595E43712AFA256A0026AAA1 /* PhotoResources.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PhotoResources.xcframework; path = ../../TGLibs/PhotoResources.xcframework; sourceTree = "<group>"; };
+		595E43722AFA256A0026AAA1 /* ReactionSelectionNode.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactionSelectionNode.xcframework; path = ../../TGLibs/ReactionSelectionNode.xcframework; sourceTree = "<group>"; };
+		595E43732AFA256A0026AAA1 /* StickerPeekUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StickerPeekUI.xcframework; path = ../../TGLibs/StickerPeekUI.xcframework; sourceTree = "<group>"; };
+		595E43742AFA256A0026AAA1 /* LottieComponentEmojiContent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LottieComponentEmojiContent.xcframework; path = ../../TGLibs/LottieComponentEmojiContent.xcframework; sourceTree = "<group>"; };
+		595E43752AFA256B0026AAA1 /* EmojiStatusSelectionComponentKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EmojiStatusSelectionComponentKit.xcframework; path = ../../TGLibs/EmojiStatusSelectionComponentKit.xcframework; sourceTree = "<group>"; };
+		595E43762AFA256B0026AAA1 /* ViewControllerComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ViewControllerComponent.xcframework; path = ../../TGLibs/ViewControllerComponent.xcframework; sourceTree = "<group>"; };
+		595E43772AFA256B0026AAA1 /* MergeLists.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MergeLists.xcframework; path = ../../TGLibs/MergeLists.xcframework; sourceTree = "<group>"; };
+		595E43782AFA256B0026AAA1 /* ChatPresentationInterfaceStateKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ChatPresentationInterfaceStateKit.xcframework; path = ../../TGLibs/ChatPresentationInterfaceStateKit.xcframework; sourceTree = "<group>"; };
+		595E43792AFA256B0026AAA1 /* SwitchNode.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwitchNode.xcframework; path = ../../TGLibs/SwitchNode.xcframework; sourceTree = "<group>"; };
+		595E437A2AFA256B0026AAA1 /* AlertUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AlertUI.xcframework; path = ../../TGLibs/AlertUI.xcframework; sourceTree = "<group>"; };
+		595E437B2AFA256B0026AAA1 /* SlotMachineAnimationNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SlotMachineAnimationNodeKit.xcframework; path = ../../TGLibs/SlotMachineAnimationNodeKit.xcframework; sourceTree = "<group>"; };
+		595E437C2AFA256B0026AAA1 /* EntityKeyboard.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EntityKeyboard.xcframework; path = ../../TGLibs/EntityKeyboard.xcframework; sourceTree = "<group>"; };
+		595E437D2AFA256B0026AAA1 /* AvatarNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AvatarNodeKit.xcframework; path = ../../TGLibs/AvatarNodeKit.xcframework; sourceTree = "<group>"; };
+		595E437E2AFA256B0026AAA1 /* DeviceAccessKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DeviceAccessKit.xcframework; path = ../../TGLibs/DeviceAccessKit.xcframework; sourceTree = "<group>"; };
+		595E437F2AFA256B0026AAA1 /* OverlayStatusControllerImpl.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = OverlayStatusControllerImpl.xcframework; path = ../../TGLibs/OverlayStatusControllerImpl.xcframework; sourceTree = "<group>"; };
+		595E43802AFA256B0026AAA1 /* TextNodeWithEntitiesKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TextNodeWithEntitiesKit.xcframework; path = ../../TGLibs/TextNodeWithEntitiesKit.xcframework; sourceTree = "<group>"; };
+		595E43812AFA256B0026AAA1 /* AnimationUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnimationUI.xcframework; path = ../../TGLibs/AnimationUI.xcframework; sourceTree = "<group>"; };
+		595E43822AFA256B0026AAA1 /* ContextUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ContextUI.xcframework; path = ../../TGLibs/ContextUI.xcframework; sourceTree = "<group>"; };
+		595E43832AFA256B0026AAA1 /* ItemListUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ItemListUI.xcframework; path = ../../TGLibs/ItemListUI.xcframework; sourceTree = "<group>"; };
+		595E43842AFA256B0026AAA1 /* PersistentStringHash.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PersistentStringHash.xcframework; path = ../../TGLibs/PersistentStringHash.xcframework; sourceTree = "<group>"; };
+		595E43852AFA256B0026AAA1 /* SolidRoundedButtonComponentKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SolidRoundedButtonComponentKit.xcframework; path = ../../TGLibs/SolidRoundedButtonComponentKit.xcframework; sourceTree = "<group>"; };
+		595E43862AFA256B0026AAA1 /* SegmentedControlNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SegmentedControlNodeKit.xcframework; path = ../../TGLibs/SegmentedControlNodeKit.xcframework; sourceTree = "<group>"; };
+		595E43872AFA256B0026AAA1 /* UrlWhitelist.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UrlWhitelist.xcframework; path = ../../TGLibs/UrlWhitelist.xcframework; sourceTree = "<group>"; };
+		595E43882AFA256B0026AAA1 /* BundleIconComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BundleIconComponent.xcframework; path = ../../TGLibs/BundleIconComponent.xcframework; sourceTree = "<group>"; };
+		595E43892AFA256C0026AAA1 /* Svg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Svg.xcframework; path = ../../TGLibs/Svg.xcframework; sourceTree = "<group>"; };
+		595E438A2AFA256C0026AAA1 /* ImageTransparency.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ImageTransparency.xcframework; path = ../../TGLibs/ImageTransparency.xcframework; sourceTree = "<group>"; };
+		595E438B2AFA256C0026AAA1 /* UndoUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UndoUI.xcframework; path = ../../TGLibs/UndoUI.xcframework; sourceTree = "<group>"; };
+		595E438C2AFA256C0026AAA1 /* CheckNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CheckNodeKit.xcframework; path = ../../TGLibs/CheckNodeKit.xcframework; sourceTree = "<group>"; };
+		595E438D2AFA256C0026AAA1 /* SearchBarNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SearchBarNodeKit.xcframework; path = ../../TGLibs/SearchBarNodeKit.xcframework; sourceTree = "<group>"; };
+		595E438E2AFA256C0026AAA1 /* DirectionalPanGesture.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DirectionalPanGesture.xcframework; path = ../../TGLibs/DirectionalPanGesture.xcframework; sourceTree = "<group>"; };
+		595E438F2AFA256C0026AAA1 /* MultilineTextComponentKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultilineTextComponentKit.xcframework; path = ../../TGLibs/MultilineTextComponentKit.xcframework; sourceTree = "<group>"; };
+		595E43902AFA256C0026AAA1 /* EmojiStatusComponentKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EmojiStatusComponentKit.xcframework; path = ../../TGLibs/EmojiStatusComponentKit.xcframework; sourceTree = "<group>"; };
+		595E43912AFA256C0026AAA1 /* LocalizedPeerData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LocalizedPeerData.xcframework; path = ../../TGLibs/LocalizedPeerData.xcframework; sourceTree = "<group>"; };
+		595E43922AFA256C0026AAA1 /* ComponentDisplayAdapters.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ComponentDisplayAdapters.xcframework; path = ../../TGLibs/ComponentDisplayAdapters.xcframework; sourceTree = "<group>"; };
+		595E43932AFA256C0026AAA1 /* TextSelectionNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TextSelectionNodeKit.xcframework; path = ../../TGLibs/TextSelectionNodeKit.xcframework; sourceTree = "<group>"; };
+		595E43942AFA256C0026AAA1 /* TelegramNotices.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramNotices.xcframework; path = ../../TGLibs/TelegramNotices.xcframework; sourceTree = "<group>"; };
+		595E43952AFA256C0026AAA1 /* AudioBlob.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AudioBlob.xcframework; path = ../../TGLibs/AudioBlob.xcframework; sourceTree = "<group>"; };
+		595E43962AFA256C0026AAA1 /* TelegramPermissions.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramPermissions.xcframework; path = ../../TGLibs/TelegramPermissions.xcframework; sourceTree = "<group>"; };
+		595E43972AFA256C0026AAA1 /* SolidRoundedButtonNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SolidRoundedButtonNodeKit.xcframework; path = ../../TGLibs/SolidRoundedButtonNodeKit.xcframework; sourceTree = "<group>"; };
+		595E43982AFA256C0026AAA1 /* AnimatedAvatarSetNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnimatedAvatarSetNodeKit.xcframework; path = ../../TGLibs/AnimatedAvatarSetNodeKit.xcframework; sourceTree = "<group>"; };
+		595E43992AFA256C0026AAA1 /* ActivityIndicator.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ActivityIndicator.xcframework; path = ../../TGLibs/ActivityIndicator.xcframework; sourceTree = "<group>"; };
+		595E43D12AFA25800026AAA1 /* MtProtoKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MtProtoKit.xcframework; path = ../../TGLibs/MtProtoKit.xcframework; sourceTree = "<group>"; };
+		595E43D22AFA25800026AAA1 /* TelegramApi.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramApi.xcframework; path = ../../TGLibs/TelegramApi.xcframework; sourceTree = "<group>"; };
+		595E43D32AFA25800026AAA1 /* MurMurHash32.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MurMurHash32.xcframework; path = ../../TGLibs/MurMurHash32.xcframework; sourceTree = "<group>"; };
+		595E43D42AFA25800026AAA1 /* CloudDataKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CloudDataKit.xcframework; path = ../../TGLibs/CloudDataKit.xcframework; sourceTree = "<group>"; };
+		595E43D52AFA25810026AAA1 /* ReachabilityKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReachabilityKit.xcframework; path = ../../TGLibs/ReachabilityKit.xcframework; sourceTree = "<group>"; };
+		595E43D62AFA25810026AAA1 /* RangeSetKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RangeSetKit.xcframework; path = ../../TGLibs/RangeSetKit.xcframework; sourceTree = "<group>"; };
+		595E43D72AFA25810026AAA1 /* NetworkLogging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NetworkLogging.xcframework; path = ../../TGLibs/NetworkLogging.xcframework; sourceTree = "<group>"; };
+		595E43D82AFA25810026AAA1 /* PresentationStringsKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PresentationStringsKit.xcframework; path = ../../TGLibs/PresentationStringsKit.xcframework; sourceTree = "<group>"; };
+		595E43D92AFA25810026AAA1 /* DarwinDirStat.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DarwinDirStat.xcframework; path = ../../TGLibs/DarwinDirStat.xcframework; sourceTree = "<group>"; };
+		595E43DA2AFA25810026AAA1 /* TelegramCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramCore.xcframework; path = ../../TGLibs/TelegramCore.xcframework; sourceTree = "<group>"; };
+		595E43DB2AFA25810026AAA1 /* PostboxKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PostboxKit.xcframework; path = ../../TGLibs/PostboxKit.xcframework; sourceTree = "<group>"; };
+		595E43DC2AFA25810026AAA1 /* StringTransliteration.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = StringTransliteration.xcframework; path = ../../TGLibs/StringTransliteration.xcframework; sourceTree = "<group>"; };
+		595E43DD2AFA25810026AAA1 /* EncryptionProviderKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EncryptionProviderKit.xcframework; path = ../../TGLibs/EncryptionProviderKit.xcframework; sourceTree = "<group>"; };
+		595E43DE2AFA25810026AAA1 /* Sunrise.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Sunrise.xcframework; path = ../../TGLibs/Sunrise.xcframework; sourceTree = "<group>"; };
+		595E43DF2AFA25810026AAA1 /* MediaResources.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MediaResources.xcframework; path = ../../TGLibs/MediaResources.xcframework; sourceTree = "<group>"; };
+		595E43E02AFA25810026AAA1 /* TelegramUIPreferences.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramUIPreferences.xcframework; path = ../../TGLibs/TelegramUIPreferences.xcframework; sourceTree = "<group>"; };
+		595E43E12AFA25810026AAA1 /* LegacyReachability.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LegacyReachability.xcframework; path = ../../TGLibs/LegacyReachability.xcframework; sourceTree = "<group>"; };
+		595E43E22AFA25810026AAA1 /* CryptoUtils.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CryptoUtils.xcframework; path = ../../TGLibs/CryptoUtils.xcframework; sourceTree = "<group>"; };
+		595E43E32AFA25810026AAA1 /* Crc32.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Crc32.xcframework; path = ../../TGLibs/Crc32.xcframework; sourceTree = "<group>"; };
+		595E43E42AFA25810026AAA1 /* sqlcipher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = sqlcipher.xcframework; path = ../../TGLibs/sqlcipher.xcframework; sourceTree = "<group>"; };
+		595E43E52AFA25810026AAA1 /* TinyThumbnail.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TinyThumbnail.xcframework; path = ../../TGLibs/TinyThumbnail.xcframework; sourceTree = "<group>"; };
+		595E43FB2AFA25900026AAA1 /* FFMpegBinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FFMpegBinding.xcframework; path = ../../TGLibs/FFMpegBinding.xcframework; sourceTree = "<group>"; };
+		595E43FC2AFA25900026AAA1 /* MetalImageView.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MetalImageView.xcframework; path = ../../TGLibs/MetalImageView.xcframework; sourceTree = "<group>"; };
+		595E43FD2AFA25900026AAA1 /* TextFormat.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TextFormat.xcframework; path = ../../TGLibs/TextFormat.xcframework; sourceTree = "<group>"; };
+		595E43FE2AFA25900026AAA1 /* TelegramAudio.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramAudio.xcframework; path = ../../TGLibs/TelegramAudio.xcframework; sourceTree = "<group>"; };
+		595E43FF2AFA25900026AAA1 /* RingBuffer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RingBuffer.xcframework; path = ../../TGLibs/RingBuffer.xcframework; sourceTree = "<group>"; };
+		595E44002AFA25900026AAA1 /* AccountContextKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AccountContextKit.xcframework; path = ../../TGLibs/AccountContextKit.xcframework; sourceTree = "<group>"; };
+		595E44012AFA25900026AAA1 /* YuvConversion.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = YuvConversion.xcframework; path = ../../TGLibs/YuvConversion.xcframework; sourceTree = "<group>"; };
+		595E44022AFA25900026AAA1 /* DctHuffman.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DctHuffman.xcframework; path = ../../TGLibs/DctHuffman.xcframework; sourceTree = "<group>"; };
+		595E44032AFA25900026AAA1 /* UniversalMediaPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = UniversalMediaPlayer.xcframework; path = ../../TGLibs/UniversalMediaPlayer.xcframework; sourceTree = "<group>"; };
+		595E440D2AFA259B0026AAA1 /* MeshAnimationCacheKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MeshAnimationCacheKit.xcframework; path = ../../TGLibs/MeshAnimationCacheKit.xcframework; sourceTree = "<group>"; };
+		595E440E2AFA259B0026AAA1 /* LottieMeshSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LottieMeshSwift.xcframework; path = ../../TGLibs/LottieMeshSwift.xcframework; sourceTree = "<group>"; };
+		595E440F2AFA259B0026AAA1 /* TelegramAnimatedStickerNode.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TelegramAnimatedStickerNode.xcframework; path = ../../TGLibs/TelegramAnimatedStickerNode.xcframework; sourceTree = "<group>"; };
+		595E44102AFA259B0026AAA1 /* AnimatedStickerComponentKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnimatedStickerComponentKit.xcframework; path = ../../TGLibs/AnimatedStickerComponentKit.xcframework; sourceTree = "<group>"; };
+		595E44112AFA259B0026AAA1 /* ManagedAnimationNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ManagedAnimationNodeKit.xcframework; path = ../../TGLibs/ManagedAnimationNodeKit.xcframework; sourceTree = "<group>"; };
+		595E44122AFA259B0026AAA1 /* WebPBinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebPBinding.xcframework; path = ../../TGLibs/WebPBinding.xcframework; sourceTree = "<group>"; };
+		595E44132AFA259B0026AAA1 /* MultiAnimationRendererKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MultiAnimationRendererKit.xcframework; path = ../../TGLibs/MultiAnimationRendererKit.xcframework; sourceTree = "<group>"; };
+		595E44142AFA259B0026AAA1 /* AnimationCacheKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnimationCacheKit.xcframework; path = ../../TGLibs/AnimationCacheKit.xcframework; sourceTree = "<group>"; };
+		595E44152AFA259B0026AAA1 /* AnimationCompression.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnimationCompression.xcframework; path = ../../TGLibs/AnimationCompression.xcframework; sourceTree = "<group>"; };
+		595E44162AFA259B0026AAA1 /* AnimatedStickerNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnimatedStickerNodeKit.xcframework; path = ../../TGLibs/AnimatedStickerNodeKit.xcframework; sourceTree = "<group>"; };
+		595E44172AFA259B0026AAA1 /* GZip.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GZip.xcframework; path = ../../TGLibs/GZip.xcframework; sourceTree = "<group>"; };
+		595E44182AFA259B0026AAA1 /* RLottieBinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RLottieBinding.xcframework; path = ../../TGLibs/RLottieBinding.xcframework; sourceTree = "<group>"; };
+		595E44192AFA259B0026AAA1 /* LottieAnimationCache.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LottieAnimationCache.xcframework; path = ../../TGLibs/LottieAnimationCache.xcframework; sourceTree = "<group>"; };
+		595E441A2AFA259B0026AAA1 /* AnimatedTextComponentKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AnimatedTextComponentKit.xcframework; path = ../../TGLibs/AnimatedTextComponentKit.xcframework; sourceTree = "<group>"; };
+		595E44292AFA25E90026AAA1 /* PeerOnlineMarkerNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PeerOnlineMarkerNodeKit.xcframework; path = ../../TGLibs/PeerOnlineMarkerNodeKit.xcframework; sourceTree = "<group>"; };
+		59C1D74A2B060B9500AD5A3A /* MetalImageViewKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MetalImageViewKit.xcframework; path = ../../TGLibs/MetalImageViewKit.xcframework; sourceTree = "<group>"; };
+		59C1D74C2B060BA100AD5A3A /* RadialStatusNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RadialStatusNodeKit.xcframework; path = ../../TGLibs/RadialStatusNodeKit.xcframework; sourceTree = "<group>"; };
+		59C1D74F2B060BD800AD5A3A /* SearchDisplayControllerContentNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDisplayControllerContentNode.swift; sourceTree = "<group>"; };
+		59C1D7502B060BD800AD5A3A /* FixSearchableListNodeScrolling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixSearchableListNodeScrolling.swift; sourceTree = "<group>"; };
+		59C1D7512B060BD800AD5A3A /* NavigationBarSearchContentNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarSearchContentNode.swift; sourceTree = "<group>"; };
+		59C1D7522B060BD800AD5A3A /* SearchDisplayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDisplayController.swift; sourceTree = "<group>"; };
+		59C1D7572B060CB600AD5A3A /* ChatListSearchItemNodeKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ChatListSearchItemNodeKit.xcframework; path = ../../TGLibs/ChatListSearchItemNodeKit.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		595E431A2AFA25240026AAA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				595E43342AFA254C0026AAA1 /* AppBundle.xcframework in Frameworks */,
+				595E43352AFA254C0026AAA1 /* SwiftSignalKit.xcframework in Frameworks */,
+				595E43362AFA254C0026AAA1 /* UIKitRuntimeUtils.xcframework in Frameworks */,
+				595E442A2AFA25E90026AAA1 /* PeerOnlineMarkerNodeKit.xcframework in Frameworks */,
+				595E43372AFA254C0026AAA1 /* Markdown.xcframework in Frameworks */,
+				595E43382AFA254C0026AAA1 /* SSignalKit.xcframework in Frameworks */,
+				59C1D7582B060CB600AD5A3A /* ChatListSearchItemNodeKit.xcframework in Frameworks */,
+				595E43392AFA254C0026AAA1 /* AsyncDisplayKit.xcframework in Frameworks */,
+				595E433A2AFA254C0026AAA1 /* Display.xcframework in Frameworks */,
+				595E441B2AFA259B0026AAA1 /* MeshAnimationCacheKit.xcframework in Frameworks */,
+				595E441C2AFA259C0026AAA1 /* LottieMeshSwift.xcframework in Frameworks */,
+				595E441D2AFA259D0026AAA1 /* TelegramAnimatedStickerNode.xcframework in Frameworks */,
+				595E441E2AFA259D0026AAA1 /* AnimatedStickerComponentKit.xcframework in Frameworks */,
+				595E441F2AFA259E0026AAA1 /* ManagedAnimationNodeKit.xcframework in Frameworks */,
+				595E44202AFA259E0026AAA1 /* WebPBinding.xcframework in Frameworks */,
+				595E44212AFA259F0026AAA1 /* MultiAnimationRendererKit.xcframework in Frameworks */,
+				595E44222AFA259F0026AAA1 /* AnimationCacheKit.xcframework in Frameworks */,
+				595E44232AFA25A00026AAA1 /* AnimationCompression.xcframework in Frameworks */,
+				595E44242AFA25A00026AAA1 /* AnimatedStickerNodeKit.xcframework in Frameworks */,
+				595E44252AFA25A10026AAA1 /* GZip.xcframework in Frameworks */,
+				595E44262AFA25A20026AAA1 /* RLottieBinding.xcframework in Frameworks */,
+				595E44272AFA25A20026AAA1 /* LottieAnimationCache.xcframework in Frameworks */,
+				595E44282AFA25A30026AAA1 /* AnimatedTextComponentKit.xcframework in Frameworks */,
+				595E43502AFA255C0026AAA1 /* VideoAnimationCache.xcframework in Frameworks */,
+				595E44042AFA25910026AAA1 /* FFMpegBinding.xcframework in Frameworks */,
+				595E44062AFA25920026AAA1 /* TextFormat.xcframework in Frameworks */,
+				595E44072AFA25920026AAA1 /* TelegramAudio.xcframework in Frameworks */,
+				595E44082AFA25930026AAA1 /* RingBuffer.xcframework in Frameworks */,
+				595E44092AFA25930026AAA1 /* AccountContextKit.xcframework in Frameworks */,
+				595E440A2AFA25940026AAA1 /* YuvConversion.xcframework in Frameworks */,
+				595E440B2AFA25940026AAA1 /* DctHuffman.xcframework in Frameworks */,
+				595E440C2AFA25950026AAA1 /* UniversalMediaPlayer.xcframework in Frameworks */,
+				595E43512AFA255C0026AAA1 /* LegacyComponents.xcframework in Frameworks */,
+				595E439A2AFA256C0026AAA1 /* OverlayStatusController.xcframework in Frameworks */,
+				595E43E62AFA25820026AAA1 /* MtProtoKit.xcframework in Frameworks */,
+				59C1D74B2B060B9500AD5A3A /* MetalImageViewKit.xcframework in Frameworks */,
+				595E43E72AFA25820026AAA1 /* TelegramApi.xcframework in Frameworks */,
+				595E43E82AFA25820026AAA1 /* MurMurHash32.xcframework in Frameworks */,
+				595E43E92AFA25830026AAA1 /* CloudDataKit.xcframework in Frameworks */,
+				595E43EA2AFA25830026AAA1 /* ReachabilityKit.xcframework in Frameworks */,
+				595E43EB2AFA25840026AAA1 /* RangeSetKit.xcframework in Frameworks */,
+				595E43EC2AFA25840026AAA1 /* NetworkLogging.xcframework in Frameworks */,
+				595E43ED2AFA25840026AAA1 /* PresentationStringsKit.xcframework in Frameworks */,
+				595E43EE2AFA25850026AAA1 /* DarwinDirStat.xcframework in Frameworks */,
+				595E43EF2AFA25850026AAA1 /* TelegramCore.xcframework in Frameworks */,
+				595E43F02AFA25860026AAA1 /* PostboxKit.xcframework in Frameworks */,
+				595E43F12AFA25860026AAA1 /* StringTransliteration.xcframework in Frameworks */,
+				595E43F22AFA25870026AAA1 /* EncryptionProviderKit.xcframework in Frameworks */,
+				595E43F32AFA25870026AAA1 /* Sunrise.xcframework in Frameworks */,
+				595E43F42AFA25880026AAA1 /* MediaResources.xcframework in Frameworks */,
+				595E43F52AFA25880026AAA1 /* TelegramUIPreferences.xcframework in Frameworks */,
+				595E43F62AFA25880026AAA1 /* LegacyReachability.xcframework in Frameworks */,
+				595E43F72AFA25890026AAA1 /* CryptoUtils.xcframework in Frameworks */,
+				595E43F82AFA25890026AAA1 /* Crc32.xcframework in Frameworks */,
+				595E43F92AFA258A0026AAA1 /* sqlcipher.xcframework in Frameworks */,
+				595E43FA2AFA258A0026AAA1 /* TinyThumbnail.xcframework in Frameworks */,
+				595E439B2AFA256D0026AAA1 /* EmojiTextAttachmentViewKit.xcframework in Frameworks */,
+				595E439C2AFA256D0026AAA1 /* ReactionButtonListComponent.xcframework in Frameworks */,
+				595E439D2AFA256D0026AAA1 /* LottieComponentKit.xcframework in Frameworks */,
+				595E439E2AFA256D0026AAA1 /* LottieAnimationCompont.xcframework in Frameworks */,
+				595E439F2AFA256D0026AAA1 /* PagerComponentKit.xcframework in Frameworks */,
+				595E43A02AFA256D0026AAA1 /* ChatInterfaceStateKit.xcframework in Frameworks */,
+				595E43A12AFA256E0026AAA1 /* TelegramStringFormatting.xcframework in Frameworks */,
+				595E43A22AFA256E0026AAA1 /* ReactionImageComponent.xcframework in Frameworks */,
+				595E43A32AFA256E0026AAA1 /* StringPluralization.xcframework in Frameworks */,
+				595E43A42AFA256E0026AAA1 /* ProgressNavigationButtonNodeKit.xcframework in Frameworks */,
+				595E43A62AFA256E0026AAA1 /* PeerPresenceStatusManagerKit.xcframework in Frameworks */,
+				59C1D74D2B060BA100AD5A3A /* RadialStatusNodeKit.xcframework in Frameworks */,
+				595E43A72AFA256F0026AAA1 /* PresentationDataUtils.xcframework in Frameworks */,
+				595E43A82AFA256F0026AAA1 /* PhotoResources.xcframework in Frameworks */,
+				595E43A92AFA256F0026AAA1 /* ReactionSelectionNode.xcframework in Frameworks */,
+				595E43AA2AFA256F0026AAA1 /* StickerPeekUI.xcframework in Frameworks */,
+				595E43AB2AFA25700026AAA1 /* LottieComponentEmojiContent.xcframework in Frameworks */,
+				595E43AC2AFA25700026AAA1 /* EmojiStatusSelectionComponentKit.xcframework in Frameworks */,
+				595E43AD2AFA25700026AAA1 /* ViewControllerComponent.xcframework in Frameworks */,
+				595E43AE2AFA25700026AAA1 /* MergeLists.xcframework in Frameworks */,
+				595E43AF2AFA25700026AAA1 /* ChatPresentationInterfaceStateKit.xcframework in Frameworks */,
+				595E43B02AFA25710026AAA1 /* SwitchNode.xcframework in Frameworks */,
+				595E43B12AFA25710026AAA1 /* AlertUI.xcframework in Frameworks */,
+				595E43B22AFA25710026AAA1 /* SlotMachineAnimationNodeKit.xcframework in Frameworks */,
+				595E43B32AFA25710026AAA1 /* EntityKeyboard.xcframework in Frameworks */,
+				595E43B42AFA25720026AAA1 /* AvatarNodeKit.xcframework in Frameworks */,
+				595E43B52AFA25720026AAA1 /* DeviceAccessKit.xcframework in Frameworks */,
+				595E43B62AFA25720026AAA1 /* OverlayStatusControllerImpl.xcframework in Frameworks */,
+				595E43B72AFA25720026AAA1 /* TextNodeWithEntitiesKit.xcframework in Frameworks */,
+				595E43B82AFA25730026AAA1 /* AnimationUI.xcframework in Frameworks */,
+				595E43B92AFA25730026AAA1 /* ContextUI.xcframework in Frameworks */,
+				595E43BA2AFA25730026AAA1 /* ItemListUI.xcframework in Frameworks */,
+				595E43BB2AFA25740026AAA1 /* PersistentStringHash.xcframework in Frameworks */,
+				595E43BC2AFA25740026AAA1 /* SolidRoundedButtonComponentKit.xcframework in Frameworks */,
+				595E43BD2AFA25740026AAA1 /* SegmentedControlNodeKit.xcframework in Frameworks */,
+				595E43BE2AFA25740026AAA1 /* UrlWhitelist.xcframework in Frameworks */,
+				595E43BF2AFA25750026AAA1 /* BundleIconComponent.xcframework in Frameworks */,
+				595E43C02AFA25750026AAA1 /* Svg.xcframework in Frameworks */,
+				595E43C12AFA25750026AAA1 /* ImageTransparency.xcframework in Frameworks */,
+				595E43C22AFA25760026AAA1 /* UndoUI.xcframework in Frameworks */,
+				595E43C32AFA25760026AAA1 /* CheckNodeKit.xcframework in Frameworks */,
+				595E43C42AFA25760026AAA1 /* SearchBarNodeKit.xcframework in Frameworks */,
+				595E43C52AFA25770026AAA1 /* DirectionalPanGesture.xcframework in Frameworks */,
+				595E43C62AFA25770026AAA1 /* MultilineTextComponentKit.xcframework in Frameworks */,
+				595E43C72AFA25770026AAA1 /* EmojiStatusComponentKit.xcframework in Frameworks */,
+				595E43C82AFA25780026AAA1 /* LocalizedPeerData.xcframework in Frameworks */,
+				595E43C92AFA25780026AAA1 /* ComponentDisplayAdapters.xcframework in Frameworks */,
+				595E43CA2AFA25780026AAA1 /* TextSelectionNodeKit.xcframework in Frameworks */,
+				595E43CB2AFA25790026AAA1 /* TelegramNotices.xcframework in Frameworks */,
+				595E43CC2AFA25790026AAA1 /* AudioBlob.xcframework in Frameworks */,
+				595E43CD2AFA257A0026AAA1 /* TelegramPermissions.xcframework in Frameworks */,
+				595E43CE2AFA257A0026AAA1 /* SolidRoundedButtonNodeKit.xcframework in Frameworks */,
+				595E43CF2AFA257A0026AAA1 /* AnimatedAvatarSetNodeKit.xcframework in Frameworks */,
+				595E43D02AFA257B0026AAA1 /* ActivityIndicator.xcframework in Frameworks */,
+				595E43522AFA255C0026AAA1 /* ImageBlur.xcframework in Frameworks */,
+				595E43532AFA255C0026AAA1 /* SoftwareVideo.xcframework in Frameworks */,
+				595E43542AFA255C0026AAA1 /* ImageCompression.xcframework in Frameworks */,
+				595E43552AFA255C0026AAA1 /* DeviceLocationManagerKit.xcframework in Frameworks */,
+				595E43562AFA255C0026AAA1 /* TemporaryCachedPeerDataManager.xcframework in Frameworks */,
+				595E43572AFA255C0026AAA1 /* MusicAlbumArtResources.xcframework in Frameworks */,
+				595E43582AFA255C0026AAA1 /* ShimmerEffect.xcframework in Frameworks */,
+				595E43592AFA255D0026AAA1 /* StickerResources.xcframework in Frameworks */,
+				595E435A2AFA255D0026AAA1 /* Tuples.xcframework in Frameworks */,
+				595E435B2AFA255D0026AAA1 /* FastBlur.xcframework in Frameworks */,
+				595E435C2AFA255D0026AAA1 /* ComponentFlow.xcframework in Frameworks */,
+				595E435D2AFA255D0026AAA1 /* HierarchyTrackingLayer.xcframework in Frameworks */,
+				595E435E2AFA255D0026AAA1 /* LocalMediaResources.xcframework in Frameworks */,
+				595E435F2AFA255D0026AAA1 /* InAppPurchaseManagerKit.xcframework in Frameworks */,
+				595E43602AFA255D0026AAA1 /* MozjpegBinding.xcframework in Frameworks */,
+				595E43612AFA255D0026AAA1 /* Lottie.xcframework in Frameworks */,
+				595E43622AFA255E0026AAA1 /* TelegramPresentationData.xcframework in Frameworks */,
+				595E433B2AFA254C0026AAA1 /* ObjCRuntimeUtils.xcframework in Frameworks */,
+				595E433C2AFA254C0026AAA1 /* ManagedFileKit.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		595E43132AFA25240026AAA1 = {
+			isa = PBXGroup;
+			children = (
+				595E431F2AFA25240026AAA1 /* SearchUI */,
+				595E431E2AFA25240026AAA1 /* Products */,
+				595E432A2AFA254C0026AAA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		595E431E2AFA25240026AAA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				595E431D2AFA25240026AAA1 /* SearchUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		595E431F2AFA25240026AAA1 /* SearchUI */ = {
+			isa = PBXGroup;
+			children = (
+				59C1D74E2B060BD800AD5A3A /* Sources */,
+				595E43202AFA25240026AAA1 /* SearchUI.h */,
+			);
+			path = SearchUI;
+			sourceTree = "<group>";
+		};
+		595E432A2AFA254C0026AAA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59C1D7572B060CB600AD5A3A /* ChatListSearchItemNodeKit.xcframework */,
+				59C1D74C2B060BA100AD5A3A /* RadialStatusNodeKit.xcframework */,
+				59C1D74A2B060B9500AD5A3A /* MetalImageViewKit.xcframework */,
+				595E44292AFA25E90026AAA1 /* PeerOnlineMarkerNodeKit.xcframework */,
+				595E44102AFA259B0026AAA1 /* AnimatedStickerComponentKit.xcframework */,
+				595E44162AFA259B0026AAA1 /* AnimatedStickerNodeKit.xcframework */,
+				595E441A2AFA259B0026AAA1 /* AnimatedTextComponentKit.xcframework */,
+				595E44142AFA259B0026AAA1 /* AnimationCacheKit.xcframework */,
+				595E44152AFA259B0026AAA1 /* AnimationCompression.xcframework */,
+				595E44172AFA259B0026AAA1 /* GZip.xcframework */,
+				595E44192AFA259B0026AAA1 /* LottieAnimationCache.xcframework */,
+				595E440E2AFA259B0026AAA1 /* LottieMeshSwift.xcframework */,
+				595E44112AFA259B0026AAA1 /* ManagedAnimationNodeKit.xcframework */,
+				595E440D2AFA259B0026AAA1 /* MeshAnimationCacheKit.xcframework */,
+				595E44132AFA259B0026AAA1 /* MultiAnimationRendererKit.xcframework */,
+				595E44182AFA259B0026AAA1 /* RLottieBinding.xcframework */,
+				595E440F2AFA259B0026AAA1 /* TelegramAnimatedStickerNode.xcframework */,
+				595E44122AFA259B0026AAA1 /* WebPBinding.xcframework */,
+				595E44002AFA25900026AAA1 /* AccountContextKit.xcframework */,
+				595E44022AFA25900026AAA1 /* DctHuffman.xcframework */,
+				595E43FB2AFA25900026AAA1 /* FFMpegBinding.xcframework */,
+				595E43FC2AFA25900026AAA1 /* MetalImageView.xcframework */,
+				595E43FF2AFA25900026AAA1 /* RingBuffer.xcframework */,
+				595E43FE2AFA25900026AAA1 /* TelegramAudio.xcframework */,
+				595E43FD2AFA25900026AAA1 /* TextFormat.xcframework */,
+				595E44032AFA25900026AAA1 /* UniversalMediaPlayer.xcframework */,
+				595E44012AFA25900026AAA1 /* YuvConversion.xcframework */,
+				595E43D42AFA25800026AAA1 /* CloudDataKit.xcframework */,
+				595E43E32AFA25810026AAA1 /* Crc32.xcframework */,
+				595E43E22AFA25810026AAA1 /* CryptoUtils.xcframework */,
+				595E43D92AFA25810026AAA1 /* DarwinDirStat.xcframework */,
+				595E43DD2AFA25810026AAA1 /* EncryptionProviderKit.xcframework */,
+				595E43E12AFA25810026AAA1 /* LegacyReachability.xcframework */,
+				595E43DF2AFA25810026AAA1 /* MediaResources.xcframework */,
+				595E43D12AFA25800026AAA1 /* MtProtoKit.xcframework */,
+				595E43D32AFA25800026AAA1 /* MurMurHash32.xcframework */,
+				595E43D72AFA25810026AAA1 /* NetworkLogging.xcframework */,
+				595E43DB2AFA25810026AAA1 /* PostboxKit.xcframework */,
+				595E43D82AFA25810026AAA1 /* PresentationStringsKit.xcframework */,
+				595E43D62AFA25810026AAA1 /* RangeSetKit.xcframework */,
+				595E43D52AFA25810026AAA1 /* ReachabilityKit.xcframework */,
+				595E43E42AFA25810026AAA1 /* sqlcipher.xcframework */,
+				595E43DC2AFA25810026AAA1 /* StringTransliteration.xcframework */,
+				595E43DE2AFA25810026AAA1 /* Sunrise.xcframework */,
+				595E43D22AFA25800026AAA1 /* TelegramApi.xcframework */,
+				595E43DA2AFA25810026AAA1 /* TelegramCore.xcframework */,
+				595E43E02AFA25810026AAA1 /* TelegramUIPreferences.xcframework */,
+				595E43E52AFA25810026AAA1 /* TinyThumbnail.xcframework */,
+				595E43992AFA256C0026AAA1 /* ActivityIndicator.xcframework */,
+				595E437A2AFA256B0026AAA1 /* AlertUI.xcframework */,
+				595E43982AFA256C0026AAA1 /* AnimatedAvatarSetNodeKit.xcframework */,
+				595E43812AFA256B0026AAA1 /* AnimationUI.xcframework */,
+				595E43952AFA256C0026AAA1 /* AudioBlob.xcframework */,
+				595E437D2AFA256B0026AAA1 /* AvatarNodeKit.xcframework */,
+				595E43882AFA256B0026AAA1 /* BundleIconComponent.xcframework */,
+				595E43692AFA256A0026AAA1 /* ChatInterfaceStateKit.xcframework */,
+				595E43782AFA256B0026AAA1 /* ChatPresentationInterfaceStateKit.xcframework */,
+				595E438C2AFA256C0026AAA1 /* CheckNodeKit.xcframework */,
+				595E43922AFA256C0026AAA1 /* ComponentDisplayAdapters.xcframework */,
+				595E43822AFA256B0026AAA1 /* ContextUI.xcframework */,
+				595E437E2AFA256B0026AAA1 /* DeviceAccessKit.xcframework */,
+				595E438E2AFA256C0026AAA1 /* DirectionalPanGesture.xcframework */,
+				595E43902AFA256C0026AAA1 /* EmojiStatusComponentKit.xcframework */,
+				595E43752AFA256B0026AAA1 /* EmojiStatusSelectionComponentKit.xcframework */,
+				595E43642AFA256A0026AAA1 /* EmojiTextAttachmentViewKit.xcframework */,
+				595E437C2AFA256B0026AAA1 /* EntityKeyboard.xcframework */,
+				595E438A2AFA256C0026AAA1 /* ImageTransparency.xcframework */,
+				595E43832AFA256B0026AAA1 /* ItemListUI.xcframework */,
+				595E43912AFA256C0026AAA1 /* LocalizedPeerData.xcframework */,
+				595E43672AFA256A0026AAA1 /* LottieAnimationCompont.xcframework */,
+				595E43742AFA256A0026AAA1 /* LottieComponentEmojiContent.xcframework */,
+				595E43662AFA256A0026AAA1 /* LottieComponentKit.xcframework */,
+				595E43772AFA256B0026AAA1 /* MergeLists.xcframework */,
+				595E438F2AFA256C0026AAA1 /* MultilineTextComponentKit.xcframework */,
+				595E43632AFA256A0026AAA1 /* OverlayStatusController.xcframework */,
+				595E437F2AFA256B0026AAA1 /* OverlayStatusControllerImpl.xcframework */,
+				595E43682AFA256A0026AAA1 /* PagerComponentKit.xcframework */,
+				595E436F2AFA256A0026AAA1 /* PeerPresenceStatusManagerKit.xcframework */,
+				595E43842AFA256B0026AAA1 /* PersistentStringHash.xcframework */,
+				595E43712AFA256A0026AAA1 /* PhotoResources.xcframework */,
+				595E43702AFA256A0026AAA1 /* PresentationDataUtils.xcframework */,
+				595E436D2AFA256A0026AAA1 /* ProgressNavigationButtonNodeKit.xcframework */,
+				595E436E2AFA256A0026AAA1 /* RadialStatusNode.xcframework */,
+				595E43652AFA256A0026AAA1 /* ReactionButtonListComponent.xcframework */,
+				595E436B2AFA256A0026AAA1 /* ReactionImageComponent.xcframework */,
+				595E43722AFA256A0026AAA1 /* ReactionSelectionNode.xcframework */,
+				595E438D2AFA256C0026AAA1 /* SearchBarNodeKit.xcframework */,
+				595E43862AFA256B0026AAA1 /* SegmentedControlNodeKit.xcframework */,
+				595E437B2AFA256B0026AAA1 /* SlotMachineAnimationNodeKit.xcframework */,
+				595E43852AFA256B0026AAA1 /* SolidRoundedButtonComponentKit.xcframework */,
+				595E43972AFA256C0026AAA1 /* SolidRoundedButtonNodeKit.xcframework */,
+				595E43732AFA256A0026AAA1 /* StickerPeekUI.xcframework */,
+				595E436C2AFA256A0026AAA1 /* StringPluralization.xcframework */,
+				595E43892AFA256C0026AAA1 /* Svg.xcframework */,
+				595E43792AFA256B0026AAA1 /* SwitchNode.xcframework */,
+				595E43942AFA256C0026AAA1 /* TelegramNotices.xcframework */,
+				595E43962AFA256C0026AAA1 /* TelegramPermissions.xcframework */,
+				595E436A2AFA256A0026AAA1 /* TelegramStringFormatting.xcframework */,
+				595E43802AFA256B0026AAA1 /* TextNodeWithEntitiesKit.xcframework */,
+				595E43932AFA256C0026AAA1 /* TextSelectionNodeKit.xcframework */,
+				595E438B2AFA256C0026AAA1 /* UndoUI.xcframework */,
+				595E43872AFA256B0026AAA1 /* UrlWhitelist.xcframework */,
+				595E43762AFA256B0026AAA1 /* ViewControllerComponent.xcframework */,
+				595E43492AFA255C0026AAA1 /* ComponentFlow.xcframework */,
+				595E43422AFA255B0026AAA1 /* DeviceLocationManagerKit.xcframework */,
+				595E43482AFA255C0026AAA1 /* FastBlur.xcframework */,
+				595E434A2AFA255C0026AAA1 /* HierarchyTrackingLayer.xcframework */,
+				595E433F2AFA255B0026AAA1 /* ImageBlur.xcframework */,
+				595E43412AFA255B0026AAA1 /* ImageCompression.xcframework */,
+				595E434C2AFA255C0026AAA1 /* InAppPurchaseManagerKit.xcframework */,
+				595E433E2AFA255B0026AAA1 /* LegacyComponents.xcframework */,
+				595E434B2AFA255C0026AAA1 /* LocalMediaResources.xcframework */,
+				595E434E2AFA255C0026AAA1 /* Lottie.xcframework */,
+				595E434D2AFA255C0026AAA1 /* MozjpegBinding.xcframework */,
+				595E43442AFA255B0026AAA1 /* MusicAlbumArtResources.xcframework */,
+				595E43452AFA255B0026AAA1 /* ShimmerEffect.xcframework */,
+				595E43402AFA255B0026AAA1 /* SoftwareVideo.xcframework */,
+				595E43462AFA255C0026AAA1 /* StickerResources.xcframework */,
+				595E434F2AFA255C0026AAA1 /* TelegramPresentationData.xcframework */,
+				595E43432AFA255B0026AAA1 /* TemporaryCachedPeerDataManager.xcframework */,
+				595E43472AFA255C0026AAA1 /* Tuples.xcframework */,
+				595E433D2AFA255B0026AAA1 /* VideoAnimationCache.xcframework */,
+				595E432B2AFA254C0026AAA1 /* AppBundle.xcframework */,
+				595E43302AFA254C0026AAA1 /* AsyncDisplayKit.xcframework */,
+				595E43312AFA254C0026AAA1 /* Display.xcframework */,
+				595E43332AFA254C0026AAA1 /* ManagedFileKit.xcframework */,
+				595E432E2AFA254C0026AAA1 /* Markdown.xcframework */,
+				595E43322AFA254C0026AAA1 /* ObjCRuntimeUtils.xcframework */,
+				595E432F2AFA254C0026AAA1 /* SSignalKit.xcframework */,
+				595E432C2AFA254C0026AAA1 /* SwiftSignalKit.xcframework */,
+				595E432D2AFA254C0026AAA1 /* UIKitRuntimeUtils.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59C1D74E2B060BD800AD5A3A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				59C1D74F2B060BD800AD5A3A /* SearchDisplayControllerContentNode.swift */,
+				59C1D7502B060BD800AD5A3A /* FixSearchableListNodeScrolling.swift */,
+				59C1D7512B060BD800AD5A3A /* NavigationBarSearchContentNode.swift */,
+				59C1D7522B060BD800AD5A3A /* SearchDisplayController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		595E43182AFA25240026AAA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				595E43212AFA25240026AAA1 /* SearchUI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		595E431C2AFA25240026AAA1 /* SearchUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 595E43242AFA25240026AAA1 /* Build configuration list for PBXNativeTarget "SearchUI" */;
+			buildPhases = (
+				595E43182AFA25240026AAA1 /* Headers */,
+				595E43192AFA25240026AAA1 /* Sources */,
+				595E431A2AFA25240026AAA1 /* Frameworks */,
+				595E431B2AFA25240026AAA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchUI;
+			productName = SearchUI;
+			productReference = 595E431D2AFA25240026AAA1 /* SearchUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		595E43142AFA25240026AAA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					595E431C2AFA25240026AAA1 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 595E43172AFA25240026AAA1 /* Build configuration list for PBXProject "SearchUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 595E43132AFA25240026AAA1;
+			productRefGroup = 595E431E2AFA25240026AAA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				595E431C2AFA25240026AAA1 /* SearchUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		595E431B2AFA25240026AAA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		595E43192AFA25240026AAA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59C1D7562B060BD800AD5A3A /* SearchDisplayController.swift in Sources */,
+				59C1D7552B060BD800AD5A3A /* NavigationBarSearchContentNode.swift in Sources */,
+				59C1D7532B060BD800AD5A3A /* SearchDisplayControllerContentNode.swift in Sources */,
+				59C1D7542B060BD800AD5A3A /* FixSearchableListNodeScrolling.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		595E43222AFA25240026AAA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		595E43232AFA25240026AAA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		595E43252AFA25240026AAA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.im.meetalk.SearchUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		595E43262AFA25240026AAA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.im.meetalk.SearchUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		595E43172AFA25240026AAA1 /* Build configuration list for PBXProject "SearchUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				595E43222AFA25240026AAA1 /* Debug */,
+				595E43232AFA25240026AAA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		595E43242AFA25240026AAA1 /* Build configuration list for PBXNativeTarget "SearchUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				595E43252AFA25240026AAA1 /* Debug */,
+				595E43262AFA25240026AAA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 595E43142AFA25240026AAA1 /* Project object */;
+}

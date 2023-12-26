@@ -1,0 +1,11 @@
+framework module TelegramCore {
+  umbrella header "TelegramCore.h"
+
+  export *
+  module * { export * }
+}
+
+module TelegramCore.Swift {
+  header "TelegramCore-Swift.h"
+  requires objc
+}
