@@ -420,7 +420,7 @@ final class EmojiSearchStatusComponent: Component {
             }
         }
         
-        func update(component: EmojiSearchStatusComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: EmojiSearchStatusComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             self.component = component
             
             let displaySize = CGSize(width: availableSize.width * UIScreenScale, height: availableSize.height * UIScreenScale)
@@ -775,7 +775,7 @@ final class EmojiSearchStatusComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }

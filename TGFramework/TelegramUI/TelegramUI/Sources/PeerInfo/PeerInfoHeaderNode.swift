@@ -2619,7 +2619,7 @@ final class PeerInfoHeaderNode: ASDisplayNode {
             let animateStatusIcon = !self.titleCredibilityIconView.bounds.isEmpty
             
             let iconSize = self.titleCredibilityIconView.update(
-                transition: animateStatusIcon ? Transition(animation: .curve(duration: 0.3, curve: .easeInOut)) : .immediate,
+                transition: animateStatusIcon ? TGTransition(animation: .curve(duration: 0.3, curve: .easeInOut)) : .immediate,
                 component: AnyComponent(EmojiStatusComponent(
                     context: self.context,
                     animationCache: self.animationCache,
@@ -2675,7 +2675,7 @@ final class PeerInfoHeaderNode: ASDisplayNode {
                 containerSize: CGSize(width: 34.0, height: 34.0)
             )
             let expandedIconSize = self.titleExpandedCredibilityIconView.update(
-                transition: animateStatusIcon ? Transition(animation: .curve(duration: 0.3, curve: .easeInOut)) : .immediate,
+                transition: animateStatusIcon ? TGTransition(animation: .curve(duration: 0.3, curve: .easeInOut)) : .immediate,
                 component: AnyComponent(EmojiStatusComponent(
                     context: self.context,
                     animationCache: self.animationCache,

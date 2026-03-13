@@ -380,7 +380,7 @@ public final class EmojiSuggestionsComponent: Component {
             //self.blurView.shadowPath = path
         }
         
-        func update(component: EmojiSuggestionsComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+        func update(component: EmojiSuggestionsComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
             let height: CGFloat = 54.0
             
             if self.component?.theme !== component.theme {
@@ -424,7 +424,7 @@ public final class EmojiSuggestionsComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }

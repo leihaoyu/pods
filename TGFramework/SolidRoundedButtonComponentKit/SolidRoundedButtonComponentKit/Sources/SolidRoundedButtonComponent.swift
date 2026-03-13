@@ -116,7 +116,7 @@ public final class SolidRoundedButtonComponent: Component {
         
         private var currentIsLoading = false
         
-        public func update(component: SolidRoundedButtonComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        public func update(component: SolidRoundedButtonComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             if self.button == nil {
                 let button = SolidRoundedButtonView(
                     title: component.title,
@@ -174,7 +174,7 @@ public final class SolidRoundedButtonComponent: Component {
         return View()
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }

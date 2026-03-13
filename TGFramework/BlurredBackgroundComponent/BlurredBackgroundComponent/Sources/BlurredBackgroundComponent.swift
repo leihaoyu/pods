@@ -30,7 +30,7 @@ public final class BlurredBackgroundComponent: Component {
         private var tintContainerView: UIView?
         private var vibrancyEffectView: UIVisualEffectView?
         
-        public func update(component: BlurredBackgroundComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        public func update(component: BlurredBackgroundComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             /*if self.tintContainerView !== component.tintContainerView {
                 if let tintContainerView = self.tintContainerView {
                     self.tintContainerView = nil
@@ -123,7 +123,7 @@ public final class BlurredBackgroundComponent: Component {
         return View(color: nil, enableBlur: true)
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }

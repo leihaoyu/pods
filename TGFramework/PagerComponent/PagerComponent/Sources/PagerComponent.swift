@@ -14,7 +14,7 @@ open class PagerExternalTopPanelContainer: SparseContainerView {
 }
 
 public protocol PagerContentViewWithBackground: UIView {
-    func pagerUpdateBackground(backgroundFrame: CGRect, transition: Transition)
+    func pagerUpdateBackground(backgroundFrame: CGRect, transition: TGTransition)
 }
 
 public final class PagerComponentChildEnvironment: Equatable {
@@ -24,7 +24,7 @@ public final class PagerComponentChildEnvironment: Equatable {
         public var absoluteOffsetToBottomEdge: CGFloat?
         public var isReset: Bool
         public var isInteracting: Bool
-        public var transition: Transition
+        public var transition: TGTransition
         
         public init(
             relativeOffset: CGFloat,
@@ -32,7 +32,7 @@ public final class PagerComponentChildEnvironment: Equatable {
             absoluteOffsetToBottomEdge: CGFloat?,
             isReset: Bool,
             isInteracting: Bool,
-            transition: Transition
+            transition: TGTransition
         ) {
             self.relativeOffset = relativeOffset
             self.absoluteOffsetToTopEdge = absoluteOffsetToTopEdge
@@ -78,8 +78,8 @@ public final class PagerComponentPanelEnvironment<TopPanelEnvironment>: Equatabl
     public let contentAccessoryRightButtons: [AnyComponentWithIdentity<Empty>]
     public let activeContentId: AnyHashable?
     public let navigateToContentId: (AnyHashable) -> Void
-    public let visibilityFractionUpdated: ActionSlot<(CGFloat, Transition)>
-    public let isExpandedUpdated: (Bool, Transition) -> Void
+    public let visibilityFractionUpdated: ActionSlot<(CGFloat, TGTransition)>
+    public let isExpandedUpdated: (Bool, TGTransition) -> Void
     
     init(
         isContentInFocus: Bool,
@@ -90,8 +90,8 @@ public final class PagerComponentPanelEnvironment<TopPanelEnvironment>: Equatabl
         contentAccessoryRightButtons: [AnyComponentWithIdentity<Empty>],
         activeContentId: AnyHashable?,
         navigateToContentId: @escaping (AnyHashable) -> Void,
-        visibilityFractionUpdated: ActionSlot<(CGFloat, Transition)>,
-        isExpandedUpdated: @escaping (Bool, Transition) -> Void
+        visibilityFractionUpdated: ActionSlot<(CGFloat, TGTransition)>,
+        isExpandedUpdated: @escaping (Bool, TGTransition) -> Void
     ) {
         self.isContentInFocus = isContentInFocus
         self.contentOffset = contentOffset
@@ -199,9 +199,9 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
     public let externalTopPanelContainer: PagerExternalTopPanelContainer?
     public let bottomPanel: AnyComponent<PagerComponentPanelEnvironment<TopPanelEnvironment>>?
     public let externalBottomPanelContainer: PagerExternalTopPanelContainer?
-    public let panelStateUpdated: ((PagerComponentPanelState, Transition) -> Void)?
-    public let isTopPanelExpandedUpdated: (Bool, Transition) -> Void
-    public let isTopPanelHiddenUpdated: (Bool, Transition) -> Void
+    public let panelStateUpdated: ((PagerComponentPanelState, TGTransition) -> Void)?
+    public let isTopPanelExpandedUpdated: (Bool, TGTransition) -> Void
+    public let isTopPanelHiddenUpdated: (Bool, TGTransition) -> Void
     public let contentIdUpdated: (AnyHashable) -> Void
     public let panelHideBehavior: PagerComponentPanelHideBehavior
     public let clipContentToTopPanel: Bool
@@ -220,9 +220,9 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
         externalTopPanelContainer: PagerExternalTopPanelContainer?,
         bottomPanel: AnyComponent<PagerComponentPanelEnvironment<TopPanelEnvironment>>?,
         externalBottomPanelContainer: PagerExternalTopPanelContainer?,
-        panelStateUpdated: ((PagerComponentPanelState, Transition) -> Void)?,
-        isTopPanelExpandedUpdated: @escaping (Bool, Transition) -> Void,
-        isTopPanelHiddenUpdated: @escaping (Bool, Transition) -> Void,
+        panelStateUpdated: ((PagerComponentPanelState, TGTransition) -> Void)?,
+        isTopPanelExpandedUpdated: @escaping (Bool, TGTransition) -> Void,
+        isTopPanelHiddenUpdated: @escaping (Bool, TGTransition) -> Void,
         contentIdUpdated: @escaping (AnyHashable) -> Void,
         panelHideBehavior: PagerComponentPanelHideBehavior,
         clipContentToTopPanel: Bool
@@ -317,9 +317,9 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
         private var contentClippingView: UIView
         private var contentViews: [AnyHashable: ContentView] = [:]
         private var contentBackgroundView: ComponentHostView<Empty>?
-        private let topPanelVisibilityFractionUpdated = ActionSlot<(CGFloat, Transition)>()
+        private let topPanelVisibilityFractionUpdated = ActionSlot<(CGFloat, TGTransition)>()
         private var topPanelView: ComponentHostView<PagerComponentPanelEnvironment<TopPanelEnvironment>>?
-        private let bottomPanelVisibilityFractionUpdated = ActionSlot<(CGFloat, Transition)>()
+        private let bottomPanelVisibilityFractionUpdated = ActionSlot<(CGFloat, TGTransition)>()
         private var bottomPanelView: ComponentHostView<PagerComponentPanelEnvironment<TopPanelEnvironment>>?
         
         private var topPanelHeight: CGFloat?
@@ -428,9 +428,9 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
                     }
                     
                     if updateTopPanelExpanded {
-                        self.isTopPanelExpandedUpdated(isExpanded: false, transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))
+                        self.isTopPanelExpandedUpdated(isExpanded: false, transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
                     } else {
-                        self.state?.updated(transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))
+                        self.state?.updated(transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
                     }
                     if let centralId = self.centralId {
                         self.component?.contentIdUpdated(centralId)
@@ -460,7 +460,7 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
                 /*paneTransitionGestureState.fraction = 1.0
                 
                 self.paneTransitionGestureState = paneTransitionGestureState
-                self.state?.updated(transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))*/
+                self.state?.updated(transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))*/
                 
                 self.centralId = id
                 
@@ -472,19 +472,19 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
             }
             
             if updateTopPanelExpanded {
-                self.isTopPanelExpandedUpdated(isExpanded: false, transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))
+                self.isTopPanelExpandedUpdated(isExpanded: false, transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
             } else {
-                self.state?.updated(transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))
+                self.state?.updated(transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
             }
             self.component?.contentIdUpdated(id)
         }
         
-        func update(component: PagerComponent<ChildEnvironmentType, TopPanelEnvironment>, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+        func update(component: PagerComponent<ChildEnvironmentType, TopPanelEnvironment>, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
             let previousPanelHideBehavior = self.component?.panelHideBehavior
             
             var panelStateTransition = transition
             if let previousPanelHideBehavior = previousPanelHideBehavior, previousPanelHideBehavior != component.panelHideBehavior, panelStateTransition.animation.isImmediate {
-                panelStateTransition = Transition(animation: .curve(duration: 0.3, curve: .spring))
+                panelStateTransition = TGTransition(animation: .curve(duration: 0.3, curve: .spring))
             }
             
             self.component = component
@@ -980,7 +980,7 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
                 
                 if self.isTopPanelExpanded {
                     self.isTopPanelExpanded = false
-                    self.component?.isTopPanelExpandedUpdated(self.isTopPanelExpanded, Transition(animation: .curve(duration: 0.25, curve: .easeInOut)))
+                    self.component?.isTopPanelExpandedUpdated(self.isTopPanelExpanded, TGTransition(animation: .curve(duration: 0.25, curve: .easeInOut)))
                 }
             }
         }
@@ -992,12 +992,12 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
             
             if contentView.wantsExclusiveMode != wantsExclusiveMode {
                 contentView.wantsExclusiveMode = wantsExclusiveMode
-                //self.state?.updated(transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))
-                self.component?.isTopPanelHiddenUpdated(wantsExclusiveMode, Transition(animation: .curve(duration: 0.4, curve: .spring)))
+                //self.state?.updated(transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
+                self.component?.isTopPanelHiddenUpdated(wantsExclusiveMode, TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
             }
         }
         
-        private func isTopPanelExpandedUpdated(isExpanded: Bool, transition: Transition) {
+        private func isTopPanelExpandedUpdated(isExpanded: Bool, transition: TGTransition) {
             if self.isTopPanelExpanded == isExpanded {
                 return
             }
@@ -1011,7 +1011,7 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
                 return
             }
             
-            self.isTopPanelExpandedUpdated(isExpanded: false, transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))
+            self.isTopPanelExpandedUpdated(isExpanded: false, transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
         }
     }
     
@@ -1019,7 +1019,7 @@ public final class PagerComponent<ChildEnvironmentType: Equatable, TopPanelEnvir
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }

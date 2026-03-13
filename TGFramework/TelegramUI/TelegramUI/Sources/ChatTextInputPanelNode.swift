@@ -1988,7 +1988,7 @@ class ChatTextInputPanelNode: ChatInputPanelNode, ASEditableTextNodeDelegate {
             let textFieldFrame = CGRect(origin: CGPoint(x: self.textInputViewInternalInsets.left, y: self.textInputViewInternalInsets.top), size: CGSize(width: textInputFrame.size.width - (self.textInputViewInternalInsets.left + self.textInputViewInternalInsets.right), height: textInputFrame.size.height - self.textInputViewInternalInsets.top - textInputViewInternalInsets.bottom))
             let shouldUpdateLayout = textFieldFrame.size != textInputNode.frame.size
             transition.updateFrame(node: textInputNode, frame: textFieldFrame)
-            self.updateInputField(textInputFrame: textFieldFrame, transition: Transition(transition))
+            self.updateInputField(textInputFrame: textFieldFrame, transition: TGTransition(transition))
             if shouldUpdateLayout {
                 textInputNode.layout()
             }
@@ -2469,7 +2469,7 @@ class ChatTextInputPanelNode: ChatInputPanelNode, ASEditableTextNodeDelegate {
     
     private var dismissedEmojiSuggestionPosition: EmojiSuggestionPosition?
     
-    private func updateInputField(textInputFrame: CGRect, transition: Transition) {
+    private func updateInputField(textInputFrame: CGRect, transition: TGTransition) {
         guard let textInputNode = self.textInputNode, let context = self.context else {
             return
         }

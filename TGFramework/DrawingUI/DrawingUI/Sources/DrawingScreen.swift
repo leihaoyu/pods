@@ -404,7 +404,7 @@ private final class BlurredGradientComponent: Component {
         private var gradientMask = UIImageView()
         private var gradientForeground = SimpleGradientLayer()
         
-        public func update(component: BlurredGradientComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        public func update(component: BlurredGradientComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             self.component = component
             
             self.isUserInteractionEnabled = false
@@ -440,7 +440,7 @@ private final class BlurredGradientComponent: Component {
         return View(color: nil, enableBlur: true)
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }
@@ -1166,12 +1166,12 @@ private final class DrawingScreenComponent: CombinedComponent {
                 )
                 context.add(textSettings
                     .position(CGPoint(x: context.availableSize.width / 2.0, y: context.availableSize.height - environment.safeInsets.bottom - textSettings.size.height / 2.0 - 89.0))
-                    .appear(Transition.Appear({ _, view, transition in
+                    .appear(TGTransition.Appear({ _, view, transition in
                         if let view = view as? TextSettingsComponent.View, !transition.animation.isImmediate {
                             view.animateIn()
                         }
                     }))
-                    .disappear(Transition.Disappear({ view, transition, completion in
+                    .disappear(TGTransition.Disappear({ view, transition, completion in
                         if let view = view as? TextSettingsComponent.View, !transition.animation.isImmediate {
                             view.animateOut(completion: completion)
                         } else {
@@ -1216,11 +1216,11 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(swatch1Button
                 .position(CGPoint(x: offsetX, y: context.availableSize.height - environment.safeInsets.bottom - swatch1Button.size.height / 2.0 - 57.0))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -1243,11 +1243,11 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(swatch2Button
                 .position(CGPoint(x: offsetX, y: context.availableSize.height - environment.safeInsets.bottom - swatch2Button.size.height / 2.0 - 57.0))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0, delay: 0.025)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0, delay: 0.025)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -1270,11 +1270,11 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(swatch3Button
                 .position(CGPoint(x: offsetX, y: context.availableSize.height - environment.safeInsets.bottom - swatch3Button.size.height / 2.0 - 57.0))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0, delay: 0.05)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0, delay: 0.05)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -1297,11 +1297,11 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(swatch4Button
                 .position(CGPoint(x: offsetX, y: context.availableSize.height - environment.safeInsets.bottom - swatch4Button.size.height / 2.0 - 57.0))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0, delay: 0.075)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0, delay: 0.075)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -1324,11 +1324,11 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(swatch5Button
                 .position(CGPoint(x: offsetX, y: context.availableSize.height - environment.safeInsets.bottom - swatch5Button.size.height / 2.0 - 57.0))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0, delay: 0.1)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0, delay: 0.1)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -1352,11 +1352,11 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(swatch6Button
                 .position(CGPoint(x: offsetX, y: context.availableSize.height - environment.safeInsets.bottom - swatch6Button.size.height / 2.0 - 57.0))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0, delay: 0.125)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0, delay: 0.125)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -1379,11 +1379,11 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(swatch7Button
                 .position(CGPoint(x: offsetX, y: context.availableSize.height - environment.safeInsets.bottom - swatch7Button.size.height / 2.0 - 57.0))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0, delay: 0.15)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0, delay: 0.15)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -1406,11 +1406,11 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(swatch8Button
                 .position(CGPoint(x: offsetX, y: context.availableSize.height - environment.safeInsets.bottom - swatch7Button.size.height / 2.0 - 57.0))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0, delay: 0.175)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0, delay: 0.175)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -1447,12 +1447,12 @@ private final class DrawingScreenComponent: CombinedComponent {
                 )
                 context.add(tools
                     .position(CGPoint(x: context.availableSize.width / 2.0, y: context.availableSize.height - environment.safeInsets.bottom - tools.size.height / 2.0 - 78.0))
-                    .appear(Transition.Appear({ _, view, transition in
+                    .appear(TGTransition.Appear({ _, view, transition in
                         if let view = view as? ToolsComponent.View, !transition.animation.isImmediate {
                             view.animateIn(completion: {})
                         }
                     }))
-                    .disappear(Transition.Disappear({ view, transition, completion in
+                    .disappear(TGTransition.Disappear({ view, transition, completion in
                         if let view = view as? ToolsComponent.View, !transition.animation.isImmediate {
                             view.animateOut(completion: completion)
                         } else {
@@ -1844,13 +1844,13 @@ private final class DrawingScreenComponent: CombinedComponent {
             )
             context.add(doneButton
                 .position(CGPoint(x: context.availableSize.width - environment.safeInsets.right - doneButton.size.width / 2.0 - 3.0, y: context.availableSize.height - environment.safeInsets.bottom - doneButton.size.height / 2.0 - 2.0 - UIScreenPixel))
-                .appear(Transition.Appear { _, view, transition in
+                .appear(TGTransition.Appear { _, view, transition in
                     transition.animateScale(view: view, from: 0.1, to: 1.0)
                     transition.animateAlpha(view: view, from: 0.0, to: 1.0)
                     
                     transition.animatePosition(view: view, from: CGPoint(x: 12.0, y: 0.0), to: CGPoint(), additive: true)
                 })
-                .disappear(Transition.Disappear { view, transition, completion in
+                .disappear(TGTransition.Disappear { view, transition, completion in
                     transition.setScale(view: view, scale: 0.1)
                     transition.setAlpha(view: view, alpha: 0.0, completion: { _ in
                         completion()
@@ -2598,7 +2598,7 @@ public class DrawingScreen: ViewController, TGPhotoDrawingInterfaceController, U
             return result
         }
         
-        func containerLayoutUpdated(layout: ContainerViewLayout, orientation: UIInterfaceOrientation?, forceUpdate: Bool = false, animateOut: Bool = false, transition: Transition) {
+        func containerLayoutUpdated(layout: ContainerViewLayout, orientation: UIInterfaceOrientation?, forceUpdate: Bool = false, animateOut: Bool = false, transition: TGTransition) {
             guard let controller = self.controller else {
                 return
             }
@@ -3024,7 +3024,7 @@ public class DrawingScreen: ViewController, TGPhotoDrawingInterfaceController, U
     override public func containerLayoutUpdated(_ layout: ContainerViewLayout, transition: ContainedViewLayoutTransition) {
         super.containerLayoutUpdated(layout, transition: transition)
 
-        (self.displayNode as! Node).containerLayoutUpdated(layout: layout, orientation: orientation, transition: Transition(transition))
+        (self.displayNode as! Node).containerLayoutUpdated(layout: layout, orientation: orientation, transition: TGTransition(transition))
     }
     
     public func adapterContainerLayoutUpdatedSize(_ size: CGSize, intrinsicInsets: UIEdgeInsets, safeInsets: UIEdgeInsets, statusBarHeight: CGFloat, inputHeight: CGFloat, orientation: UIInterfaceOrientation, isRegular: Bool, animated: Bool) {

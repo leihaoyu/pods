@@ -305,7 +305,7 @@ private class ColorSliderComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         view.updated = self.updated
         return view.updateLayout(size: availableSize, leftColor: self.leftColor, rightColor: self.rightColor, currentColor: self.currentColor, value: self.value)
     }
@@ -455,7 +455,7 @@ private class ColorFieldComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         view.updated = self.updated
         return view.updateLayout(size: availableSize, component: self)
     }
@@ -547,7 +547,7 @@ private class ColorPreviewComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.updateLayout(size: availableSize, color: self.color)
     }
 }
@@ -719,7 +719,7 @@ final class ColorGridComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         view.selected = self.selected
         return view.updateLayout(size: availableSize, selectedColor: self.color)
     }
@@ -930,7 +930,7 @@ final class ColorSpectrumComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         view.selected = self.selected
         return view.updateLayout(size: availableSize, selectedColor: self.color)
     }
@@ -1528,7 +1528,7 @@ private class SegmentedControlComponent: Component {
             preconditionFailure()
         }
 
-        func update(component: SegmentedControlComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: SegmentedControlComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             self.node.items = component.values.map { SegmentedControlItem(title: $0) }
             self.node.selectedIndex = component.selectedIndex
             let selectionChanged = component.selectionChanged
@@ -1551,7 +1551,7 @@ private class SegmentedControlComponent: Component {
         return View()
     }
 
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }
@@ -1743,7 +1743,7 @@ final class ColorSwatchComponent: Component {
             self.contentView.layer.animateScale(from: 1.0, to: 0.01, duration: 0.3)
         }
         
-        func update(component: ColorSwatchComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: ColorSwatchComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             self.component = component
             let contentSize: CGSize
             if case .pallete = component.type {
@@ -1845,7 +1845,7 @@ final class ColorSwatchComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -1885,7 +1885,7 @@ class BlurredRectangle: Component {
             preconditionFailure()
         }
 
-        func update(component: BlurredRectangle, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: BlurredRectangle, availableSize: CGSize, transition: TGTransition) -> CGSize {
             transition.setFrame(view: self.background.view, frame: CGRect(origin: CGPoint(), size: availableSize))
             self.background.updateColor(color: component.color, transition: .immediate)
             self.background.update(size: availableSize, cornerRadius: component.radius, transition: .immediate)
@@ -1898,7 +1898,7 @@ class BlurredRectangle: Component {
         return View()
     }
 
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }

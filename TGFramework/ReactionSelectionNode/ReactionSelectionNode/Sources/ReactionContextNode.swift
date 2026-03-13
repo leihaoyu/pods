@@ -499,11 +499,11 @@ public final class ReactionContextNode: ASDisplayNode, UIScrollViewDelegate {
                 strongSelf.updateEmojiContent(emojiContent)
                 
                 if let reactionSelectionComponentHost = strongSelf.reactionSelectionComponentHost, let componentView = reactionSelectionComponentHost.view {
-                    var emojiTransition: Transition = .immediate
+                    var emojiTransition: TGTransition = .immediate
                     if let scheduledEmojiContentAnimationHint = strongSelf.scheduledEmojiContentAnimationHint {
                         strongSelf.scheduledEmojiContentAnimationHint = nil
                         let contentAnimation = scheduledEmojiContentAnimationHint
-                        emojiTransition = Transition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(contentAnimation)
+                        emojiTransition = TGTransition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(contentAnimation)
                     }
                     
                     let _ = reactionSelectionComponentHost.update(
@@ -1055,7 +1055,7 @@ public final class ReactionContextNode: ASDisplayNode, UIScrollViewDelegate {
         
         if (self.isExpanded || self.reactionSelectionComponentHost != nil), let _ = self.getEmojiContent {
             let reactionSelectionComponentHost: ComponentView<Empty>
-            var componentTransition = Transition(transition)
+            var componentTransition = TGTransition(transition)
             if let current = self.reactionSelectionComponentHost {
                 reactionSelectionComponentHost = current
             } else {
@@ -1070,7 +1070,7 @@ public final class ReactionContextNode: ASDisplayNode, UIScrollViewDelegate {
                 if let scheduledEmojiContentAnimationHint = self.scheduledEmojiContentAnimationHint {
                     self.scheduledEmojiContentAnimationHint = nil
                     let contentAnimation = scheduledEmojiContentAnimationHint
-                    componentTransition = Transition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(contentAnimation)
+                    componentTransition = TGTransition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(contentAnimation)
                 }
                 
                 let _ = reactionSelectionComponentHost.update(
@@ -1134,7 +1134,7 @@ public final class ReactionContextNode: ASDisplayNode, UIScrollViewDelegate {
                             
                             if let mirrorContentClippingView = emojiView.mirrorContentClippingView {
                                 mirrorContentClippingView.clipsToBounds = false
-                                Transition(transition).animateBoundsOrigin(view: mirrorContentClippingView, from: CGPoint(x: 0.0, y: 46.0 + 54.0 - 4.0), to: CGPoint(), additive: true, completion: { [weak mirrorContentClippingView] _ in
+                                TGTransition(transition).animateBoundsOrigin(view: mirrorContentClippingView, from: CGPoint(x: 0.0, y: 46.0 + 54.0 - 4.0), to: CGPoint(), additive: true, completion: { [weak mirrorContentClippingView] _ in
                                     mirrorContentClippingView?.clipsToBounds = true
                                 })
                             }

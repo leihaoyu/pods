@@ -17,7 +17,7 @@ private extension UIView {
 }
 
 private extension CALayer {
-    func animate(from: AnyObject, to: AnyObject, keyPath: String, duration: Double, delay: Double, curve: Transition.Animation.Curve, removeOnCompletion: Bool, additive: Bool, completion: ((Bool) -> Void)? = nil) {
+    func animate(from: AnyObject, to: AnyObject, keyPath: String, duration: Double, delay: Double, curve:TGTransition.Animation.Curve, removeOnCompletion: Bool, additive: Bool, completion: ((Bool) -> Void)? = nil) {
         let timingFunction: String
         let mediaTimingFunction: CAMediaTimingFunction?
         switch curve {
@@ -44,7 +44,7 @@ private extension CALayer {
     }
 }
 
-private extension Transition.Animation.Curve {
+private extension TGTransition.Animation.Curve {
     func asTimingFunction() -> CAMediaTimingFunction {
         switch self {
         case .easeInOut:
@@ -57,7 +57,7 @@ private extension Transition.Animation.Curve {
     }
 }
 
-public extension Transition.Animation {
+public extension TGTransition.Animation {
     var isImmediate: Bool {
         if case .none = self {
             return true
@@ -67,7 +67,7 @@ public extension Transition.Animation {
     }
 }
 
-public struct Transition {
+public struct TGTransition {
     public enum Animation {
         public enum Curve {
             case easeInOut
@@ -91,19 +91,19 @@ public struct Transition {
         return nil
     }
 
-    public func withUserData(_ userData: Any) -> Transition {
+    public func withUserData(_ userData: Any) -> TGTransition {
         var result = self
         result._userData.append(userData)
         return result
     }
     
-    public func withAnimation(_ animation: Animation) -> Transition {
+    public func withAnimation(_ animation: Animation) -> TGTransition {
         var result = self
         result.animation = animation
         return result
     }
     
-    public func withAnimationIfAnimated(_ animation: Animation) -> Transition {
+    public func withAnimationIfAnimated(_ animation: Animation) -> TGTransition {
         switch self.animation {
         case .none:
             return self
@@ -114,10 +114,10 @@ public struct Transition {
         }
     }
     
-    public static var immediate: Transition = Transition(animation: .none)
+    public static var immediate: TGTransition = TGTransition(animation: .none)
     
-    public static func easeInOut(duration: Double) -> Transition {
-        return Transition(animation: .curve(duration: duration, curve: .easeInOut))
+    public static func easeInOut(duration: Double) -> TGTransition {
+        return TGTransition(animation: .curve(duration: duration, curve: .easeInOut))
     }
 
     public init(animation: Animation) {

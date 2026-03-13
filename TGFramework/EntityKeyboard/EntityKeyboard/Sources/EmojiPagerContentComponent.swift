@@ -73,7 +73,7 @@ private final class WarpView: UIView {
             fatalError("init(coder:) has not been implemented")
         }
         
-        func update(containerSize: CGSize, rect: CGRect, transition: Transition) {
+        func update(containerSize: CGSize, rect: CGRect, transition: TGTransition) {
             transition.setFrame(view: self.cloneView.view, frame: CGRect(origin: CGPoint(x: -rect.minX, y: -rect.minY), size: CGSize(width: containerSize.width, height: containerSize.height)))
         }
     }
@@ -114,7 +114,7 @@ private final class WarpView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(size: CGSize, topInset: CGFloat, warpHeight: CGFloat, theme: PresentationTheme, transition: Transition) {
+    func update(size: CGSize, topInset: CGFloat, warpHeight: CGFloat, theme: PresentationTheme, transition: TGTransition) {
         transition.setFrame(view: self.contentView, frame: CGRect(origin: CGPoint(), size: size))
         
         let allItemsHeight = warpHeight * 0.5
@@ -642,7 +642,7 @@ private final class PremiumBadgeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(transition: Transition, badge: EmojiPagerContentComponent.View.ItemLayer.Badge, backgroundColor: UIColor, size: CGSize) {
+    func update(transition: TGTransition, badge: EmojiPagerContentComponent.View.ItemLayer.Badge, backgroundColor: UIColor, size: CGSize) {
         if self.badge != badge {
             self.badge = badge
             
@@ -1293,7 +1293,7 @@ private final class GroupEmbeddedView: UIScrollView, UIScrollViewDelegate, Pager
         }
     }
     
-    private func updateVisibleItems(transition: Transition, attemptSynchronousLoad: Bool) {
+    private func updateVisibleItems(transition: TGTransition, attemptSynchronousLoad: Bool) {
         guard let context = self.context, let theme = self.theme, let itemLayout = self.itemLayout, let items = self.items, let cache = self.cache, let renderer = self.renderer else {
             return
         }
@@ -1822,7 +1822,7 @@ public final class EmojiSearchHeaderView: UIView, UITextFieldDelegate {
         self.updateQuery(.text(value: text, language: inputLanguage))
     }
     
-    private func update(transition: Transition) {
+    private func update(transition: TGTransition) {
         guard let params = self.params else {
             return
         }
@@ -1830,7 +1830,7 @@ public final class EmojiSearchHeaderView: UIView, UITextFieldDelegate {
         self.update(context: params.context, theme: params.theme, strings: params.strings, text: params.text, useOpaqueTheme: params.useOpaqueTheme, isActive: params.isActive, size: params.size, canFocus: params.canFocus, searchCategories: params.searchCategories, searchState: params.searchState, transition: transition)
     }
     
-    public func update(context: AccountContext, theme: PresentationTheme, strings: PresentationStrings, text: String, useOpaqueTheme: Bool, isActive: Bool, size: CGSize, canFocus: Bool, searchCategories: EmojiSearchCategories?, searchState: EmojiPagerContentComponent.SearchState, transition: Transition) {
+    public func update(context: AccountContext, theme: PresentationTheme, strings: PresentationStrings, text: String, useOpaqueTheme: Bool, isActive: Bool, size: CGSize, canFocus: Bool, searchCategories: EmojiSearchCategories?, searchState: EmojiPagerContentComponent.SearchState, transition: TGTransition) {
         let textInputState: EmojiSearchSearchBarComponent.TextInputState
         if let textField = self.textField {
             textInputState = .active(hasText: !(textField.text ?? "").isEmpty)
@@ -2010,7 +2010,7 @@ public final class EmojiSearchHeaderView: UIView, UITextFieldDelegate {
                     
                     if shouldChangeActivation {
                         if let term {
-                            self.update(transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))
+                            self.update(transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
                             
                             self.updateQuery(.category(value: term))
                             self.activated(false)
@@ -2143,7 +2143,7 @@ private final class EmptySearchResultsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(context: AccountContext, theme: PresentationTheme, useOpaqueTheme: Bool, text: String, file: TelegramMediaFile?, size: CGSize, searchInitiallyHidden: Bool, transition: Transition) {
+    func update(context: AccountContext, theme: PresentationTheme, useOpaqueTheme: Bool, text: String, file: TelegramMediaFile?, size: CGSize, searchInitiallyHidden: Bool, transition: TGTransition) {
         let titleColor: UIColor
         if useOpaqueTheme {
             titleColor = theme.chat.inputMediaPanel.panelContentOpaqueSearchOverlayColor
@@ -2288,7 +2288,7 @@ public final class EmojiPagerContentComponent: Component {
         public let presentController: (ViewController) -> Void
         public let presentGlobalOverlayController: (ViewController) -> Void
         public let navigationController: () -> NavigationController?
-        public let requestUpdate: (Transition) -> Void
+        public let requestUpdate: (TGTransition) -> Void
         public let updateSearchQuery: (EmojiPagerContentComponent.SearchQuery?) -> Void
         public let updateScrollingToItemGroup: () -> Void
         public let externalCancel: (() -> Void)?
@@ -2313,7 +2313,7 @@ public final class EmojiPagerContentComponent: Component {
             presentController: @escaping (ViewController) -> Void,
             presentGlobalOverlayController: @escaping (ViewController) -> Void,
             navigationController: @escaping () -> NavigationController?,
-            requestUpdate: @escaping (Transition) -> Void,
+            requestUpdate: @escaping (TGTransition) -> Void,
             updateSearchQuery: @escaping (SearchQuery?) -> Void,
             updateScrollingToItemGroup: @escaping () -> Void,
             externalCancel: (() -> Void)? = nil,
@@ -3378,7 +3378,7 @@ public final class EmojiPagerContentComponent: Component {
                 }
             }
             
-            func update(transition: Transition, size: CGSize, badge: Badge?, blurredBadgeColor: UIColor, blurredBadgeBackgroundColor: UIColor) {
+            func update(transition: TGTransition, size: CGSize, badge: Badge?, blurredBadgeColor: UIColor, blurredBadgeBackgroundColor: UIColor) {
                 if self.badge != badge || self.validSize != size {
                     self.badge = badge
                     self.validSize = size
@@ -3638,7 +3638,7 @@ public final class EmojiPagerContentComponent: Component {
         private weak var state: EmptyComponentState?
         private var pagerEnvironment: PagerComponentChildEnvironment?
         private var keyboardChildEnvironment: EntityKeyboardChildEnvironment?
-        private var activeItemUpdated: ActionSlot<(AnyHashable, AnyHashable?, Transition)>?
+        private var activeItemUpdated: ActionSlot<(AnyHashable, AnyHashable?, TGTransition)>?
         private var itemLayout: ItemLayout?
         
         private var contextFocusItemKey: EmojiPagerContentComponent.View.ItemLayer.Key?
@@ -5025,7 +5025,7 @@ public final class EmojiPagerContentComponent: Component {
                     itemLayer.cloneLayer = currentLongPressLayer
                     
                     itemLayer.isHidden = true
-                    let transition = Transition(animation: .curve(duration: longPressDuration, curve: .easeInOut))
+                    let transition = TGTransition(animation: .curve(duration: longPressDuration, curve: .easeInOut))
                     transition.setScale(layer: currentLongPressLayer, scale: 1.85)
                 }
                 
@@ -5052,13 +5052,13 @@ public final class EmojiPagerContentComponent: Component {
                     self.longPressItem = nil
                     
                     if let itemLayer = self.visibleItemLayers[itemKey] {
-                        let transition = Transition(animation: .curve(duration: 0.3, curve: .spring))
+                        let transition = TGTransition(animation: .curve(duration: 0.3, curve: .spring))
                         transition.setScale(layer: itemLayer, scale: 1.0)
                         
                         if let currentLongPressLayer = self.currentLongPressLayer {
                             self.currentLongPressLayer = nil
                             
-                            let transition = Transition(animation: .curve(duration: 0.3, curve: .spring))
+                            let transition = TGTransition(animation: .curve(duration: 0.3, curve: .spring))
                             transition.setScale(layer: currentLongPressLayer, scale: 1.0, completion: { [weak itemLayer, weak currentLongPressLayer] _ in
                                 itemLayer?.isHidden = false
                                 currentLongPressLayer?.removeFromSuperlayer()
@@ -5087,13 +5087,13 @@ public final class EmojiPagerContentComponent: Component {
                         }
                     } else {
                         if let itemLayer = self.visibleItemLayers[itemKey] {
-                            let transition = Transition(animation: .curve(duration: 0.3, curve: .spring))
+                            let transition = TGTransition(animation: .curve(duration: 0.3, curve: .spring))
                             transition.setScale(layer: itemLayer, scale: 1.0)
                             
                             if let currentLongPressLayer = self.currentLongPressLayer {
                                 self.currentLongPressLayer = nil
                                 
-                                let transition = Transition(animation: .curve(duration: 0.3, curve: .spring))
+                                let transition = TGTransition(animation: .curve(duration: 0.3, curve: .spring))
                                 transition.setScale(layer: currentLongPressLayer, scale: 1.0, completion: { [weak itemLayer, weak currentLongPressLayer] _ in
                                     itemLayer?.isHidden = false
                                     currentLongPressLayer?.removeFromSuperlayer()
@@ -5102,7 +5102,7 @@ public final class EmojiPagerContentComponent: Component {
                         } else if let currentLongPressLayer = self.currentLongPressLayer {
                             self.currentLongPressLayer = nil
                             
-                            let transition = Transition(animation: .curve(duration: 0.3, curve: .spring))
+                            let transition = TGTransition(animation: .curve(duration: 0.3, curve: .spring))
                             transition.setScale(layer: currentLongPressLayer, scale: 1.0, completion: { [weak currentLongPressLayer] _ in
                                 currentLongPressLayer?.removeFromSuperlayer()
                             })
@@ -5213,7 +5213,7 @@ public final class EmojiPagerContentComponent: Component {
             self.snapScrollingOffsetToInsets()
         }
         
-        private func updateScrollingOffset(isReset: Bool, transition: Transition) {
+        private func updateScrollingOffset(isReset: Bool, transition: TGTransition) {
             guard let component = self.component else {
                 return
             }
@@ -5257,7 +5257,7 @@ public final class EmojiPagerContentComponent: Component {
         }
         
         private func snapScrollingOffsetToInsets() {
-            let transition = Transition(animation: .curve(duration: 0.4, curve: .spring))
+            let transition = TGTransition(animation: .curve(duration: 0.4, curve: .spring))
             
             var currentBounds = self.scrollView.bounds
             currentBounds.origin.y = self.snappedContentOffset(proposedOffset: currentBounds.minY)
@@ -5266,7 +5266,7 @@ public final class EmojiPagerContentComponent: Component {
             self.updateScrollingOffset(isReset: false, transition: transition)
         }
         
-        private func updateVisibleItems(transition: Transition, attemptSynchronousLoads: Bool, previousItemPositions: [VisualItemKey: CGPoint]?, previousAbsoluteItemPositions: [VisualItemKey: CGPoint]? = nil, updatedItemPositions: [VisualItemKey: CGPoint]?, hintDisappearingGroupFrame: (groupId: AnyHashable, frame: CGRect)? = nil) {
+        private func updateVisibleItems(transition: TGTransition, attemptSynchronousLoads: Bool, previousItemPositions: [VisualItemKey: CGPoint]?, previousAbsoluteItemPositions: [VisualItemKey: CGPoint]? = nil, updatedItemPositions: [VisualItemKey: CGPoint]?, hintDisappearingGroupFrame: (groupId: AnyHashable, frame: CGRect)? = nil) {
             guard let component = self.component, let pagerEnvironment = self.pagerEnvironment, let keyboardChildEnvironment = self.keyboardChildEnvironment, let itemLayout = self.itemLayout else {
                 return
             }
@@ -6144,10 +6144,10 @@ public final class EmojiPagerContentComponent: Component {
         private func expandGroup(groupId: AnyHashable) {
             self.expandedGroupIds.insert(groupId)
             
-            self.state?.updated(transition: Transition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(ContentAnimation(type: .groupExpanded(id: groupId))))
+            self.state?.updated(transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(ContentAnimation(type: .groupExpanded(id: groupId))))
         }
         
-        public func pagerUpdateBackground(backgroundFrame: CGRect, transition: Transition) {
+        public func pagerUpdateBackground(backgroundFrame: CGRect, transition: TGTransition) {
             guard let component = self.component, let keyboardChildEnvironment = self.keyboardChildEnvironment, let pagerEnvironment = self.pagerEnvironment else {
                 return
             }
@@ -6214,7 +6214,7 @@ public final class EmojiPagerContentComponent: Component {
             }
         }
         
-        func update(component: EmojiPagerContentComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+        func update(component: EmojiPagerContentComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
             let previousComponent = self.component
             
             self.component = component
@@ -6677,11 +6677,11 @@ public final class EmojiPagerContentComponent: Component {
                             
                             if !isFirstResponder {
                                 strongSelf.component?.inputInteractionHolder.inputInteraction?.requestUpdate(
-                                    Transition(animation: .curve(duration: 0.4, curve: .spring)))
+                                    TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
                             } else {
                                 DispatchQueue.main.async {
                                     self?.component?.inputInteractionHolder.inputInteraction?.requestUpdate(
-                                        Transition(animation: .curve(duration: 0.4, curve: .spring)))
+                                        TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
                                 }
                             }
                         }
@@ -6915,7 +6915,7 @@ public final class EmojiPagerContentComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
     

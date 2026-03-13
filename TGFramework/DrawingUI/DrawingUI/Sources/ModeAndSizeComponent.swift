@@ -182,7 +182,7 @@ final class ModeAndSizeComponent: Component {
             self.backgroundNode.layer.animateAlpha(from: 1.0, to: 0.0, duration: 0.3)
         }
 
-        func update(component: ModeAndSizeComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: ModeAndSizeComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             self.component = component
         
             self.updated = component.sizeUpdated
@@ -260,7 +260,7 @@ final class ModeAndSizeComponent: Component {
         return View()
     }
 
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }

@@ -136,7 +136,7 @@ open class ViewControllerComponentContainer: ViewController {
             self.view.addSubview(self.hostView)
         }
         
-        func containerLayoutUpdated(layout: ContainerViewLayout, navigationHeight: CGFloat, transition: Transition) {
+        func containerLayoutUpdated(layout: ContainerViewLayout, navigationHeight: CGFloat, transition: TGTransition) {
             self.currentLayout = (layout, navigationHeight)
             
             let environment = ViewControllerComponentContainer.Environment(
@@ -174,10 +174,10 @@ open class ViewControllerComponentContainer: ViewController {
             guard let currentLayout = self.currentLayout else {
                 return
             }
-            self.containerLayoutUpdated(layout: currentLayout.layout, navigationHeight: currentLayout.navigationHeight, transition: animated ? Transition(animation: .none).withUserData(isVisible ? AnimateInTransition() : AnimateOutTransition()) : .immediate)
+            self.containerLayoutUpdated(layout: currentLayout.layout, navigationHeight: currentLayout.navigationHeight, transition: animated ? TGTransition(animation: .none).withUserData(isVisible ? AnimateInTransition() : AnimateOutTransition()) : .immediate)
         }
         
-        func updateComponent(component: AnyComponent<ViewControllerComponentContainer.Environment>, transition: Transition) {
+        func updateComponent(component: AnyComponent<ViewControllerComponentContainer.Environment>, transition: TGTransition) {
             self.component = component
             
             guard let currentLayout = self.currentLayout else {
@@ -282,10 +282,10 @@ open class ViewControllerComponentContainer: ViewController {
         let navigationHeight = self.navigationLayout(layout: layout).navigationFrame.maxY
         
         self.validLayout = layout
-        self.node.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+        self.node.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
     }
     
-    public func updateComponent(component: AnyComponent<ViewControllerComponentContainer.Environment>, transition: Transition) {
+    public func updateComponent(component: AnyComponent<ViewControllerComponentContainer.Environment>, transition: TGTransition) {
         self.node.updateComponent(component: component, transition: transition)
     }
 }

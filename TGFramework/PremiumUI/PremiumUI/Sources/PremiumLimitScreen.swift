@@ -232,7 +232,7 @@ private class PremiumLimitAnimationComponent: Component {
         }
         
         var previousAvailableSize: CGSize?
-        func update(component: PremiumLimitAnimationComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: PremiumLimitAnimationComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             self.inactiveBackground.backgroundColor = component.inactiveColor.cgColor
             self.activeBackground.backgroundColor = component.activeColors.last?.cgColor
             
@@ -410,7 +410,7 @@ private class PremiumLimitAnimationComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }

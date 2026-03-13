@@ -138,7 +138,7 @@ final class TextAlignmentComponent: Component {
             fatalError("init(coder:) has not been implemented")
         }
         
-        func update(component: TextAlignmentComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: TextAlignmentComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             let height = 2.0 - UIScreenPixel
             let spacing: CGFloat = 3.0 + UIScreenPixel
             let long = 21.0
@@ -172,7 +172,7 @@ final class TextAlignmentComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -225,7 +225,7 @@ final class TextFontComponent: Component {
             }
         }
                         
-        func update(component: TextFontComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: TextFontComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             self.component = component
             
             if self.icon.contents == nil {
@@ -278,7 +278,7 @@ final class TextFontComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -525,7 +525,7 @@ final class TextSettingsComponent: CombinedComponent {
             )
             context.add(styleButton
                 .position(CGPoint(x: offset + styleButton.size.width / 2.0, y: context.availableSize.height / 2.0))
-                .update(Transition.Update { _, view, transition in
+                .update(TGTransition.Update { _, view, transition in
                     if let snapshot = view.snapshotView(afterScreenUpdates: false) {
                         transition.setAlpha(view: snapshot, alpha: 0.0, completion: { [weak snapshot] _ in
                             snapshot?.removeFromSuperview()
@@ -743,7 +743,7 @@ final class TextSizeSliderComponent: Component {
             return true
         }
         
-        func updateLayout(size: CGSize, component: TextSizeSliderComponent, transition: Transition) -> CGSize {
+        func updateLayout(size: CGSize, component: TextSizeSliderComponent, transition: TGTransition) -> CGSize {
             self.component = component
             
             let previousSize = self.validSize
@@ -791,7 +791,7 @@ final class TextSizeSliderComponent: Component {
         return View()
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         view.updated = self.updated
         view.released = self.released
         return view.updateLayout(size: availableSize, component: self, transition: transition)

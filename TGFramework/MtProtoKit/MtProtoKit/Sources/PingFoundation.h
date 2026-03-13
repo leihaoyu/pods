@@ -7,7 +7,7 @@
 #endif
 
 #include <AssertMacros.h>
-
+@import Darwin.POSIX;
 #pragma mark * PingFoundation
 
 @protocol PingFoundationDelegate;

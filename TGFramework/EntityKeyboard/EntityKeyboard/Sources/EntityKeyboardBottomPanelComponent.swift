@@ -66,7 +66,7 @@ private final class BottomPanelIconComponent: Component {
             }
         }
         
-        func update(component: BottomPanelIconComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: BottomPanelIconComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             if self.component?.title != component.title {
                 let text = NSAttributedString(string: component.title, font: Font.medium(15.0), textColor: .white)
                 let textBounds = text.boundingRect(with: CGSize(width: 120.0, height: 100.0), options: .usesLineFragmentOrigin, context: nil)
@@ -107,7 +107,7 @@ private final class BottomPanelIconComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -185,7 +185,7 @@ final class EntityKeyboardBottomPanelComponent: Component {
             fatalError("init(coder:) has not been implemented")
         }
         
-        func update(component: EntityKeyboardBottomPanelComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+        func update(component: EntityKeyboardBottomPanelComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
             if self.component?.theme !== component.theme {
                 self.separatorView.backgroundColor = component.theme.chat.inputMediaPanel.panelSeparatorColor
                 self.backgroundView.updateColor(color: component.theme.chat.inputPanel.panelBackgroundColor.withMultipliedAlpha(1.0), transition: .immediate)
@@ -310,7 +310,7 @@ final class EntityKeyboardBottomPanelComponent: Component {
             }
             
             var validIconIds: [AnyHashable] = []
-            var iconInfos: [AnyHashable: (size: CGSize, transition: Transition)] = [:]
+            var iconInfos: [AnyHashable: (size: CGSize, transition: TGTransition)] = [:]
             
             var iconTotalSize = CGSize()
             let iconSpacing: CGFloat = 4.0
@@ -412,7 +412,7 @@ final class EntityKeyboardBottomPanelComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }

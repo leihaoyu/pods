@@ -157,7 +157,7 @@ public final class EmojiSearchContent: ASDisplayNode, EntitySearchContainerNode 
                         self.onCancel?()
                     } else {
                         self.itemGroups.removeAll(where: { $0.groupId == groupId })
-                        self.update(transition: Transition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(EmojiPagerContentComponent.ContentAnimation(type: .groupRemoved(id: groupId))))
+                        self.update(transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(EmojiPagerContentComponent.ContentAnimation(type: .groupRemoved(id: groupId))))
                     }
                 }
             },
@@ -421,17 +421,17 @@ public final class EmojiSearchContent: ASDisplayNode, EntitySearchContainerNode 
         self.dataDisposable?.dispose()
     }
     
-    private func update(transition: Transition) {
+    private func update(transition: TGTransition) {
         if let params = self.params {
             self.update(size: params.size, leftInset: params.leftInset, rightInset: params.rightInset, bottomInset: params.bottomInset, inputHeight: params.inputHeight, deviceMetrics: params.deviceMetrics, transition: transition)
         }
     }
     
     public func updateLayout(size: CGSize, leftInset: CGFloat, rightInset: CGFloat, bottomInset: CGFloat, inputHeight: CGFloat, deviceMetrics: DeviceMetrics, transition: ContainedViewLayoutTransition) {
-        self.update(size: size, leftInset: leftInset, rightInset: rightInset, bottomInset: bottomInset, inputHeight: inputHeight, deviceMetrics: deviceMetrics, transition: Transition(transition))
+        self.update(size: size, leftInset: leftInset, rightInset: rightInset, bottomInset: bottomInset, inputHeight: inputHeight, deviceMetrics: deviceMetrics, transition: TGTransition(transition))
     }
      
-    private func update(size: CGSize, leftInset: CGFloat, rightInset: CGFloat, bottomInset: CGFloat, inputHeight: CGFloat, deviceMetrics: DeviceMetrics, transition: Transition) {
+    private func update(size: CGSize, leftInset: CGFloat, rightInset: CGFloat, bottomInset: CGFloat, inputHeight: CGFloat, deviceMetrics: DeviceMetrics, transition: TGTransition) {
         self.backgroundColor = self.presentationData.theme.list.plainBackgroundColor
         
         let params = Params(size: size, leftInset: leftInset, rightInset: rightInset, bottomInset: bottomInset, inputHeight: inputHeight, deviceMetrics: deviceMetrics)

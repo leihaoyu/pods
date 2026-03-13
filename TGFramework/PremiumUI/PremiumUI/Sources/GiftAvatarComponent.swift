@@ -235,7 +235,7 @@ class GiftAvatarComponent: Component {
             }
         }
         
-        func update(component: GiftAvatarComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: GiftAvatarComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             self.sceneView.bounds = CGRect(origin: .zero, size: CGSize(width: availableSize.width * 2.0, height: availableSize.height * 2.0))
             if self.sceneView.superview == self {
                 self.sceneView.center = CGPoint(x: availableSize.width / 2.0, y: availableSize.height / 2.0)
@@ -256,7 +256,7 @@ class GiftAvatarComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }

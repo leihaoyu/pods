@@ -17,7 +17,7 @@ import ChatPresentationInterfaceStateKit
 private let boundingSize = CGSize(width: 41.0, height: 41.0)
 private let boundingImageSize = CGSize(width: 28.0, height: 28.0)
 
-private struct Transition {
+private struct TGTransition {
     let deletions: [ListViewDeleteItem]
     let insertions: [ListViewInsertItem]
     let updates: [ListViewUpdateItem]
@@ -72,14 +72,14 @@ private enum Entry: Comparable, Identifiable {
     }
 }
 
-private func preparedEntryTransition(account: Account, from fromEntries: [Entry], to toEntries: [Entry], inputNodeInteraction: ChatMediaInputNodeInteraction, isVisible: @escaping () -> Bool) -> Transition {
+private func preparedEntryTransition(account: Account, from fromEntries: [Entry], to toEntries: [Entry], inputNodeInteraction: ChatMediaInputNodeInteraction, isVisible: @escaping () -> Bool) -> TGTransition {
     let (deleteIndices, indicesAndItems, updateIndices) = mergeListsStableWithUpdates(leftList: fromEntries, rightList: toEntries)
     
     let deletions = deleteIndices.map { ListViewDeleteItem(index: $0, directionHint: nil) }
     let insertions = indicesAndItems.map { ListViewInsertItem(index: $0.0, previousIndex: $0.2, item: $0.1.item(account: account, inputNodeInteraction: inputNodeInteraction, isVisible: isVisible), directionHint: nil) }
     let updates = updateIndices.map { ListViewUpdateItem(index: $0.0, previousIndex: $0.2, item: $0.1.item(account: account, inputNodeInteraction: inputNodeInteraction, isVisible: isVisible), directionHint: nil) }
     
-    return Transition(deletions: deletions, insertions: insertions, updates: updates)
+    return TGTransition(deletions: deletions, insertions: insertions, updates: updates)
 }
 
 private func panelEntries(featuredPacks: [FeaturedStickerPackItem], theme: PresentationTheme) -> [Entry] {
@@ -458,7 +458,7 @@ class StickerPaneTrendingListGridItemNode: GridItemNode {
         self.disposable.dispose()
     }
     
-    private func enqueuePanelTransition(_ transition: Transition, firstTime: Bool) {
+    private func enqueuePanelTransition(_ transition: TGTransition, firstTime: Bool) {
         var options = ListViewDeleteAndInsertOptions()
         if firstTime {
             options.insert(.Synchronous)

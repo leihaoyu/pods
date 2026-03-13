@@ -1,9 +1,9 @@
 import Foundation
 import UIKit
 
-public extension Transition.Appear {
-    static func `default`(scale: Bool = false, alpha: Bool = false) -> Transition.Appear {
-        return Transition.Appear { component, view, transition in
+public extension TGTransition.Appear {
+    static func `default`(scale: Bool = false, alpha: Bool = false) -> TGTransition.Appear {
+        return TGTransition.Appear { component, view, transition in
             if scale {
                 transition.animateScale(view: view, from: 0.01, to: 1.0)
             }
@@ -13,16 +13,16 @@ public extension Transition.Appear {
         }
     }
 
-    static func scaleIn() -> Transition.Appear {
-        return Transition.Appear { component, view, transition in
+    static func scaleIn() -> TGTransition.Appear {
+        return TGTransition.Appear { component, view, transition in
             transition.animateScale(view: view, from: 0.01, to: 1.0)
         }
     }
 }
 
-public extension Transition.AppearWithGuide {
-    static func `default`(scale: Bool = false, alpha: Bool = false) -> Transition.AppearWithGuide {
-        return Transition.AppearWithGuide { component, view, guide, transition in
+public extension TGTransition.AppearWithGuide {
+    static func `default`(scale: Bool = false, alpha: Bool = false) -> TGTransition.AppearWithGuide {
+        return TGTransition.AppearWithGuide { component, view, guide, transition in
             if scale {
                 transition.animateScale(view: view, from: 0.01, to: 1.0)
             }
@@ -34,9 +34,9 @@ public extension Transition.AppearWithGuide {
     }
 }
 
-public extension Transition.Disappear {
-    static func `default`(scale: Bool = false, alpha: Bool = true) -> Transition.Disappear {
-        return Transition.Disappear { view, transition, completion in
+public extension TGTransition.Disappear {
+    static func `default`(scale: Bool = false, alpha: Bool = true) -> TGTransition.Disappear {
+        return TGTransition.Disappear { view, transition, completion in
             if scale {
                 transition.setScale(view: view, scale: 0.01, completion: { _ in
                     if !alpha {
@@ -56,9 +56,9 @@ public extension Transition.Disappear {
     }
 }
 
-public extension Transition.DisappearWithGuide {
-    static func `default`(alpha: Bool = true) -> Transition.DisappearWithGuide {
-        return Transition.DisappearWithGuide { stage, view, guide, transition, completion in
+public extension TGTransition.DisappearWithGuide {
+    static func `default`(alpha: Bool = true) -> TGTransition.DisappearWithGuide {
+        return TGTransition.DisappearWithGuide { stage, view, guide, transition, completion in
             switch stage {
             case .begin:
                 if alpha {
@@ -78,8 +78,8 @@ public extension Transition.DisappearWithGuide {
     }
 }
 
-public extension Transition.Update {
-    static let `default` = Transition.Update { component, view, transition in
+public extension TGTransition.Update {
+    static let `default` = TGTransition.Update { component, view, transition in
         let frame = component.size.centered(around: component._position ?? CGPoint())
         if let scale = component._scale {
             transition.setBounds(view: view, bounds: CGRect(origin: CGPoint(), size: frame.size))

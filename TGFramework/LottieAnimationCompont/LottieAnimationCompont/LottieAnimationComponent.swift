@@ -136,7 +136,7 @@ public final class LottieAnimationComponent: Component {
             }
         }
         
-        func update(component: LottieAnimationComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: LottieAnimationComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             var updatePlayback = false
             var updateColors = false
             
@@ -299,7 +299,7 @@ public final class LottieAnimationComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }

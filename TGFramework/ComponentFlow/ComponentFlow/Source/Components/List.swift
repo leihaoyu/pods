@@ -11,9 +11,9 @@ public final class List<ChildEnvironment: Equatable>: CombinedComponent {
 
     private let items: [AnyComponentWithIdentity<ChildEnvironment>]
     private let direction: Direction
-    private let appear: Transition.Appear
+    private let appear:TGTransition.Appear
 
-    public init(_ items: [AnyComponentWithIdentity<ChildEnvironment>], direction: Direction = .vertical, appear: Transition.Appear = .default()) {
+    public init(_ items: [AnyComponentWithIdentity<ChildEnvironment>], direction: Direction = .vertical, appear:TGTransition.Appear = .default()) {
         self.items = items
         self.direction = direction
         self.appear = appear

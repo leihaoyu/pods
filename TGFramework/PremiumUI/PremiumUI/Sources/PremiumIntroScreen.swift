@@ -822,7 +822,7 @@ private final class CheckComponent: Component {
         }
 
     
-        func update(component: CheckComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: CheckComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             self.checkLayer.setSelected(component.selected, animated: true)
             self.checkLayer.theme = component.theme.checkNodeTheme
             
@@ -834,7 +834,7 @@ private final class CheckComponent: Component {
         return View()
     }
 
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }
@@ -925,7 +925,7 @@ final class SectionGroupComponent: Component {
             }
         }
         
-        func update(component: SectionGroupComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: SectionGroupComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             let sideInset: CGFloat = 16.0
             
             self.backgroundColor = component.backgroundColor
@@ -1032,7 +1032,7 @@ final class SectionGroupComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -1485,9 +1485,9 @@ private final class PremiumIntroScreenContentComponent: CombinedComponent {
             )
             context.add(text
                 .position(CGPoint(x: size.width / 2.0, y: size.height + text.size.height / 2.0))
-//                .update(Transition.Update { _, view, _ in
+//                .update(TGTransition.Update { _, view, _ in
 //                    if let snapshot = view.snapshotView(afterScreenUpdates: false) {
-//                        let transition = Transition(animation: .curve(duration: 0.2, curve: .easeInOut))
+//                        let transition = TGTransition(animation: .curve(duration: 0.2, curve: .easeInOut))
 //                        view.superview?.addSubview(snapshot)
 //                        transition.setAlpha(view: snapshot, alpha: 0.0, completion: { [weak snapshot] _ in
 //                            snapshot?.removeFromSuperview()
@@ -1949,7 +1949,7 @@ class BlurredRectangle: Component {
             preconditionFailure()
         }
 
-        func update(component: BlurredRectangle, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: BlurredRectangle, availableSize: CGSize, transition: TGTransition) -> CGSize {
             transition.setFrame(view: self.background.view, frame: CGRect(origin: CGPoint(), size: availableSize))
             self.background.updateColor(color: component.color, transition: .immediate)
             self.background.update(size: availableSize, cornerRadius: component.radius, transition: .immediate)
@@ -1962,7 +1962,7 @@ class BlurredRectangle: Component {
         return View()
     }
 
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }
@@ -2608,9 +2608,9 @@ private final class PremiumIntroScreenComponent: CombinedComponent {
                 .position(CGPoint(x: context.availableSize.width / 2.0, y: max(topInset + 160.0 - titleOffset, environment.statusBarHeight + (environment.navigationHeight - environment.statusBarHeight) / 2.0)))
                 .scale(titleScale)
                 .opacity(titleAlpha)
-//                .update(Transition.Update { _, view, _ in
+//                .update(TGTransition.Update { _, view, _ in
 //                    if let snapshot = view.snapshotView(afterScreenUpdates: false) {
-//                        let transition = Transition(animation: .curve(duration: 0.2, curve: .easeInOut))
+//                        let transition = TGTransition(animation: .curve(duration: 0.2, curve: .easeInOut))
 //                        view.superview?.addSubview(snapshot)
 //                        transition.setAlpha(view: snapshot, alpha: 0.0, completion: { [weak snapshot] _ in
 //                            snapshot?.removeFromSuperview()
@@ -2695,7 +2695,7 @@ private final class PremiumIntroScreenComponent: CombinedComponent {
                 context.add(bottomPanel
                     .position(CGPoint(x: context.availableSize.width / 2.0, y: context.availableSize.height - bottomPanel.size.height / 2.0))
                     .opacity(bottomPanelAlpha)
-                    .disappear(Transition.Disappear { view, transition, completion in
+                    .disappear(TGTransition.Disappear { view, transition, completion in
                         if case .none = transition.animation {
                             completion()
                             return
@@ -2708,7 +2708,7 @@ private final class PremiumIntroScreenComponent: CombinedComponent {
                 context.add(bottomSeparator
                     .position(CGPoint(x: context.availableSize.width / 2.0, y: context.availableSize.height - bottomPanel.size.height))
                     .opacity(bottomPanelAlpha)
-                    .disappear(Transition.Disappear { view, transition, completion in
+                    .disappear(TGTransition.Disappear { view, transition, completion in
                         if case .none = transition.animation {
                             completion()
                             return
@@ -2720,7 +2720,7 @@ private final class PremiumIntroScreenComponent: CombinedComponent {
                 )
                 context.add(button
                     .position(CGPoint(x: context.availableSize.width / 2.0, y: context.availableSize.height - bottomPanel.size.height + bottomPanelPadding + button.size.height / 2.0))
-                    .disappear(Transition.Disappear { view, transition, completion in
+                    .disappear(TGTransition.Disappear { view, transition, completion in
                         if case .none = transition.animation {
                             completion()
                             return

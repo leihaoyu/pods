@@ -49,7 +49,7 @@ final class ReactionsCarouselComponent: Component {
         
         private var isVisible = false
                 
-        public func update(component: ReactionsCarouselComponent, availableSize: CGSize, environment: Environment<DemoPageEnvironment>, transition: Transition) -> CGSize {
+        public func update(component: ReactionsCarouselComponent, availableSize: CGSize, environment: Environment<DemoPageEnvironment>, transition: TGTransition) -> CGSize {
             let isDisplaying = environment[DemoPageEnvironment.self].isDisplaying
             
             if self.node == nil && !component.reactions.isEmpty {
@@ -88,7 +88,7 @@ final class ReactionsCarouselComponent: Component {
         return View()
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<DemoPageEnvironment>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<DemoPageEnvironment>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, environment: environment, transition: transition)
     }
 }

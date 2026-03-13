@@ -548,7 +548,7 @@ class PremiumStarComponent: Component {
             node.addAnimation(springAnimation, forKey: "rotate")
         }
         
-        func update(component: PremiumStarComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: PremiumStarComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             self.sceneView.bounds = CGRect(origin: .zero, size: CGSize(width: availableSize.width * 2.0, height: availableSize.height * 2.0))
             if self.sceneView.superview == self {
                 self.sceneView.center = CGPoint(x: availableSize.width / 2.0, y: availableSize.height / 2.0)
@@ -564,7 +564,7 @@ class PremiumStarComponent: Component {
         return View(frame: CGRect(), isIntro: self.isIntro)
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }

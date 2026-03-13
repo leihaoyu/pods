@@ -750,7 +750,7 @@ public final class GifPagerContentComponent: Component {
             self.snapScrollingOffsetToInsets()
         }
         
-        private func updateScrollingOffset(transition: Transition) {
+        private func updateScrollingOffset(transition: TGTransition) {
             let isInteracting = self.scrollView.isDragging || self.scrollView.isDecelerating
             if let previousScrollingOffsetValue = self.previousScrollingOffset {
                 let currentBounds = self.scrollView.bounds
@@ -796,7 +796,7 @@ public final class GifPagerContentComponent: Component {
         }
         
         private func snapScrollingOffsetToInsets() {
-            let transition = Transition(animation: .curve(duration: 0.4, curve: .spring))
+            let transition = TGTransition(animation: .curve(duration: 0.4, curve: .spring))
             
             var currentBounds = self.scrollView.bounds
             currentBounds.origin.y = self.snappedContentOffset(proposedOffset: currentBounds.minY)
@@ -806,7 +806,7 @@ public final class GifPagerContentComponent: Component {
             self.updateVisibleItems(attemptSynchronousLoads: false, transition: transition, fromScrolling: true)
         }
         
-        private func updateVisibleItems(attemptSynchronousLoads: Bool, transition: Transition, fromScrolling: Bool) {
+        private func updateVisibleItems(attemptSynchronousLoads: Bool, transition: TGTransition, fromScrolling: Bool) {
             guard let component = self.component, let itemLayout = self.itemLayout else {
                 return
             }
@@ -841,7 +841,7 @@ public final class GifPagerContentComponent: Component {
                     
                     let itemFrame = itemLayout.frame(at: index).offsetBy(dx: 0.0, dy: searchInset)
                     
-                    var itemTransition: Transition = transition
+                    var itemTransition: TGTransition = transition
                     var updateItemLayerPlaceholder = false
                     
                     let itemLayer: ItemLayer
@@ -960,7 +960,7 @@ public final class GifPagerContentComponent: Component {
             }
         }
         
-        public func pagerUpdateBackground(backgroundFrame: CGRect, transition: Transition) {
+        public func pagerUpdateBackground(backgroundFrame: CGRect, transition: TGTransition) {
             guard let theme = self.theme else {
                 return
             }
@@ -991,7 +991,7 @@ public final class GifPagerContentComponent: Component {
             }
         }
         
-        func update(component: GifPagerContentComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+        func update(component: GifPagerContentComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
             var contentReset = false
             if let previousComponent = self.component, previousComponent.subject != component.subject {
                 contentReset = true
@@ -1111,7 +1111,7 @@ public final class GifPagerContentComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }

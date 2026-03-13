@@ -15,18 +15,18 @@ public final class NavigationContainer: ASDisplayNode, UIGestureRecognizerDelega
     }
     
     private final class PendingChild {
-        enum TransitionType {
+        enum TGTransitionType {
             case push
             case pop
         }
         
         let value: Child
-        let transitionType: TransitionType
+        let transitionType: TGTransitionType
         let transition: ContainedViewLayoutTransition
         let disposable: MetaDisposable = MetaDisposable()
         var isReady: Bool = false
         
-        init(value: Child, transitionType: TransitionType, transition: ContainedViewLayoutTransition, update: @escaping (PendingChild) -> Void) {
+        init(value: Child, transitionType: TGTransitionType, transition: ContainedViewLayoutTransition, update: @escaping (PendingChild) -> Void) {
             self.value = value
             self.transitionType = transitionType
             self.transition = transition
@@ -54,11 +54,11 @@ public final class NavigationContainer: ASDisplayNode, UIGestureRecognizerDelega
     }
     
     private final class TopTransition {
-        let type: PendingChild.TransitionType
+        let type: PendingChild.TGTransitionType
         let previous: Child
         let coordinator: NavigationTransitionCoordinator
         
-        init(type: PendingChild.TransitionType, previous: Child, coordinator: NavigationTransitionCoordinator) {
+        init(type: PendingChild.TGTransitionType, previous: Child, coordinator: NavigationTransitionCoordinator) {
             self.type = type
             self.previous = previous
             self.coordinator = coordinator
@@ -355,7 +355,7 @@ public final class NavigationContainer: ASDisplayNode, UIGestureRecognizerDelega
                 if controllers.last !== self.state.pending?.value.value {
                     self.state.pending = nil
                     if let last = controllers.last {
-                        let transitionType: PendingChild.TransitionType
+                        let transitionType: PendingChild.TGTransitionType
                         if !previousControllers.contains(where: { $0 === last }) {
                             transitionType = .push
                         } else {
@@ -445,7 +445,7 @@ public final class NavigationContainer: ASDisplayNode, UIGestureRecognizerDelega
         }
     }
     
-    private func topTransition(from fromValue: Child?, to toValue: Child?, transitionType: PendingChild.TransitionType, layout: ContainerViewLayout, transition: ContainedViewLayoutTransition) {
+    private func topTransition(from fromValue: Child?, to toValue: Child?, transitionType: PendingChild.TGTransitionType, layout: ContainerViewLayout, transition: ContainedViewLayoutTransition) {
         if case .animated = transition, let fromValue = fromValue, let toValue = toValue {
             if let currentTransition = self.state.transition {
                 currentTransition.coordinator.performCompletion(completion: {

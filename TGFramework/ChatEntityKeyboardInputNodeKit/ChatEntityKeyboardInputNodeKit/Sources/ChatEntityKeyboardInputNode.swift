@@ -305,7 +305,7 @@ public final class ChatEntityKeyboardInputNode: ChatInputNode {
     private var currentState: (width: CGFloat, leftInset: CGFloat, rightInset: CGFloat, bottomInset: CGFloat, standardInputHeight: CGFloat, inputHeight: CGFloat, maximumHeight: CGFloat, inputPanelHeight: CGFloat, interfaceState: ChatPresentationInterfaceState, layoutMetrics: LayoutMetrics, deviceMetrics: DeviceMetrics, isVisible: Bool, isExpanded: Bool)?
     
     private var scheduledContentAnimationHint: EmojiPagerContentComponent.ContentAnimation?
-    private var scheduledInnerTransition: Transition?
+    private var scheduledInnerTransition: TGTransition?
     
     private var gifMode: GifPagerContentComponent.Subject? {
         didSet {
@@ -1541,7 +1541,7 @@ public final class ChatEntityKeyboardInputNode: ChatInputNode {
                 }
             }
             
-            var transition: Transition = .immediate
+            var transition: TGTransition = .immediate
             var useAnimation = false
             
             if let pagerView = strongSelf.entityKeyboardView.componentView as? EntityKeyboardComponent.View, let centralId = pagerView.centralId {
@@ -1560,7 +1560,7 @@ public final class ChatEntityKeyboardInputNode: ChatInputNode {
                 } else {
                     contentAnimation = EmojiPagerContentComponent.ContentAnimation(type: .generic)
                 }
-                transition = Transition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(contentAnimation)
+                transition = TGTransition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(contentAnimation)
             }
             strongSelf.currentInputData = strongSelf.processInputData(inputData: inputData)
             strongSelf.performLayout(transition: transition)
@@ -1689,7 +1689,7 @@ public final class ChatEntityKeyboardInputNode: ChatInputNode {
         self.isMarkInputCollapsed = true
     }
     
-    private func performLayout(transition: Transition) {
+    private func performLayout(transition: TGTransition) {
         guard let (width, leftInset, rightInset, bottomInset, standardInputHeight, inputHeight, maximumHeight, inputPanelHeight, interfaceState, layoutMetrics, deviceMetrics, isVisible, isExpanded) = self.currentState else {
             return
         }
@@ -1707,12 +1707,12 @@ public final class ChatEntityKeyboardInputNode: ChatInputNode {
     public override func updateLayout(width: CGFloat, leftInset: CGFloat, rightInset: CGFloat, bottomInset: CGFloat, standardInputHeight: CGFloat, inputHeight: CGFloat, maximumHeight: CGFloat, inputPanelHeight: CGFloat, transition: ContainedViewLayoutTransition, interfaceState: ChatPresentationInterfaceState, layoutMetrics: LayoutMetrics, deviceMetrics: DeviceMetrics, isVisible: Bool, isExpanded: Bool) -> (CGFloat, CGFloat) {
         self.currentState = (width, leftInset, rightInset, bottomInset, standardInputHeight, inputHeight, maximumHeight, inputPanelHeight, interfaceState, layoutMetrics, deviceMetrics, isVisible, isExpanded)
         
-        let innerTransition: Transition
+        let innerTransition: TGTransition
         if let scheduledInnerTransition = self.scheduledInnerTransition {
             self.scheduledInnerTransition = nil
             innerTransition = scheduledInnerTransition
         } else {
-            innerTransition = Transition(transition)
+            innerTransition = TGTransition(transition)
         }
         
         let wasMarkedInputCollapsed = self.isMarkInputCollapsed
@@ -1998,7 +1998,7 @@ public final class ChatEntityKeyboardInputNode: ChatInputNode {
             guard let strongSelf = self else {
                 return
             }
-            strongSelf.performLayout(transition: Transition(animation: .curve(duration: 0.4, curve: .spring)))
+            strongSelf.performLayout(transition: TGTransition(animation: .curve(duration: 0.4, curve: .spring)))
         })
     }
     

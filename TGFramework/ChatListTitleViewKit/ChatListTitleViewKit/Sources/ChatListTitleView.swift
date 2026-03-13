@@ -141,9 +141,9 @@ public final class ChatListTitleView: UIView, NavigationBarTitleView, Navigation
                     statusContent = .animation(content: .customEmoji(fileId: emoji.fileId), size: CGSize(width: 22.0, height: 22.0), placeholderColor: self.theme.list.mediaPlaceholderColor, themeColor: self.theme.list.itemAccentColor, loopMode: .count(2))
                 }
                 
-                var titleCredibilityIconTransition: Transition
+                var titleCredibilityIconTransition: TGTransition
                 if animateStatusTransition {
-                    titleCredibilityIconTransition = Transition(animation: .curve(duration: 0.2, curve: .easeInOut))
+                    titleCredibilityIconTransition = TGTransition(animation: .curve(duration: 0.2, curve: .easeInOut))
                 } else {
                     titleCredibilityIconTransition = .immediate
                 }
@@ -380,7 +380,7 @@ public final class ChatListTitleView: UIView, NavigationBarTitleView, Navigation
                 statusContent = .animation(content: .customEmoji(fileId: emoji.fileId), size: CGSize(width: 22.0, height: 22.0), placeholderColor: self.theme.list.mediaPlaceholderColor, themeColor: self.theme.list.itemAccentColor, loopMode: .count(2))
             }
             
-            var titleCredibilityIconTransition = Transition(transition)
+            var titleCredibilityIconTransition = TGTransition(transition)
             let titleCredibilityIconView: ComponentHostView<Empty>
             if let current = self.titleCredibilityIconView {
                 titleCredibilityIconView = current

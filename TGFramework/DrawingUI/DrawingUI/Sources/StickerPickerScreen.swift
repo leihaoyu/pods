@@ -118,7 +118,7 @@ private final class StickerSelectionComponent: Component {
         deinit {
         }
         
-        func update(component: StickerSelectionComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+        func update(component: StickerSelectionComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
             self.backgroundColor = component.backgroundColor
             let panelBackgroundColor = component.backgroundColor.withMultipliedAlpha(0.85)
             self.panelBackgroundView.updateColor(color: panelBackgroundColor, transition: .immediate)
@@ -196,7 +196,7 @@ private final class StickerSelectionComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<EnvironmentType>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -663,7 +663,7 @@ class StickerPickerScreen: ViewController {
             }
         }
                 
-        func containerLayoutUpdated(layout: ContainerViewLayout, navigationHeight: CGFloat, transition: Transition) {
+        func containerLayoutUpdated(layout: ContainerViewLayout, navigationHeight: CGFloat, transition: TGTransition) {
             self.currentLayout = (layout, navigationHeight)
                         
             self.dim.frame = CGRect(origin: CGPoint(x: 0.0, y: -layout.size.height), size: CGSize(width: layout.size.width, height: layout.size.height * 3.0))
@@ -747,11 +747,11 @@ class StickerPickerScreen: ViewController {
             transition.setFrame(view: self.containerView, frame: clipFrame)
                         
             if let content = self.content {
-                var stickersTransition: Transition = transition
+                var stickersTransition: TGTransition = transition
                 if let scheduledEmojiContentAnimationHint = self.scheduledEmojiContentAnimationHint {
                     self.scheduledEmojiContentAnimationHint = nil
                     let contentAnimation = scheduledEmojiContentAnimationHint
-                    stickersTransition = Transition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(contentAnimation)
+                    stickersTransition = TGTransition(animation: .curve(duration: 0.4, curve: .spring)).withUserData(contentAnimation)
                 }
                 
                 var contentSize = self.hostView.update(
@@ -934,24 +934,24 @@ class StickerPickerScreen: ViewController {
                             let initialVelocity: CGFloat = distance.isZero ? 0.0 : abs(velocity.y / distance)
                             let transition = ContainedViewLayoutTransition.animated(duration: 0.45, curve: .customSpring(damping: 124.0, initialVelocity: initialVelocity))
 
-                            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+                            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
                         } else {
                             self.isExpanded = true
                             
-                            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(.animated(duration: 0.3, curve: .easeInOut)))
+                            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(.animated(duration: 0.3, curve: .easeInOut)))
                         }
                     } else if (velocity.y < -300.0 || offset < topInset / 2.0) {
                         let initialVelocity: CGFloat = offset.isZero ? 0.0 : abs(velocity.y / offset)
                         let transition = ContainedViewLayoutTransition.animated(duration: 0.45, curve: .customSpring(damping: 124.0, initialVelocity: initialVelocity))
                         self.isExpanded = true
                        
-                        self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+                        self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
                     } else {
                         if let scrollView = scrollView {
                             scrollView.setContentOffset(CGPoint(x: 0.0, y: -scrollView.contentInset.top), animated: false)
                         }
                         
-                        self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(.animated(duration: 0.3, curve: .easeInOut)))
+                        self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(.animated(duration: 0.3, curve: .easeInOut)))
                     }
                     
                     if !dismissing {
@@ -964,7 +964,7 @@ class StickerPickerScreen: ViewController {
                 case .cancelled:
                     self.panGestureArguments = nil
                     
-                    self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(.animated(duration: 0.3, curve: .easeInOut)))
+                    self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(.animated(duration: 0.3, curve: .easeInOut)))
                 default:
                     break
             }
@@ -979,7 +979,7 @@ class StickerPickerScreen: ViewController {
             guard let (layout, navigationHeight) = self.currentLayout else {
                 return
             }
-            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
         }
     }
     
@@ -1050,6 +1050,6 @@ class StickerPickerScreen: ViewController {
         
         let navigationHeight: CGFloat = 56.0
         
-        self.node.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+        self.node.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
     }
 }

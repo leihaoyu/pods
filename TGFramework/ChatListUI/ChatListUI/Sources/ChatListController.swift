@@ -1985,7 +1985,7 @@ public class ChatListControllerImpl: TelegramBaseController, ChatListController 
         }
         
         let _ = self.headerContentView.update(
-            transition: Transition(transition),
+            transition: TGTransition(transition),
             component: AnyComponent(ChatListHeaderComponent(
                 sideInset: layout.safeInsets.left + 16.0,
                 primaryContent: primaryContent,

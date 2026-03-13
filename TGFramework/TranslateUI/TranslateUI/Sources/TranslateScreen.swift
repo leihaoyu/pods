@@ -634,7 +634,7 @@ public class TranslateScreen: ViewController {
             }
         }
                 
-        func containerLayoutUpdated(layout: ContainerViewLayout, navigationHeight: CGFloat, transition: Transition) {
+        func containerLayoutUpdated(layout: ContainerViewLayout, navigationHeight: CGFloat, transition: TGTransition) {
             self.currentLayout = (layout, navigationHeight)
             
             if let controller = self.controller, let navigationBar = controller.navigationBar, navigationBar.view.superview !== self.wrappingView {
@@ -920,11 +920,11 @@ public class TranslateScreen: ViewController {
                             let initialVelocity: CGFloat = distance.isZero ? 0.0 : abs(velocity.y / distance)
                             let transition = ContainedViewLayoutTransition.animated(duration: 0.45, curve: .customSpring(damping: 124.0, initialVelocity: initialVelocity))
 
-                            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+                            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
                         } else {
                             self.isExpanded = true
                             
-                            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(.animated(duration: 0.3, curve: .easeInOut)))
+                            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(.animated(duration: 0.3, curve: .easeInOut)))
                         }
                     } else if (velocity.y < -300.0 || offset < topInset / 2.0) {
                         if velocity.y > -2200.0 && velocity.y < -300.0, let listNode = listNode {
@@ -937,7 +937,7 @@ public class TranslateScreen: ViewController {
                         let transition = ContainedViewLayoutTransition.animated(duration: 0.45, curve: .customSpring(damping: 124.0, initialVelocity: initialVelocity))
                         self.isExpanded = true
                        
-                        self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+                        self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
                     } else {
                         if let listNode = listNode {
                             listNode.scroller.setContentOffset(CGPoint(), animated: false)
@@ -945,7 +945,7 @@ public class TranslateScreen: ViewController {
                             scrollView.setContentOffset(CGPoint(x: 0.0, y: -scrollView.contentInset.top), animated: false)
                         }
                         
-                        self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(.animated(duration: 0.3, curve: .easeInOut)))
+                        self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(.animated(duration: 0.3, curve: .easeInOut)))
                     }
                     
                     if !dismissing {
@@ -958,7 +958,7 @@ public class TranslateScreen: ViewController {
                 case .cancelled:
                     self.panGestureArguments = nil
                     
-                    self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(.animated(duration: 0.3, curve: .easeInOut)))
+                    self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(.animated(duration: 0.3, curve: .easeInOut)))
                 default:
                     break
             }
@@ -973,7 +973,7 @@ public class TranslateScreen: ViewController {
             guard let (layout, navigationHeight) = self.currentLayout else {
                 return
             }
-            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+            self.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
         }
     }
     
@@ -1140,6 +1140,6 @@ public class TranslateScreen: ViewController {
         
         let navigationHeight: CGFloat = 56.0
         
-        self.node.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: Transition(transition))
+        self.node.containerLayoutUpdated(layout: layout, navigationHeight: navigationHeight, transition: TGTransition(transition))
     }
 }

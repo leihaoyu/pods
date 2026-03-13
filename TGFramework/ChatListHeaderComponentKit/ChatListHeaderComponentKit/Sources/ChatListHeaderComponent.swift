@@ -52,7 +52,7 @@ public final class HeaderNetworkStatusComponent: Component {
             fatalError("init(coder:) has not been implemented")
         }
         
-        func update(component: HeaderNetworkStatusComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: HeaderNetworkStatusComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             self.state = state
             
             return availableSize
@@ -63,7 +63,7 @@ public final class HeaderNetworkStatusComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -233,7 +233,7 @@ public final class ChatListHeaderComponent: Component {
             self.onPressed()
         }
         
-        func update(title: String, theme: PresentationTheme, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(title: String, theme: PresentationTheme, availableSize: CGSize, transition: TGTransition) -> CGSize {
             self.titleView.attributedText = NSAttributedString(string: title, font: Font.regular(17.0), textColor: theme.rootController.navigationBar.accentTextColor)
             let titleSize = self.titleView.updateLayout(CGSize(width: 100.0, height: 44.0))
             
@@ -329,7 +329,7 @@ public final class ChatListHeaderComponent: Component {
             return nil
         }
         
-        func updateNavigationTransitionAsPrevious(nextView: ContentView, fraction: CGFloat, transition: Transition, completion: @escaping () -> Void) {
+        func updateNavigationTransitionAsPrevious(nextView: ContentView, fraction: CGFloat, transition: TGTransition, completion: @escaping () -> Void) {
             transition.setBounds(view: self.leftButtonOffsetContainer, bounds: CGRect(origin: CGPoint(x: fraction * self.bounds.width * 0.5, y: 0.0), size: self.leftButtonOffsetContainer.bounds.size), completion: { _ in
                 completion()
             })
@@ -352,7 +352,7 @@ public final class ChatListHeaderComponent: Component {
             }
         }
         
-        func updateNavigationTransitionAsNext(previousView: ContentView, fraction: CGFloat, transition: Transition, completion: @escaping () -> Void) {
+        func updateNavigationTransitionAsNext(previousView: ContentView, fraction: CGFloat, transition: TGTransition, completion: @escaping () -> Void) {
             transition.setBounds(view: self.titleOffsetContainer, bounds: CGRect(origin: CGPoint(x: -(1.0 - fraction) * self.bounds.width, y: 0.0), size: self.titleOffsetContainer.bounds.size), completion: { _ in
                 completion()
             })
@@ -373,7 +373,7 @@ public final class ChatListHeaderComponent: Component {
             }
         }
         
-        func update(context: AccountContext, theme: PresentationTheme, strings: PresentationStrings, content: Content, backTitle: String?, sideInset: CGFloat, size: CGSize, transition: Transition) {
+        func update(context: AccountContext, theme: PresentationTheme, strings: PresentationStrings, content: Content, backTitle: String?, sideInset: CGFloat, size: CGSize, transition: TGTransition) {
             self.titleTextView.attributedText = NSAttributedString(string: content.title, font: Font.semibold(17.0), textColor: theme.rootController.navigationBar.primaryTextColor)
             
             let buttonSpacing: CGFloat = 8.0
@@ -643,7 +643,7 @@ public final class ChatListHeaderComponent: Component {
             }
         }
         
-        func update(component: ChatListHeaderComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: ChatListHeaderComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             self.state = state
             
             let previousComponent = self.component
@@ -753,7 +753,7 @@ public final class ChatListHeaderComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -851,7 +851,7 @@ public final class NavigationButtonComponent: Component {
             self.component?.pressed(self)
         }
         
-        func update(component: NavigationButtonComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<NavigationButtonComponentEnvironment>, transition: Transition) -> CGSize {
+        func update(component: NavigationButtonComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<NavigationButtonComponentEnvironment>, transition: TGTransition) -> CGSize {
             self.component = component
             
             let theme = environment[NavigationButtonComponentEnvironment.self].value.theme
@@ -1001,7 +1001,7 @@ public final class NavigationButtonComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<NavigationButtonComponentEnvironment>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<NavigationButtonComponentEnvironment>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }

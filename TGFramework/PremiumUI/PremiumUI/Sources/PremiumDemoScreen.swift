@@ -57,7 +57,7 @@ final class GradientBackgroundComponent: Component {
         }
         
         
-        func update(component: GradientBackgroundComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+        func update(component: GradientBackgroundComponent, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
             self.clipLayer.frame = CGRect(origin: .zero, size: CGSize(width: availableSize.width, height: availableSize.height + 10.0))
             self.gradientLayer.frame = CGRect(origin: .zero, size: availableSize)
         
@@ -123,7 +123,7 @@ final class GradientBackgroundComponent: Component {
         return View(frame: CGRect())
     }
     
-    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    public func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, state: state, environment: environment, transition: transition)
     }
 }
@@ -342,7 +342,7 @@ final class DemoPagerComponent: Component {
             self.ignoreContentOffsetChange = false
         }
         
-        func update(component: DemoPagerComponent, availableSize: CGSize, transition: Transition) -> CGSize {
+        func update(component: DemoPagerComponent, availableSize: CGSize, transition: TGTransition) -> CGSize {
             var validIds: [AnyHashable] = []
             
             let firstTime = self.itemViews.isEmpty
@@ -427,7 +427,7 @@ final class DemoPagerComponent: Component {
         return View(frame: CGRect())
     }
     
-    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: Transition) -> CGSize {
+    func update(view: View, availableSize: CGSize, state: EmptyComponentState, environment: Environment<Empty>, transition: TGTransition) -> CGSize {
         return view.update(component: self, availableSize: availableSize, transition: transition)
     }
 }
@@ -626,7 +626,7 @@ private final class DemoSheetContent: CombinedComponent {
                 strongSelf.isPremium = isPremium
                 strongSelf.promoConfiguration = promoConfiguration
                 if !reactions.isEmpty && !stickers.isEmpty {
-                    strongSelf.updated(transition: Transition(.immediate).withUserData(DemoAnimateInTransition()))
+                    strongSelf.updated(transition: TGTransition(.immediate).withUserData(DemoAnimateInTransition()))
                 }
             })
         }
