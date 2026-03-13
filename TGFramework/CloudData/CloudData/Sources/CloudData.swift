@@ -12,9 +12,9 @@ private enum FetchError {
 @available(iOS 10.0, *)
 private func fetchRawData(prefix: String) -> Signal<Data, FetchError> {
     return Signal { subscriber in
-        #if targetEnvironment(simulator)
+//        #if targetEnvironment(simulator)
         return EmptyDisposable
-        #else
+//        #else
         let container = CKContainer.default()
         let publicDatabase = container.database(with: .public)
         let recordId = CKRecord.ID(recordName: "emergency-datacenter-\(prefix)")
@@ -47,7 +47,7 @@ private func fetchRawData(prefix: String) -> Signal<Data, FetchError> {
         
         return ActionDisposable {
         }
-        #endif
+//        #endif
     }
 }
 
