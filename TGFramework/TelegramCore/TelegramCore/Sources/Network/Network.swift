@@ -499,14 +499,16 @@ func initializedNetwork(accountId: AccountRecordId, arguments: NetworkInitializa
             
             if testingEnvironment {
                 seedAddressList = [
-                    1: ["45.77.244.226"],
+                    1: ["192.168.0.39"],
+//                    1: ["45.77.244.226"],
 //                    1: ["149.154.175.10"],
 //                    2: ["149.154.167.40"],
 //                    3: ["149.154.175.117"]
                 ]
             } else {
                 seedAddressList = [
-                    1: ["45.77.244.226"],
+                    1: ["192.168.0.39"],
+//                    1: ["45.77.244.226"],
 //                    1: ["149.154.175.50", "2001:b28:f23d:f001::a"],
 //                    2: ["149.154.167.50", "95.161.76.100", "2001:67c:4e8:f002::a"],
 //                    3: ["149.154.175.100", "2001:b28:f23d:f003::a"],
@@ -714,7 +716,7 @@ public final class Network: NSObject, MTRequestMessageServiceDelegate {
     let requestService: MTRequestMessageService
     let basePath: String
     private let connectionStatusDelegate: MTProtoConnectionStatusDelegate
-    
+
     private let appDataDisposable: Disposable
     
     private var _multiplexedRequestManager: MultiplexedRequestManager?
@@ -998,7 +1000,7 @@ public final class Network: NSObject, MTRequestMessageServiceDelegate {
                     }
                 }
             }
-            
+
             if let tag = tag {
                 request.shouldDependOnRequest = { other in
                     if let other = other, let metadata = other.metadata as? WrappedRequestMetadata, let otherTag = metadata.tag {
@@ -1007,17 +1009,17 @@ public final class Network: NSObject, MTRequestMessageServiceDelegate {
                     return false
                 }
             }
-            
+
             let internalId: Any! = request.internalId
-            
+
             requestService.add(request)
-            
+
             return ActionDisposable { [weak requestService] in
                 requestService?.removeRequest(byInternalId: internalId)
             }
         }
     }
-        
+
     public func request<T>(_ data: (FunctionDescription, Buffer, DeserializeFunctionResponse<T>), tag: NetworkRequestDependencyTag? = nil, automaticFloodWait: Bool = true) -> Signal<T, MTRpcError> {
         let requestService = self.requestService
         return Signal { subscriber in
@@ -1078,7 +1080,12 @@ public final class Network: NSObject, MTRequestMessageServiceDelegate {
 
 public func retryRequest<T>(signal: Signal<T, MTRpcError>) -> Signal<T, NoError> {
     return signal
-    |> retry(0.2, maxDelay: 5.0, onQueue: Queue.concurrentDefaultQueue())
+    |> retry(retryOnError: { error in
+        return error.errorDescription != "ERR_ENTERPRISE_IS_BLOCKED" && error.errorDescription != "METHOD_NOT_IMPL"
+    }, delayIncrement: 0.2, maxDelay: 5.0, maxRetries: Int.max, onQueue: Queue.concurrentDefaultQueue())
+    |> `catch` { _ in
+        return .never()
+    }
 }
 
 class Keychain: NSObject, MTKeychain {

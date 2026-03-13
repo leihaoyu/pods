@@ -494,7 +494,7 @@ private func extractAccountManagerState(records: AccountRecordsView<TelegramAcco
         }
         
         if isDebugConfiguration || buildConfig.isInternalBuild {
-            LoggingSettings.defaultSettings = LoggingSettings(logToFile: true, logToConsole: false, redactSensitiveData: true)
+            LoggingSettings.defaultSettings = LoggingSettings(logToFile: true, logToConsole: true, redactSensitiveData: true)
         } else {
             LoggingSettings.defaultSettings = LoggingSettings(logToFile: false, logToConsole: false, redactSensitiveData: true)
         }
