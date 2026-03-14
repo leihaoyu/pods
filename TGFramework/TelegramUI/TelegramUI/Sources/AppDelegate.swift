@@ -446,7 +446,27 @@ private func extractAccountManagerState(records: AccountRecordsView<TelegramAcco
         
         let baseAppBundleId = Bundle.main.bundleIdentifier!
         let appGroupName = "group.\(baseAppBundleId)"
-        let maybeAppGroupUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupName)
+        var maybeAppGroupUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupName)
+        
+    
+
+        if maybeAppGroupUrl == nil {
+            // 获取 Documents 目录
+            let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+
+            // 在 Documents 下创建一个子目录
+            let appFolder = documentURL.appendingPathComponent(baseAppBundleId)
+
+            // 如果目录不存在就创建
+            if !FileManager.default.fileExists(atPath: appFolder.path) {
+                try? FileManager.default.createDirectory(at: appFolder, withIntermediateDirectories: true)
+            }
+            maybeAppGroupUrl = appFolder
+        }
+        
+
+        
+        
         print("=====\(baseAppBundleId)==\(appGroupName)==\(maybeAppGroupUrl)")
         let buildConfig = BuildConfig(baseAppBundleId: baseAppBundleId)
         self.buildConfig = buildConfig
